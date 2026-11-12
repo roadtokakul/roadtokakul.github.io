@@ -1,0 +1,68 @@
+{
+ "version": "2026-11-12",
+ "news": [
+  {
+   "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
+   "b": "Selection is on merit. Anyone asking for money to get you selected is a fraud.",
+   "c": [
+    "all"
+   ]
+  },
+  {
+   "t": "Next PMA Long Course (160): watch for the advert around March 2027",
+   "b": "Long Course registration usually opens twice a year. 158 LC ran 24 Mar – 3 May 2026 and 159 LC ran 14 Sep – 23 Oct 2026. Use the months in between to train for the initial test and the 1.6 km run.",
+   "u": "https://joinpakarmy.gov.pk",
+   "c": [
+    "pma_lc"
+   ]
+  },
+  {
+   "t": "PAF officer induction usually opens in February and July",
+   "b": "In 2026 registration ran 16 Feb – 1 Mar and 22 Jul – 3 Aug. Physics and maths carry real weight in the GD(P) academic test.",
+   "u": "https://joinpaf.gov.pk",
+   "c": [
+    "paf_gdp"
+   ]
+  },
+  {
+   "t": "PN Cadet Term 2027-A: registration ran 13 Sep – 11 Oct 2026",
+   "d": "2026-10-11",
+   "b": "The next Navy officer intake is usually advertised in spring. Engineering, Operations and Supply branches.",
+   "u": "https://joinpaknavy.gov.pk",
+   "c": [
+    "pn"
+   ]
+  },
+  {
+   "t": "TCC and Lady Cadet Course adverts usually appear in December–January",
+   "b": "Last cycle: 38th TCC closed 31 Jan 2026 and LCC-28 closed 20 Jan 2026. Keep your documents ready.",
+   "u": "https://joinpakarmy.gov.pk",
+   "c": [
+    "tcc",
+    "lcc"
+   ]
+  },
+  {
+   "t": "159 PMA Long Course: registration closed 23 Oct 2026",
+   "d": "2026-10-23",
+   "b": "If you registered, your initial test date is on your registration slip. Practise a full timed mock every few days.",
+   "u": "https://joinpakarmy.gov.pk",
+   "c": [
+    "pma_lc"
+   ]
+  }
+ ],
+ "questions": [],
+ "cards": [],
+ "config": {
+  "shareUrl": "https://zakirhusyn69-bit.github.io/road-to-kakul/",
+  "pay": {
+   "honourMin": 5,
+   "honourMax": 10,
+   "honourTimes": 1,
+   "honourWords": 5,
+   "honourDays": 7
+  },
+  "blockTids": []
+ }
+}
