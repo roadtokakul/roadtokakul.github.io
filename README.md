@@ -1,9 +1,12 @@
-# Road to Kakul — live content
+# Road to Kakul
 
-The Road to Kakul app and website read **`pack.json`** from this repository every few hours.
+This repository is the Road to Kakul website, **https://roadtokakul.github.io/**, and its live content file.
+The website files (`index.html`, `sw.js`, icons…) are rebuilt from the app's source; don't edit them by hand.
+
+The app and the website read **`pack.json`** from here every few hours.
 Change it here and every phone gets the change, with no new app version.
 
-Keep this repository **public** (the app reads it without a password) and keep only `pack.json` and this note in it.
+Keep this repository **public**: GitHub Pages and the app read it without a password.
 
 ## What you can change
 
