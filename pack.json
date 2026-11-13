@@ -1,5 +1,5 @@
 {
- "version": "2026-11-12b",
+ "version": "2026-11-13.061418",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -61,7 +61,18 @@
    "honourMax": 10,
    "honourTimes": 1,
    "honourWords": 5,
-   "honourDays": 7
+   "honourDays": 7,
+   "logUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtyXsrj5PM7aLGb8D8hb2SY4vAWdKlZhtSM4ztxCKEoAYw9A/formResponse",
+   "logMap": {
+    "kind": "entry.1459019534",
+    "plan": "entry.1306922108",
+    "tid": "entry.1089460789",
+    "id": "entry.2090932224",
+    "name": "entry.707198381",
+    "course": "entry.1116286298",
+    "at": "entry.1853725172",
+    "note": "entry.2075329372"
+   }
   },
   "blockTids": []
  }
