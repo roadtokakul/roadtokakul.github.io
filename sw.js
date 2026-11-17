@@ -1,5 +1,5 @@
 /* Road to Kakul — offline support. The app is one page; keep it cached and refresh it in the background. */
-const CACHE = 'rtk-2.2.0-mwen38jv';
+const CACHE = 'rtk-2.3.0-mwl6n1zc';
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'privacy.html'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
