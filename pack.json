@@ -1,5 +1,5 @@
 {
- "version": "2026-11-17.221213",
+ "version": "2026-11-17.221927",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -81,7 +81,8 @@
   "track": true,
   "lib": {
    "inLife": true
-  }
+  },
+  "statsMin": 1
  },
  "stats": {
   "week": 0,
