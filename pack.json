@@ -1,5 +1,5 @@
 {
- "version": "2026-11-18.052531",
+ "version": "2026-11-18.065309",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -91,5 +91,11 @@
   "pro": 3,
   "answered": 0,
   "d": "2026-11-18"
- }
+ },
+ "pics": [
+  {
+   "url": "https://roadtokakul.github.io/pics/pic-20261118-065305-911.jpg",
+   "cap": "The parade ground is waiting"
+  }
+ ]
 }
