@@ -1,5 +1,5 @@
 {
- "version": "2026-11-19.123121",
+ "version": "2026-11-19.123211",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -101,5 +101,42 @@
    "url": "https://roadtokakul.github.io/pics/pma-gate.jpg",
    "cap": "One day, you will walk through this gate"
   }
- ]
+ ],
+ "issb_sched": {
+  "from": "issb.gov.pk",
+  "title": "Tentative schedule for ISSB tests, Nov 2026 – May 2027",
+  "rows": [
+   [
+    "Army",
+    "159 PMA Long Course",
+    "13 Nov 2026 – 17 Feb 2027"
+   ],
+   [
+    "Army",
+    "Lady Cadet Course-29",
+    "1 – 5 Mar 2027"
+   ],
+   [
+    "Army",
+    "DSSC",
+    "12 – 16 Mar 2027"
+   ],
+   [
+    "Army",
+    "EME (Aviation) officers",
+    "26 – 30 Mar 2027"
+   ],
+   [
+    "Navy",
+    "PNCT / SSC PN Courses",
+    "19 Feb – 9 Apr 2027"
+   ],
+   [
+    "PAF",
+    "PAF Courses / 139 CSC / PAF officers",
+    "5 Apr – 13 May 2027"
+   ]
+  ],
+  "at": "2026-11-19"
+ }
 }
