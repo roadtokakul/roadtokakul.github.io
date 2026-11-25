@@ -1,5 +1,5 @@
 {
- "version": "2026-11-24.190531",
+ "version": "2026-11-25.131054",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -138,5 +138,14 @@
    ]
   ],
   "at": "2026-11-19"
+ },
+ "voice": {
+  "welcome": {
+   "url": "https://roadtokakul.github.io/voice/welcome-20261125-131051.m4a",
+   "id": "20261125-131051",
+   "title": "A message for you",
+   "sub": "From the Road to Kakul team · listen once",
+   "d": "2026-11-25"
+  }
  }
 }
