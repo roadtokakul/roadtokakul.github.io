@@ -1,5 +1,5 @@
 {
- "version": "2026-11-27.205411",
+ "version": "2026-11-27.205517",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -75,7 +75,8 @@
    }
   },
   "blockTids": [
-   "6785256921525"
+   "6785256921525",
+   "9123854127851"
   ],
   "ask": true,
   "track": true,
