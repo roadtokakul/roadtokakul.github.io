@@ -1,5 +1,5 @@
 {
- "version": "2026-11-27.205724",
+ "version": "2026-11-27.211031",
  "news": [
   {
    "t": "Apply only on official websites — joinpakarmy.gov.pk, joinpaknavy.gov.pk, joinpaf.gov.pk",
@@ -92,7 +92,16 @@
   "push": {
    "key": "BLU5jfq4CB5yxbKAqUPUhF6EC3hZVYBZt_1__p3Oalsqrx3Xyj-Qiowl1URJD2FmJ3Ak6x58C2zcLvK-JliHmjc"
   },
-  "stories": true
+  "stories": true,
+  "api": "https://rtk-backend.roadtokakul.workers.dev",
+  "vip": {
+   "id": "vip",
+   "n": "Ultra + Mentor · 6 months",
+   "p": 4999,
+   "d": 180,
+   "seats": 3,
+   "tag": "VIP"
+  }
  },
  "stats": {
   "week": 0,
