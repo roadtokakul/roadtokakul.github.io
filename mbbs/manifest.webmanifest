@@ -1,0 +1,18 @@
+{
+ "name": "Road to MBBS",
+ "short_name": "MBBS",
+ "description": "MDCAT practice that follows the PMDC syllabus — free, right now.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#060908",
+ "theme_color": "#060908",
+ "icons": [
+  {
+   "src": "icon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml",
+   "purpose": "any"
+  }
+ ]
+}

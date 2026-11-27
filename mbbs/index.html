@@ -1,0 +1,1204 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Road to MBBS — MDCAT practice</title><meta name="description" content="MDCAT practice that follows the PMDC syllabus — free, right now.">
+<meta name="theme-color" content="#060908"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta property="og:title" content="Road to MBBS"><meta property="og:description" content="MDCAT practice that follows the PMDC syllabus — free, right now.">
+<style>/* The exam apps' look: Road to Kakul's family — dark, brass and green. */
+@font-face{font-family:"InterV";src:url("../fonts/inter.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"BarlowC";src:url("../fonts/barlowc-700.woff2") format("woff2");font-weight:700 900;font-display:swap}
+:root{--bg:#060908;--card:#0f1612;--card2:#141d18;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);--fg:#edf2ee;--fg2:#c9d4cc;--mute:#8a9c90;
+  --gold:#d9b45f;--gold2:#f4d685;--ac:#3fbf74;--ac2:#86e3ae;--red:#f0645c;--hero1:#17432c;--r:20px;--ease:cubic-bezier(.22,.9,.24,1);
+  --fb:"InterV",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--fd:"BarlowC","InterV",system-ui,sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.45;-webkit-font-smoothing:antialiased}
+body{background:radial-gradient(900px 420px at 50% -180px,var(--hero1) 0%,transparent 72%),var(--bg);min-height:100vh}
+#app{max-width:560px;margin:0 auto;padding-bottom:92px}#app.nonav{padding-bottom:28px}
+main{padding:10px 14px 4px}main.enter{animation:enter .24s var(--ease) both}@keyframes enter{from{opacity:0;transform:translateY(6px)}}
+h1,h2,h3{margin:.2em 0 .45em;line-height:1.2;font-family:var(--fd);letter-spacing:.01em}h1{font-size:2rem}h2{font-size:1.35rem}h3{font-size:1.12rem}
+p{margin:.4em 0 .7em}small{display:block;color:var(--mute);font-size:.8rem;line-height:1.35}.mute{color:var(--mute)}.fine{color:var(--mute);font-size:.76rem}.c,.center{text-align:center}
+a{color:var(--gold2)}ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(6,9,8,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .hl,header .hr{display:flex;align-items:center;gap:10px}.ttl{font-family:var(--fd);font-size:1.25rem;letter-spacing:.02em}
+.logo svg{width:30px;height:30px;display:block}.ib{background:none;border:0;color:var(--fg);padding:4px;cursor:pointer}.ib svg{width:24px;height:24px}
+.chip{border:1px solid var(--line2);border-radius:99px;padding:3px 10px;font-size:.75rem;font-weight:700;color:var(--fg2);cursor:pointer;white-space:nowrap}
+.chip.pro{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1405;border:0}
+.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:0 0 12px}
+.tap{cursor:pointer}.row{display:flex;align-items:center;gap:10px}.sp{justify-content:space-between}.g{gap:10px}.wide{flex:1}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:6px;border:1px solid var(--line2);background:var(--card2);color:var(--fg);border-radius:14px;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer}
+.btn.big{display:flex;width:100%;padding:14px;margin:8px 0 4px;font-size:1rem}.btn.sm{padding:6px 12px;font-size:.82rem;border-radius:10px}
+.btn.gold{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1b1405;border:0;box-shadow:0 6px 18px rgba(217,180,95,.25)}
+.btn.ghost{background:transparent}.btn:disabled{opacity:.45}
+.pill{border-radius:99px;padding:2px 10px;background:rgba(63,191,116,.14);color:var(--ac2);font-weight:700;font-size:.82rem}
+.bar{height:8px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--ac);border-radius:99px}
+.bar.gold i{background:linear-gradient(90deg,var(--gold),var(--gold2))}.bar.thin{height:4px;margin:6px 0 12px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:0}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px;border-radius:var(--r);margin-bottom:12px;background:linear-gradient(160deg,#17432c,#0b1a12);border:1px solid rgba(217,180,95,.25)}
+.hero small{color:var(--fg2);letter-spacing:.06em}.big{font-family:var(--fd);font-size:3rem;line-height:1;margin:4px 0}.big span{font-size:1.3rem;color:var(--mute)}
+.ring{--p:0;width:92px;height:92px;border-radius:50%;flex:none;display:grid;place-items:center;align-content:center;background:conic-gradient(var(--gold) calc(var(--p)*1%),rgba(255,255,255,.08) 0);position:relative}
+.ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#0d2117}.ring b,.ring small{position:relative}.ring b{font-family:var(--fd);font-size:1.7rem;line-height:1}.ring small{font-size:.62rem;letter-spacing:.12em}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.tile{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer}.tile b{display:block;margin-top:6px}
+.trow{display:grid;grid-template-columns:1fr 38%;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.trow:last-child{border-bottom:0}.trow.off{opacity:.5}.trow .bar{margin:0}
+.chev{color:var(--mute);font-size:1.4rem}.intro{color:var(--mute);margin:2px 2px 14px}
+.startc{border-color:rgba(217,180,95,.55);background:linear-gradient(160deg,rgba(217,180,95,.12),transparent 60%),var(--card)}.startc .k,.k{letter-spacing:.12em;color:var(--gold);font-weight:700}
+.trialc{border-color:rgba(217,180,95,.45)}.trialc .btn{margin-top:10px;display:flex;width:100%}
+.callout{border-radius:14px;padding:12px 14px;margin-bottom:12px;border:1px solid var(--line2)}.callout.okc{background:rgba(63,191,116,.1);border-color:rgba(63,191,116,.35)}.callout.tip{background:rgba(217,180,95,.08);border-color:rgba(217,180,95,.35)}
+.welcome{min-height:100vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:28px 18px}.wl svg{width:84px;height:84px}
+.tag{color:var(--gold2);font-weight:600;margin-top:0}.hook{font-weight:700;font-size:1.08rem;margin:14px 0 4px}.trialnote{color:var(--gold2);margin:4px 0 14px}
+.feats{text-align:left;display:grid;gap:10px}.feats div{display:grid;grid-template-columns:auto 1fr;column-gap:2px}.feats small{grid-column:2}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.timer{font-family:var(--fd);font-size:1.2rem;color:var(--gold2)}.timer.low{color:var(--red)}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:12px}.q{font-size:1.06rem;font-weight:600;line-height:1.5;margin-top:0}
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:var(--card2);border:1px solid var(--line2);color:var(--fg);border-radius:14px;padding:12px;margin:8px 0;font:inherit;cursor:pointer}
+.opt i{font-style:normal;font-weight:800;width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.07)}
+.opt.sel{border-color:var(--gold);background:rgba(217,180,95,.12)}.opt.ok{border-color:var(--ac);background:rgba(63,191,116,.16)}.opt.bad{border-color:var(--red);background:rgba(240,100,92,.14)}
+.expl{border-radius:14px;padding:12px 14px;margin-bottom:8px}.expl.ok{background:rgba(63,191,116,.12)}.expl.bad{background:rgba(240,100,92,.1)}.expl p{margin:.3em 0 0;color:var(--fg2)}
+.grid{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;max-height:50vh;overflow:auto;margin:10px 0}.grid button{border:1px solid var(--line2);background:var(--card2);color:var(--fg);border-radius:8px;padding:6px 0;font:inherit;font-size:.8rem}.grid button.on{background:rgba(217,180,95,.25);border-color:var(--gold)}
+.res .big{font-size:3.6rem}.rv.ok{border-left:4px solid var(--ac)}.rv.bad{border-left:4px solid var(--red)}.upsell{border-color:rgba(217,180,95,.5)}
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}.stats3 b{font-family:var(--fd);font-size:1.7rem}
+.spark{display:flex;align-items:flex-end;gap:4px;height:70px}.spark i{flex:1;background:var(--ac);border-radius:4px 4px 0 0;min-height:3px;opacity:.85}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}.plan{position:relative;border:1px solid var(--line2);border-radius:16px;padding:14px 10px;text-align:center;cursor:pointer;background:var(--card2)}
+.plan.sel{border-color:var(--gold);background:rgba(217,180,95,.12)}.plan em{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1b1405;font-style:normal;font-size:.68rem;font-weight:800;border-radius:99px;padding:1px 8px}
+.plan .pr{font-family:var(--fd);font-size:1.5rem;color:var(--gold2)}.payqr{width:220px;max-width:70%;background:#fff;border-radius:14px;padding:10px;margin:6px auto;display:block}
+.steps{text-align:left}.incl li::marker{color:var(--ac)}
+label{display:block;font-weight:600;margin:8px 0}.inp{width:100%;margin-top:6px;background:#0a110d;border:1px solid var(--line2);color:var(--fg);border-radius:12px;padding:12px;font:inherit}.inp.big{font-size:1.15rem}.mono{font-family:ui-monospace,monospace}
+.oath{display:flex;gap:10px;align-items:flex-start;font-weight:600;margin:12px 0}.oath input{width:20px;height:20px;flex:none;margin-top:2px}
+.bn{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;max-width:560px;margin:0 auto;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:rgba(10,15,12,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);z-index:6}
+.bn button{flex:1;background:none;border:0;color:var(--mute);display:flex;flex-direction:column;align-items:center;gap:3px;font:inherit;font-size:.72rem;cursor:pointer}.bn svg{width:22px;height:22px}.bn button.on{color:var(--gold2)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:flex-end;justify-content:center;z-index:20;animation:fade .2s}
+.sheet{background:#101914;border:1px solid var(--line2);border-radius:22px 22px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));width:100%;max-width:560px;max-height:88vh;overflow:auto}
+@keyframes fade{from{opacity:0}}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#1c2a22;border:1px solid var(--line2);padding:10px 16px;border-radius:12px;z-index:30;transition:opacity .4s}.toast.out{opacity:0}
+</style></head><body><div id="app"></div>
+<noscript><p style="padding:20px">Road to MBBS needs JavaScript switched on.</p></noscript>
+<script>/* Road to MBBS — MDCAT practice (28 Nov 2026). The paper: 180 MCQs in 3 hours — Biology 81, Chemistry 45, Physics 36,
+   English 9, Logical Reasoning 9 (PMDC MDCAT curriculum 2025, used for 2026). Prices as Road to Kakul's. */
+const EXAM = {
+  key: 'mbbs', name: 'Road to MBBS', short: 'MDCAT', url: 'https://roadtokakul.github.io/mbbs/', packUrl: '../pack.json',
+  tagline: 'Your MDCAT, one question at a time',
+  hook: 'MDCAT practice that follows the PMDC syllabus — free, right now.',
+  disclaimer: 'Independent practice app. Not affiliated with PMDC, NUMS, any university or any academy. Questions follow the PMDC MDCAT curriculum.',
+  syllabusNote: 'the PMDC MDCAT curriculum (2025, used for 2026)',
+  shareText: 'Free MDCAT practice that follows the PMDC syllabus:',
+  total: 180, minutes: 180, secPerQ: 60, mini: 50, diagN: 30, diagName: 'MDCAT check', freeDaily: 30, dailyGoal: 30, trialHours: 24,
+  format: [['bio', 81], ['chem', 45], ['phy', 36], ['eng', 9], ['lr', 9]],
+  plans: [{ id: 'w1', n: 'Pro · 7 days', p: 99, d: 7, tag: 'Try it' }, { id: 'm1', n: 'Pro · 30 days', p: 399, d: 30 },
+    { id: 'q3', n: 'Pro · 90 days', p: 799, d: 90, tag: 'Popular' }, { id: 'life', n: 'Pro · Lifetime', p: 1499, d: 0 }],
+  proIncl: ['Unlimited practice on every topic, with explanations', 'Full 180-question mocks, timed like test day', 'Unlimited mini mocks', 'Your mistakes and weak topics, drilled until they are right'],
+  subjects: [
+    { id: 'bio', n: 'Biology', c: '#3fbf74', topics: [['b_mol', 'Biological Molecules'], ['b_enz', 'Enzymes'], ['b_cell', 'Cell Structure & Function'],
+      ['b_acell', 'Acellular Life (Viruses)'], ['b_energy', 'Bioenergetics'], ['b_dig', 'Digestion'], ['b_resp', 'Respiration & Gaseous Exchange'],
+      ['b_circ', 'Circulation'], ['b_imm', 'Immunity'], ['b_supp', 'Support & Movement'], ['b_coord', 'Coordination & Control'], ['b_homeo', 'Homeostasis'],
+      ['b_repro', 'Reproduction'], ['b_inher', 'Inheritance'], ['b_evo', 'Evolution'], ['b_biotech', 'Biotechnology']] },
+    { id: 'chem', n: 'Chemistry', c: '#5aa9f0', topics: [['c_fund', 'Fundamental Concepts'], ['c_atom', 'Atomic Structure'], ['c_gas', 'Gases'], ['c_liq', 'Liquids'],
+      ['c_sol', 'Solids'], ['c_eq', 'Chemical Equilibrium'], ['c_kin', 'Reaction Kinetics'], ['c_thermo', 'Thermochemistry'], ['c_elec', 'Electrochemistry'],
+      ['c_bond', 'Chemical Bonding'], ['c_sp', 's- and p-Block Elements'], ['c_trans', 'Transition Elements'], ['c_org', 'Fundamentals of Organic Chemistry'],
+      ['c_hc', 'Hydrocarbons'], ['c_alk', 'Alkyl Halides'], ['c_alc', 'Alcohols & Phenols'], ['c_ald', 'Aldehydes & Ketones'], ['c_carb', 'Carboxylic Acids'],
+      ['c_macro', 'Macromolecules'], ['c_ind', 'Industrial Chemistry']] },
+    { id: 'phy', n: 'Physics', c: '#f0a93b', topics: [['p_vec', 'Vectors & Equilibrium'], ['p_force', 'Force & Motion'], ['p_work', 'Work & Energy'],
+      ['p_rot', 'Rotational & Circular Motion'], ['p_fluid', 'Fluid Dynamics'], ['p_wave', 'Waves'], ['p_thermo', 'Thermodynamics'], ['p_estat', 'Electrostatics'],
+      ['p_curr', 'Current Electricity'], ['p_emag', 'Electromagnetism'], ['p_emi', 'Electromagnetic Induction'], ['p_ac', 'Alternating Current'],
+      ['p_elec', 'Electronics'], ['p_modern', 'Dawn of Modern Physics'], ['p_atom', 'Atomic Spectra'], ['p_nuc', 'Nuclear Physics']] },
+    { id: 'eng', n: 'English', c: '#a78bfa', topics: [['e_vocab', 'Vocabulary'], ['e_tense', 'Tenses & Sentence Structure'], ['e_agree', 'Subject–Verb Agreement'],
+      ['e_prep', 'Articles & Prepositions'], ['e_punct', 'Punctuation & Spelling'], ['e_correct', 'Choose the Correct Sentence']] },
+    { id: 'lr', n: 'Logical Reasoning', c: '#2dd4bf', topics: [['l_crit', 'Critical Thinking'], ['l_series', 'Letter & Symbol Series'], ['l_deduct', 'Logical Deductions'],
+      ['l_prob', 'Logical Problems'], ['l_action', 'Course of Action'], ['l_cause', 'Cause & Effect']] }
+  ],
+  logo: '<svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d27a"/><stop offset="1" stop-color="#b8892f"/></linearGradient></defs><path d="M50 4 L88 18 V48 C88 72 70 88 50 96 C30 88 12 72 12 48 V18 Z" fill="#12301f" stroke="url(#mg)" stroke-width="5"/><path d="M20 56 H38 L44 42 L52 70 L60 34 L66 56 H80" fill="none" stroke="#86e3ae" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 14 v10 M45 19 h10" stroke="url(#mg)" stroke-width="4" stroke-linecap="round"/></svg>',
+  qr: ''   // filled at build time with Road to Kakul's Easypaisa QR (src/pro3.js EP_QR)
+};
+const BANK = {};
+// written questions: [topic, question, right answer, wrong, wrong, wrong, explanation] — the app shuffles the options
+const mk = rows => rows.map(([t, q, c, w1, w2, w3, e]) => ({ t, q, o: [c, w1, w2, w3], a: 0, e }));
+
+EXAM.qr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAAClElEQVR42u2bQW7bMBBF31gG6J18A+YGPQJ9M8kni3QT6gbOogAFSPpdyGmbIknTWA5QYLgwYPlBBr6Gwz8ztokPrn7Hh5ejjjrqqKOO3hO1dR0Z98gMYDiOh/l6/eRifRJtJClDGG2H6NshDXXBJEntC7R9eYOue+U7XddPoGezBxhtbwsGferj0wFkZq2LdVd0/+JdKAdVMoMhDXWZXayN0DDZgoC4hraLdX8USdL6mmuVShJqU46XoKlaE3ySpM7F+ndd11WXMFULoulirkuYrtff0HVxXbd7BM+rgC0gKcdLePGRh/bdd0Hq1gSPad0FhEIlabWW/gg+g0o6N2toA8hOQ1KhGneYrHWxvqLibFPHcGQMWjCaLvZm9Rhmk8krzm3Q9m8JviNegrSYpDblKJVqMj1Xrp5dbsra0oKkLma4Gpk3vYvruq136aBWCVoAdSlHFarJhNpXQvv4q+/iur4X2o06qNeDU0DMBGkC0Xi580WVUcq1SjXZAqSWeIHwXmhf2zCn9VSdXNcbUbX0qbf6aa9KgqQ+luDeZWO0ez/Br3YFTIKUoyS5d7nRlgMwHMdaWjDpnPKTmYXZROOh/RXFqbX0D3E4gHaIc5OHWMI07zCZOhdrG/T0u+v7YxfIGqk/AjYbpPNDfWHcA57gt2gpXm25lKNKkBZe9y6u6z0n/SCzU+ztwLwHT/BsMOlnrhaM1A3pAtX0fKa+Pek/ua4bzeJaiLkuQctzt/xnperd8i3QPwZs9vakf97bWqky1OXAdT7tunLTLyjG+rstmIDhW0HIoLHHzsX6qkn/NbuoTRlCqSaTd3VvCe01idSM+2k20ZxSfgCqebfQ2OOH7irX9VOo+b8WHHXUUUcd/Y/QHyECB22KY3Q/AAAAAElFTkSuQmCC";
+/* MDCAT Biology — FSc / PMDC curriculum facts. [topic, question, RIGHT, wrong, wrong, wrong, explanation] */
+BANK.bio = mk([
+  // ---------- Biological Molecules ----------
+  ['b_mol', 'About what share of a living cell is water?', '70–90%', '10–20%', '30–40%', '95–99%', 'Water is the most abundant compound in cells, usually 70–90% of their mass.'],
+  ['b_mol', 'Which class of compounds makes up about half of a cell’s dry mass?', 'Proteins', 'Carbohydrates', 'Lipids', 'Nucleic acids', 'Proteins form roughly 50% of the dry mass of a cell.'],
+  ['b_mol', 'The bond that joins two monosaccharides is a:', 'Glycosidic bond', 'Peptide bond', 'Ester bond', 'Phosphodiester bond', 'A glycosidic bond forms by condensation between two sugars.'],
+  ['b_mol', 'Sucrose is made of:', 'Glucose and fructose', 'Glucose and galactose', 'Two glucose molecules', 'Fructose and galactose', 'Sucrose (cane sugar) = glucose + fructose.'],
+  ['b_mol', 'Lactose (milk sugar) is made of:', 'Glucose and galactose', 'Glucose and fructose', 'Two glucose molecules', 'Galactose and fructose', 'Lactose = glucose + galactose.'],
+  ['b_mol', 'Maltose is made of:', 'Two glucose molecules', 'Glucose and fructose', 'Glucose and galactose', 'Two fructose molecules', 'Maltose (malt sugar) = α-glucose + α-glucose.'],
+  ['b_mol', 'The storage polysaccharide of animals is:', 'Glycogen', 'Starch', 'Cellulose', 'Chitin', 'Animals store glucose as glycogen, mainly in the liver and muscles.'],
+  ['b_mol', 'Cellulose is a polymer of:', 'β-glucose', 'α-glucose', 'Fructose', 'Galactose', 'Cellulose is a straight chain of β-glucose units.'],
+  ['b_mol', 'Amino acids in a protein are joined by:', 'Peptide bonds', 'Glycosidic bonds', 'Ester bonds', 'Hydrogen bonds only', 'A peptide bond forms between the carboxyl group of one amino acid and the amino group of the next.'],
+  ['b_mol', 'How many kinds of amino acids are commonly found in proteins?', '20', '12', '30', '64', 'About 20 different amino acids build the proteins of living things.'],
+  ['b_mol', 'The α-helix and β-pleated sheet are examples of which protein structure?', 'Secondary', 'Primary', 'Tertiary', 'Quaternary', 'Secondary structure is local folding held by hydrogen bonds.'],
+  ['b_mol', 'Haemoglobin, made of four polypeptide chains, shows:', 'Quaternary structure', 'Primary structure', 'Secondary structure only', 'Tertiary structure only', 'More than one polypeptide chain together = quaternary structure.'],
+  ['b_mol', 'A triglyceride is formed from:', 'Glycerol and three fatty acids', 'Glycerol and one fatty acid', 'Three glycerols and one fatty acid', 'A fatty acid and phosphate', 'Fats (triglycerides) are esters of glycerol with three fatty acids.'],
+  ['b_mol', 'Which base is found in RNA but not in DNA?', 'Uracil', 'Thymine', 'Adenine', 'Cytosine', 'RNA has uracil in place of thymine.'],
+  ['b_mol', 'In DNA, guanine pairs with cytosine by:', 'Three hydrogen bonds', 'Two hydrogen bonds', 'One hydrogen bond', 'A peptide bond', 'G≡C has three hydrogen bonds; A=T has two.'],
+  ['b_mol', 'Which of these is a purine?', 'Adenine', 'Cytosine', 'Thymine', 'Uracil', 'Purines (double ring): adenine and guanine. The others are pyrimidines.'],
+  ['b_mol', 'The sugar in RNA is:', 'Ribose', 'Deoxyribose', 'Glucose', 'Fructose', 'RNA = ribonucleic acid: its sugar is ribose.'],
+  // ---------- Enzymes ----------
+  ['b_enz', 'Most enzymes are:', 'Globular proteins', 'Lipids', 'Carbohydrates', 'Nucleic acids', 'Almost all enzymes are globular proteins.'],
+  ['b_enz', 'Enzymes speed up reactions by:', 'Lowering the activation energy', 'Raising the activation energy', 'Raising the temperature', 'Changing the products', 'An enzyme gives the reaction an easier path with lower activation energy.'],
+  ['b_enz', 'The part of an enzyme where the substrate binds is the:', 'Active site', 'Allosteric site', 'Prosthetic group', 'Coenzyme', 'The substrate fits into the active site.'],
+  ['b_enz', 'The lock-and-key model of enzyme action was proposed by:', 'Emil Fischer', 'Koshland', 'Darwin', 'Mendel', 'Fischer proposed the lock-and-key model in 1894.'],
+  ['b_enz', 'The induced-fit model of enzyme action was proposed by:', 'Koshland', 'Emil Fischer', 'Watson and Crick', 'Pasteur', 'Koshland (1959): the active site changes shape slightly as the substrate binds.'],
+  ['b_enz', 'A non-protein organic group tightly bound to an enzyme is a:', 'Prosthetic group', 'Coenzyme', 'Activator', 'Apoenzyme', 'Prosthetic groups are permanently bound; coenzymes are loosely attached.'],
+  ['b_enz', 'An enzyme’s protein part without its cofactor is called the:', 'Apoenzyme', 'Holoenzyme', 'Coenzyme', 'Substrate', 'Apoenzyme + cofactor = holoenzyme (the active enzyme).'],
+  ['b_enz', 'A competitive inhibitor:', 'Competes with the substrate for the active site', 'Binds only at a site away from the active site', 'Destroys the enzyme permanently', 'Raises the activation energy of the products', 'It resembles the substrate and blocks the active site.'],
+  ['b_enz', 'A non-competitive inhibitor binds:', 'At a site other than the active site', 'Only to the substrate', 'At the active site', 'Only to the product', 'It changes the enzyme’s shape from another site, so more substrate cannot overcome it.'],
+  ['b_enz', 'The optimum pH of pepsin is about:', '2', '7', '8', '11', 'Pepsin works in the acid of the stomach, around pH 2.'],
+  ['b_enz', 'The optimum temperature of most human enzymes is about:', '37 °C', '20 °C', '60 °C', '100 °C', 'Human enzymes work best near body temperature, 37 °C.'],
+  ['b_enz', 'Beyond a certain substrate concentration, the rate stops rising because:', 'All active sites are occupied', 'The enzyme is destroyed', 'The pH falls', 'Products stop forming', 'The enzyme is saturated; adding substrate cannot raise the rate.'],
+  ['b_enz', 'High temperature lowers enzyme activity because the enzyme:', 'Is denatured', 'Is used up', 'Gains more active sites', 'Turns into substrate', 'Heat breaks the bonds that keep the active site’s shape.'],
+  // ---------- Cell Structure & Function ----------
+  ['b_cell', 'The “powerhouse” of the cell, where most ATP is made, is the:', 'Mitochondrion', 'Ribosome', 'Golgi apparatus', 'Lysosome', 'Aerobic respiration makes most ATP in mitochondria.'],
+  ['b_cell', 'Proteins are made on:', 'Ribosomes', 'Lysosomes', 'Centrioles', 'Vacuoles', 'Ribosomes translate mRNA into protein.'],
+  ['b_cell', 'Ribosomes of prokaryotes are:', '70S', '80S', '60S', '90S', 'Prokaryotic ribosomes are 70S; eukaryotic cytoplasmic ones are 80S.'],
+  ['b_cell', 'Lysosomes contain:', 'Hydrolytic (digestive) enzymes', 'Chlorophyll', 'DNA', 'Ribosomes', 'Lysosomes are “suicide bags” full of hydrolytic enzymes.'],
+  ['b_cell', 'Which organelle packages and secretes proteins?', 'Golgi apparatus', 'Mitochondrion', 'Nucleolus', 'Centriole', 'The Golgi modifies, packs and sends out proteins in vesicles.'],
+  ['b_cell', 'Rough endoplasmic reticulum is “rough” because of:', 'Ribosomes on its surface', 'Lysosomes on its surface', 'Its cellulose coat', 'Its DNA', 'Ribosomes attached to the RER make proteins for export.'],
+  ['b_cell', 'Smooth endoplasmic reticulum mainly:', 'Makes lipids and detoxifies drugs', 'Makes proteins', 'Stores DNA', 'Makes ATP', 'SER synthesises lipids and steroids and detoxifies (e.g. in liver cells).'],
+  ['b_cell', 'The fluid mosaic model of the cell membrane was given by:', 'Singer and Nicolson', 'Watson and Crick', 'Schleiden and Schwann', 'Robert Hooke', 'Singer and Nicolson proposed it in 1972.'],
+  ['b_cell', 'The cell membrane is mainly made of:', 'Phospholipids and proteins', 'Cellulose and pectin', 'DNA and histones', 'Starch and protein', 'A phospholipid bilayer with proteins floating in it.'],
+  ['b_cell', 'Centrioles are found in:', 'Animal cells', 'Most plant cells', 'Bacteria', 'Viruses', 'Centrioles help form the spindle in animal cells; most plant cells lack them.'],
+  ['b_cell', 'Chromatin is made of:', 'DNA and histone proteins', 'RNA and lipids', 'Cellulose', 'Starch and protein', 'DNA wrapped around histones forms chromatin.'],
+  ['b_cell', 'The nucleolus is the site of:', 'Ribosomal RNA synthesis', 'ATP synthesis', 'Lipid synthesis', 'Photosynthesis', 'The nucleolus makes rRNA and assembles ribosome subunits.'],
+  ['b_cell', 'The plant cell wall is mainly made of:', 'Cellulose', 'Chitin', 'Peptidoglycan', 'Glycogen', 'Plant cell walls are mainly cellulose.'],
+  ['b_cell', 'The cell theory was put forward by:', 'Schleiden and Schwann', 'Watson and Crick', 'Singer and Nicolson', 'Lamarck and Darwin', 'Schleiden (plants, 1838) and Schwann (animals, 1839).'],
+  ['b_cell', 'Besides the nucleus, which animal-cell organelle has its own DNA?', 'Mitochondrion', 'Golgi apparatus', 'Lysosome', 'Endoplasmic reticulum', 'Mitochondria have their own circular DNA and 70S ribosomes.'],
+  ['b_cell', 'The bacterial cell wall is made of:', 'Peptidoglycan (murein)', 'Cellulose', 'Chitin', 'Pectin', 'Bacterial walls are made of peptidoglycan.'],
+  // ---------- Acellular Life ----------
+  ['b_acell', 'Viruses are best described as:', 'Obligate intracellular parasites', 'Free-living cells', 'Prokaryotic cells', 'Eukaryotic cells', 'Viruses can only reproduce inside living host cells.'],
+  ['b_acell', 'The protein coat of a virus is the:', 'Capsid', 'Envelope', 'Cell wall', 'Capsule', 'The capsid is made of protein units called capsomeres.'],
+  ['b_acell', 'Viruses that infect bacteria are called:', 'Bacteriophages', 'Prions', 'Viroids', 'Retroviruses', 'Bacteriophages (“phages”) attack bacteria.'],
+  ['b_acell', 'HIV is a:', 'Retrovirus', 'Bacteriophage', 'DNA virus', 'Bacterium', 'HIV is an RNA virus that uses reverse transcriptase.'],
+  ['b_acell', 'The enzyme HIV uses to make DNA from its RNA is:', 'Reverse transcriptase', 'DNA ligase', 'RNA polymerase', 'Restriction enzyme', 'Reverse transcriptase copies RNA into DNA.'],
+  ['b_acell', 'HIV mainly attacks:', 'Helper T cells', 'Red blood cells', 'Platelets', 'Nerve cells', 'HIV destroys CD4 helper T cells, weakening immunity (AIDS).'],
+  ['b_acell', 'In the lysogenic cycle, the phage DNA:', 'Joins the host chromosome as a prophage', 'Immediately bursts the cell', 'Is destroyed by the host', 'Becomes a capsid', 'The prophage is copied with the host DNA until it turns lytic.'],
+  ['b_acell', 'The lytic cycle ends with:', 'The host cell bursting to release new viruses', 'The viral DNA joining the host chromosome', 'The host cell dividing normally', 'The virus becoming dormant', 'Lysis releases many new phages.'],
+  ['b_acell', 'Which of these is a DNA virus?', 'Hepatitis B virus', 'HIV', 'Influenza virus', 'Polio virus', 'Hepatitis B has a DNA genome; the others are RNA viruses.'],
+  ['b_acell', 'Tobacco mosaic virus was first crystallised by:', 'W. M. Stanley', 'Ivanowsky', 'Pasteur', 'Jenner', 'Stanley crystallised TMV in 1935.'],
+  // ---------- Bioenergetics ----------
+  ['b_energy', 'The light reactions of photosynthesis take place in the:', 'Thylakoid membranes', 'Stroma', 'Cytoplasm', 'Mitochondria', 'Pigments and electron carriers sit in the thylakoids (grana).'],
+  ['b_energy', 'The Calvin cycle takes place in the:', 'Stroma', 'Thylakoids', 'Cytoplasm', 'Nucleus', 'The dark reactions fix CO₂ in the stroma.'],
+  ['b_energy', 'The CO₂ acceptor in the Calvin cycle is:', 'Ribulose bisphosphate (RuBP)', 'Phosphoglycerate (PGA)', 'Pyruvate', 'Oxaloacetate', 'RuBisCO joins CO₂ to RuBP.'],
+  ['b_energy', 'The first stable product of the Calvin cycle is:', '3-phosphoglycerate (PGA)', 'Glucose', 'RuBP', 'Pyruvate', 'CO₂ + RuBP gives two molecules of 3-PGA.'],
+  ['b_energy', 'The oxygen released in photosynthesis comes from:', 'Water', 'Carbon dioxide', 'Glucose', 'Chlorophyll', 'Photolysis of water releases O₂.'],
+  ['b_energy', 'Which colour of light does chlorophyll absorb least?', 'Green', 'Red', 'Blue', 'Violet', 'Green light is reflected, so leaves look green.'],
+  ['b_energy', 'The reaction centre of photosystem I is:', 'P700', 'P680', 'P600', 'P720', 'PS I = P700; PS II = P680.'],
+  ['b_energy', 'Glycolysis takes place in the:', 'Cytoplasm', 'Mitochondrial matrix', 'Inner mitochondrial membrane', 'Nucleus', 'Glucose is split to pyruvate in the cytoplasm.'],
+  ['b_energy', 'Net ATP gained in glycolysis per glucose:', '2', '4', '36', '38', 'Glycolysis makes 4 ATP but uses 2: a net gain of 2.'],
+  ['b_energy', 'The Krebs cycle takes place in the:', 'Mitochondrial matrix', 'Cytoplasm', 'Stroma', 'Outer mitochondrial membrane', 'The citric acid cycle runs in the matrix.'],
+  ['b_energy', 'The electron transport chain is located in the:', 'Inner mitochondrial membrane', 'Outer mitochondrial membrane', 'Matrix', 'Cytoplasm', 'Carriers sit in the inner membrane (cristae).'],
+  ['b_energy', 'The final electron acceptor in aerobic respiration is:', 'Oxygen', 'NAD⁺', 'Carbon dioxide', 'Pyruvate', 'O₂ accepts electrons and H⁺ to form water.'],
+  ['b_energy', 'Anaerobic respiration in human muscle produces:', 'Lactic acid', 'Ethanol', 'Methane', 'Acetic acid', 'Without enough O₂, pyruvate is reduced to lactic acid.'],
+  ['b_energy', 'Fermentation by yeast produces:', 'Ethanol and CO₂', 'Lactic acid only', 'Water and CO₂', 'Glucose and O₂', 'Alcoholic fermentation gives ethyl alcohol and carbon dioxide.'],
+  ['b_energy', 'The enzyme that fixes CO₂ in the Calvin cycle is:', 'RuBisCO', 'ATP synthase', 'Amylase', 'Carbonic anhydrase', 'RuBisCO — the most abundant protein on Earth.'],
+  // ---------- Digestion ----------
+  ['b_dig', 'Salivary amylase digests:', 'Starch into maltose', 'Proteins into peptides', 'Fats into fatty acids', 'Maltose into glucose', 'Ptyalin (salivary amylase) starts starch digestion in the mouth.'],
+  ['b_dig', 'Pepsin is secreted in an inactive form called:', 'Pepsinogen', 'Trypsinogen', 'Prothrombin', 'Fibrinogen', 'HCl turns pepsinogen into active pepsin.'],
+  ['b_dig', 'HCl in the stomach is secreted by:', 'Parietal (oxyntic) cells', 'Chief cells', 'Goblet cells', 'Beta cells', 'Parietal cells secrete hydrochloric acid.'],
+  ['b_dig', 'Bile is made in the:', 'Liver', 'Gall bladder', 'Pancreas', 'Stomach', 'The liver makes bile; the gall bladder stores it.'],
+  ['b_dig', 'Bile helps digestion by:', 'Emulsifying fats', 'Digesting proteins', 'Digesting starch', 'Killing bacteria only', 'Bile salts break fat into small droplets for lipase.'],
+  ['b_dig', 'Trypsinogen is activated by:', 'Enterokinase', 'Pepsin', 'Bile', 'Gastrin', 'Enterokinase from the intestinal wall turns trypsinogen into trypsin.'],
+  ['b_dig', 'Most digestion and absorption takes place in the:', 'Small intestine', 'Stomach', 'Large intestine', 'Oesophagus', 'The small intestine has the enzymes and the villi.'],
+  ['b_dig', 'Villi in the small intestine mainly:', 'Increase the surface area for absorption', 'Secrete bile', 'Store food', 'Make HCl', 'Villi and microvilli give a huge absorbing surface.'],
+  ['b_dig', 'Fatty acids and glycerol are absorbed into the:', 'Lacteals', 'Blood capillaries only', 'Hepatic artery', 'Gall bladder', 'Fats enter the lacteals (lymph vessels) of the villi.'],
+  ['b_dig', 'The main job of the large intestine (colon) is to absorb:', 'Water and salts', 'Amino acids', 'Glucose', 'Fatty acids', 'The colon absorbs water and salts and forms faeces.'],
+  ['b_dig', 'Wave-like contractions that move food along the gut are called:', 'Peristalsis', 'Emulsification', 'Ultrafiltration', 'Osmosis', 'Peristalsis is the rhythmic contraction of the gut muscles.'],
+  ['b_dig', 'Secretin stimulates the pancreas to release:', 'Bicarbonate-rich (alkaline) juice', 'Insulin', 'Pepsin', 'Bile', 'Secretin from the duodenum triggers alkaline pancreatic juice.'],
+  ['b_dig', 'Gastrin stimulates the secretion of:', 'Gastric juice', 'Bile', 'Saliva', 'Insulin', 'Gastrin from the stomach wall increases gastric juice.'],
+  // ---------- Respiration & Gaseous Exchange ----------
+  ['b_resp', 'Gas exchange in the human lungs takes place in the:', 'Alveoli', 'Bronchi', 'Trachea', 'Larynx', 'Thin, moist alveoli with capillaries exchange O₂ and CO₂.'],
+  ['b_resp', 'Most oxygen in the blood is carried as:', 'Oxyhaemoglobin', 'Dissolved O₂ in plasma', 'Bicarbonate', 'Carbaminohaemoglobin', 'About 97% of O₂ travels bound to haemoglobin.'],
+  ['b_resp', 'Most carbon dioxide in the blood is carried as:', 'Bicarbonate ions', 'Carbaminohaemoglobin', 'Dissolved CO₂', 'Carbon monoxide', 'About 70% of CO₂ travels as HCO₃⁻ in plasma.'],
+  ['b_resp', 'The enzyme in red blood cells that forms carbonic acid is:', 'Carbonic anhydrase', 'Catalase', 'Pepsin', 'Amylase', 'Carbonic anhydrase: CO₂ + H₂O ⇌ H₂CO₃.'],
+  ['b_resp', 'The breathing centre is in the:', 'Medulla oblongata', 'Cerebellum', 'Cerebrum', 'Spinal cord', 'The medulla controls the rhythm of breathing.'],
+  ['b_resp', 'During inspiration, the diaphragm:', 'Contracts and flattens', 'Relaxes and domes upward', 'Does not move', 'Pushes air out', 'A contracting diaphragm enlarges the chest and draws air in.'],
+  ['b_resp', 'Breathing rate rises mainly when the blood has more:', 'Carbon dioxide', 'Oxygen', 'Glucose', 'Nitrogen', 'Chemoreceptors respond mainly to rising CO₂ (and H⁺).'],
+  ['b_resp', 'The volume of air breathed in or out in a normal breath is the:', 'Tidal volume', 'Vital capacity', 'Residual volume', 'Total lung capacity', 'Tidal volume is about 500 mL at rest.'],
+  ['b_resp', 'Emphysema is:', 'Breakdown of alveolar walls', 'A bacterial infection of the lungs', 'Narrowing of the trachea', 'Fluid in the pleura', 'Walls of alveoli break down, reducing the surface for gas exchange.'],
+  ['b_resp', 'Tuberculosis is caused by a:', 'Bacterium', 'Virus', 'Fungus', 'Protozoan', 'TB is caused by Mycobacterium tuberculosis.'],
+  ['b_resp', 'The vocal cords are in the:', 'Larynx', 'Pharynx', 'Trachea', 'Bronchi', 'The larynx (voice box) holds the vocal cords.'],
+  // ---------- Circulation ----------
+  ['b_circ', 'The pacemaker of the heart is the:', 'Sino-atrial (SA) node', 'Atrio-ventricular (AV) node', 'Bundle of His', 'Purkinje fibres', 'The SA node in the right atrium starts each heartbeat.'],
+  ['b_circ', 'The valve between the left atrium and left ventricle is the:', 'Bicuspid (mitral) valve', 'Tricuspid valve', 'Pulmonary valve', 'Aortic valve', 'Left side: bicuspid; right side: tricuspid.'],
+  ['b_circ', 'Oxygenated blood returns from the lungs to the heart in the:', 'Pulmonary veins', 'Pulmonary arteries', 'Vena cava', 'Aorta', 'Pulmonary veins are the only veins carrying oxygenated blood.'],
+  ['b_circ', 'The largest artery in the body is the:', 'Aorta', 'Pulmonary artery', 'Carotid artery', 'Femoral artery', 'The aorta carries blood from the left ventricle to the body.'],
+  ['b_circ', 'Normal blood pressure of a healthy young adult is about:', '120/80 mmHg', '80/120 mmHg', '160/100 mmHg', '90/40 mmHg', 'Systolic 120, diastolic 80 mmHg.'],
+  ['b_circ', 'The first heart sound (“lubb”) is caused by the closing of the:', 'Atrioventricular valves', 'Semilunar valves', 'Venous valves', 'Atria', 'Tricuspid and bicuspid valves close as the ventricles contract.'],
+  ['b_circ', 'Mature human red blood cells lack a:', 'Nucleus', 'Cell membrane', 'Haemoglobin', 'Cytoplasm', 'Losing the nucleus leaves more room for haemoglobin.'],
+  ['b_circ', 'Red blood cells live for about:', '120 days', '12 days', '30 days', '1 year', 'Old RBCs are destroyed in the spleen and liver after about 120 days.'],
+  ['b_circ', 'Fibrinogen is changed into fibrin by:', 'Thrombin', 'Prothrombin', 'Heparin', 'Pepsin', 'Thrombin converts soluble fibrinogen into fibrin threads in a clot.'],
+  ['b_circ', 'The universal recipient blood group is:', 'AB', 'O', 'A', 'B', 'Group AB has no anti-A or anti-B antibodies in its plasma.'],
+  ['b_circ', 'Plasma makes up about what share of blood?', '55%', '25%', '75%', '90%', 'Plasma ≈ 55%; cells ≈ 45%.'],
+  ['b_circ', 'Atherosclerosis is:', 'Fatty deposits narrowing the arteries', 'Inflammation of the heart valves', 'A hole in the heart', 'Low red cell count', 'Cholesterol plaques build up in artery walls.'],
+  ['b_circ', 'In plants, sugars are transported in the:', 'Phloem', 'Xylem', 'Cortex', 'Epidermis', 'Phloem carries food; xylem carries water and minerals.'],
+  // ---------- Immunity ----------
+  ['b_imm', 'Antibodies are made by:', 'Plasma cells', 'Red blood cells', 'Platelets', 'Neutrophils', 'B cells become plasma cells that secrete antibodies.'],
+  ['b_imm', 'T lymphocytes mature in the:', 'Thymus', 'Bone marrow', 'Spleen', 'Liver', 'T cells mature in the thymus; B cells in the bone marrow.'],
+  ['b_imm', 'Antibodies are chemically:', 'Proteins (immunoglobulins)', 'Lipids', 'Carbohydrates', 'Nucleic acids', 'Antibodies are Y-shaped immunoglobulin proteins.'],
+  ['b_imm', 'The antibody that crosses the placenta is:', 'IgG', 'IgA', 'IgM', 'IgE', 'IgG passes from mother to foetus, giving passive immunity.'],
+  ['b_imm', 'The antibody found in breast milk, tears and saliva is mainly:', 'IgA', 'IgG', 'IgM', 'IgD', 'IgA protects body surfaces and secretions.'],
+  ['b_imm', 'Vaccination gives:', 'Artificially acquired active immunity', 'Naturally acquired passive immunity', 'Artificially acquired passive immunity', 'Innate immunity', 'The body makes its own antibodies and memory cells after a vaccine.'],
+  ['b_imm', 'A baby protected by antibodies from its mother’s milk has:', 'Naturally acquired passive immunity', 'Artificially acquired active immunity', 'Naturally acquired active immunity', 'No immunity', 'Ready-made antibodies received naturally = natural passive immunity.'],
+  ['b_imm', 'The body’s first line of defence is:', 'Skin and mucous membranes', 'Antibodies', 'Killer T cells', 'Vaccines', 'Physical and chemical barriers come first.'],
+  ['b_imm', 'Cells that kill virus-infected body cells are:', 'Cytotoxic (killer) T cells', 'Plasma cells', 'Red blood cells', 'Platelets', 'Cytotoxic T cells destroy infected and cancerous cells.'],
+  ['b_imm', 'The most common white blood cells are:', 'Neutrophils', 'Lymphocytes', 'Monocytes', 'Eosinophils', 'Neutrophils make up about 60–70% of WBCs.'],
+  ['b_imm', 'A second exposure to the same antigen gives a faster, stronger response because of:', 'Memory cells', 'Red blood cells', 'Platelets', 'Interferon only', 'Memory B and T cells remember the antigen.'],
+  // ---------- Support & Movement ----------
+  ['b_supp', 'An adult human skeleton has:', '206 bones', '106 bones', '306 bones', '256 bones', 'Adults have 206 bones.'],
+  ['b_supp', 'Muscles are attached to bones by:', 'Tendons', 'Ligaments', 'Cartilage', 'Synovial fluid', 'Tendons join muscle to bone; ligaments join bone to bone.'],
+  ['b_supp', 'The functional unit of a skeletal muscle fibre is the:', 'Sarcomere', 'Neuron', 'Nephron', 'Myelin', 'A sarcomere runs from one Z line to the next.'],
+  ['b_supp', 'The thin filaments of a sarcomere are made of:', 'Actin', 'Myosin', 'Keratin', 'Collagen', 'Thin = actin; thick = myosin.'],
+  ['b_supp', 'In muscle contraction, calcium ions bind to:', 'Troponin', 'Myosin', 'Actin directly', 'ATP', 'Ca²⁺ binds troponin, which moves tropomyosin and exposes actin’s binding sites.'],
+  ['b_supp', 'During contraction, the length of the A band:', 'Stays the same', 'Shortens', 'Doubles', 'Disappears', 'Filaments slide; the A band (myosin length) does not change. The I band and H zone shorten.'],
+  ['b_supp', 'The knee is an example of a:', 'Hinge joint', 'Ball-and-socket joint', 'Pivot joint', 'Fixed joint', 'The knee moves in one plane, like a hinge.'],
+  ['b_supp', 'The shoulder is an example of a:', 'Ball-and-socket joint', 'Hinge joint', 'Pivot joint', 'Gliding joint', 'It allows movement in all directions.'],
+  ['b_supp', 'Osteoporosis is:', 'Loss of bone density, making bones brittle', 'Inflammation of the joints', 'A bacterial bone infection', 'Extra growth of bone', 'Bones lose calcium and mass, and break easily.'],
+  ['b_supp', 'Cardiac muscle is:', 'Striated and involuntary', 'Smooth and voluntary', 'Striated and voluntary', 'Smooth and found in limbs', 'Heart muscle is striated but not under conscious control.'],
+  ['b_supp', 'Muscle fatigue after hard exercise is linked to the build-up of:', 'Lactic acid', 'Glucose', 'Oxygen', 'Urea', 'Anaerobic respiration builds up lactic acid.'],
+  // ---------- Coordination & Control ----------
+  ['b_coord', 'The structural and functional unit of the nervous system is the:', 'Neuron', 'Nephron', 'Sarcomere', 'Synapse', 'Neurons carry nerve impulses.'],
+  ['b_coord', 'The junction between two neurons is a:', 'Synapse', 'Node of Ranvier', 'Dendrite', 'Myelin sheath', 'Neurotransmitters cross the synaptic cleft.'],
+  ['b_coord', 'The resting membrane potential of a neuron is about:', '−70 mV', '+30 mV', '0 mV', '−200 mV', 'The inside is about 70 mV negative at rest.'],
+  ['b_coord', 'Depolarisation of a neuron is caused by the rapid entry of:', 'Na⁺ ions', 'K⁺ ions', 'Cl⁻ ions', 'Ca²⁺ ions only', 'Voltage-gated sodium channels open and Na⁺ rushes in.'],
+  ['b_coord', 'In peripheral nerves, the myelin sheath is formed by:', 'Schwann cells', 'Red blood cells', 'Osteocytes', 'Neurons themselves', 'Schwann cells wrap around axons.'],
+  ['b_coord', 'Impulses jump from node to node in myelinated fibres. This is:', 'Saltatory conduction', 'Peristalsis', 'Osmosis', 'Reflex action', 'Jumping between nodes of Ranvier makes conduction faster.'],
+  ['b_coord', 'The neurotransmitter at the neuromuscular junction is:', 'Acetylcholine', 'Dopamine', 'Insulin', 'Adrenaline', 'Acetylcholine triggers contraction of skeletal muscle.'],
+  ['b_coord', 'Balance and coordination of movement are controlled by the:', 'Cerebellum', 'Medulla', 'Hypothalamus', 'Thalamus', 'The cerebellum coordinates posture and smooth movement.'],
+  ['b_coord', 'Insulin is secreted by the:', 'Beta cells of the islets of Langerhans', 'Alpha cells of the islets', 'Adrenal cortex', 'Thyroid gland', 'Beta cells make insulin, which lowers blood glucose.'],
+  ['b_coord', 'Glucagon:', 'Raises blood glucose', 'Lowers blood glucose', 'Controls calcium', 'Causes ovulation', 'Glucagon (alpha cells) releases glucose from liver glycogen.'],
+  ['b_coord', 'The “master gland” of the body is the:', 'Pituitary', 'Thyroid', 'Adrenal', 'Pancreas', 'Its hormones control many other glands.'],
+  ['b_coord', 'Diabetes insipidus is caused by a lack of:', 'ADH (vasopressin)', 'Insulin', 'Thyroxine', 'Glucagon', 'Without ADH, the kidneys pass large amounts of dilute urine.'],
+  ['b_coord', 'Goitre is usually due to a lack of:', 'Iodine', 'Iron', 'Calcium', 'Vitamin C', 'The thyroid needs iodine to make thyroxine.'],
+  ['b_coord', 'Adrenaline is secreted by the:', 'Adrenal medulla', 'Adrenal cortex', 'Pituitary', 'Thyroid', 'The adrenal medulla prepares the body for “fight or flight”.'],
+  ['b_coord', 'Parkinson’s disease is linked to a shortage of:', 'Dopamine', 'Insulin', 'Acetylcholinesterase', 'Thyroxine', 'Dopamine-producing neurons are lost.'],
+  ['b_coord', 'The plant hormone behind phototropism is:', 'Auxin', 'Ethylene', 'Abscisic acid', 'Cytokinin', 'Auxin collects on the shaded side and makes it grow faster.'],
+  ['b_coord', 'The plant hormone that ripens fruit is:', 'Ethylene', 'Auxin', 'Gibberellin', 'Cytokinin', 'Ethylene (ethene) gas speeds up ripening.'],
+  // ---------- Homeostasis ----------
+  ['b_homeo', 'The functional unit of the kidney is the:', 'Nephron', 'Neuron', 'Alveolus', 'Glomerulus only', 'Each kidney has about a million nephrons.'],
+  ['b_homeo', 'Ultrafiltration of blood takes place in the:', 'Glomerulus and Bowman’s capsule', 'Loop of Henle', 'Collecting duct', 'Ureter', 'Blood pressure forces fluid out of the glomerulus into Bowman’s capsule.'],
+  ['b_homeo', 'Most useful substances are reabsorbed in the:', 'Proximal convoluted tubule', 'Collecting duct', 'Ureter', 'Bladder', 'Glucose, amino acids and most water and salts return in the PCT.'],
+  ['b_homeo', 'ADH increases the reabsorption of water mainly in the:', 'Collecting ducts', 'Glomerulus', 'Bowman’s capsule', 'Ureter', 'ADH makes the collecting ducts more permeable to water.'],
+  ['b_homeo', 'The main nitrogenous waste of humans is:', 'Urea', 'Ammonia', 'Uric acid', 'Creatine', 'Mammals are ureotelic.'],
+  ['b_homeo', 'Urea is made in the:', 'Liver', 'Kidney', 'Bladder', 'Pancreas', 'The liver makes urea through the ornithine cycle.'],
+  ['b_homeo', 'Birds and reptiles excrete nitrogen mainly as:', 'Uric acid', 'Ammonia', 'Urea', 'Nitrates', 'Uric acid saves water; they are uricotelic.'],
+  ['b_homeo', 'Body temperature is regulated by the:', 'Hypothalamus', 'Cerebellum', 'Medulla', 'Pituitary', 'The hypothalamus acts as the body’s thermostat.'],
+  ['b_homeo', 'Aldosterone increases the reabsorption of:', 'Sodium ions', 'Glucose', 'Urea', 'Proteins', 'Aldosterone (adrenal cortex) makes the kidney keep Na⁺.'],
+  ['b_homeo', 'The loop of Henle helps to:', 'Concentrate the urine', 'Filter the blood', 'Store urine', 'Make urea', 'Its counter-current system builds a salty medulla that draws water out.'],
+  ['b_homeo', 'The most common kidney stones are made of:', 'Calcium oxalate', 'Sodium chloride', 'Urea', 'Glucose', 'Most kidney stones are calcium oxalate.'],
+  // ---------- Reproduction ----------
+  ['b_repro', 'Sperms are produced in the:', 'Seminiferous tubules', 'Epididymis', 'Prostate gland', 'Urethra', 'Spermatogenesis happens in the seminiferous tubules of the testes.'],
+  ['b_repro', 'Testosterone is secreted by:', 'Leydig (interstitial) cells', 'Sertoli cells', 'Sperm cells', 'The prostate', 'Leydig cells lie between the seminiferous tubules.'],
+  ['b_repro', 'Fertilisation in humans normally occurs in the:', 'Fallopian tube (oviduct)', 'Uterus', 'Ovary', 'Vagina', 'The egg is fertilised in the oviduct, then moves to the uterus.'],
+  ['b_repro', 'Ovulation is triggered by a surge of:', 'LH', 'FSH only', 'Progesterone', 'Oxytocin', 'A mid-cycle LH surge releases the egg.'],
+  ['b_repro', 'The corpus luteum mainly secretes:', 'Progesterone', 'FSH', 'LH', 'Testosterone', 'Progesterone keeps the uterine lining ready for pregnancy.'],
+  ['b_repro', 'A pregnancy test detects the hormone:', 'hCG', 'FSH', 'Insulin', 'Thyroxine', 'Human chorionic gonadotropin is made by the early embryo.'],
+  ['b_repro', 'Meiosis produces:', 'Four haploid cells', 'Two diploid cells', 'Four diploid cells', 'Two haploid cells', 'One diploid cell → four haploid cells.'],
+  ['b_repro', 'A human sperm cell carries how many chromosomes?', '23', '46', '22', '44', 'Gametes are haploid: 23 chromosomes.'],
+  ['b_repro', 'The hormone that causes uterine contractions in childbirth is:', 'Oxytocin', 'Prolactin', 'Progesterone', 'Insulin', 'Oxytocin from the posterior pituitary.'],
+  ['b_repro', 'Syphilis is caused by a:', 'Bacterium', 'Virus', 'Fungus', 'Protozoan', 'Syphilis is caused by the bacterium Treponema pallidum.'],
+  // ---------- Inheritance ----------
+  ['b_inher', 'The phenotypic ratio in the F₂ of a monohybrid cross is:', '3 : 1', '1 : 2 : 1', '9 : 3 : 3 : 1', '1 : 1', 'Mendel’s monohybrid F₂: 3 dominant : 1 recessive.'],
+  ['b_inher', 'The phenotypic ratio in the F₂ of a dihybrid cross is:', '9 : 3 : 3 : 1', '3 : 1', '1 : 2 : 1', '1 : 1 : 1 : 1', 'Two independently assorting genes give 9:3:3:1.'],
+  ['b_inher', 'A test cross is made with:', 'A homozygous recessive', 'A homozygous dominant', 'A heterozygous', 'Any F₁ plant', 'Crossing with the recessive reveals the unknown genotype.'],
+  ['b_inher', 'Haemophilia is inherited as a:', 'Sex-linked recessive trait', 'Autosomal dominant trait', 'Y-linked trait', 'Autosomal recessive trait', 'The gene is on the X chromosome, so it is more common in males.'],
+  ['b_inher', 'A colour-blind man marries a woman with normal genes (not a carrier). Their sons will be:', 'All normal', 'All colour-blind', 'Half colour-blind', 'All carriers', 'Sons get their X from the mother, who has only normal X chromosomes.'],
+  ['b_inher', 'Blood group AB is an example of:', 'Codominance', 'Incomplete dominance', 'Complete dominance', 'Epistasis', 'Both A and B antigens are fully expressed.'],
+  ['b_inher', 'Red × white four-o’clock flowers give pink F₁ plants. This is:', 'Incomplete dominance', 'Codominance', 'Multiple alleles', 'Linkage', 'Neither allele is fully dominant, so the heterozygote is intermediate.'],
+  ['b_inher', 'The genotype of blood group O is:', 'ii (IᴼIᴼ)', 'IᴬIᴮ', 'Iᴬi', 'Iᴮi', 'Group O is homozygous recessive.'],
+  ['b_inher', 'Down syndrome is caused by:', 'An extra chromosome 21', 'A missing X chromosome', 'An extra X chromosome in males', 'A gene mutation on chromosome 7', 'Trisomy 21: three copies of chromosome 21.'],
+  ['b_inher', 'DNA replication is:', 'Semi-conservative', 'Conservative', 'Dispersive', 'Random', 'Meselson and Stahl showed each new DNA keeps one old strand.'],
+  ['b_inher', 'The start codon is:', 'AUG', 'UAA', 'UAG', 'UGA', 'AUG codes for methionine and starts translation; the other three are stop codons.'],
+  ['b_inher', 'How many codons make up the genetic code?', '64', '20', '61', '3', '4 bases in triplets: 4³ = 64 codons (61 code for amino acids, 3 are stop).'],
+  ['b_inher', 'The structure of DNA was proposed by:', 'Watson and Crick', 'Mendel', 'Meselson and Stahl', 'Singer and Nicolson', 'Watson and Crick described the double helix in 1953.'],
+  ['b_inher', 'Making mRNA from a DNA template is called:', 'Transcription', 'Translation', 'Replication', 'Mutation', 'Transcription happens in the nucleus; translation on ribosomes.'],
+  // ---------- Evolution ----------
+  ['b_evo', 'The theory of evolution by natural selection was given by:', 'Charles Darwin', 'Lamarck', 'Mendel', 'Pasteur', 'Darwin (with Wallace) proposed natural selection.'],
+  ['b_evo', 'The idea of “inheritance of acquired characteristics” was given by:', 'Lamarck', 'Darwin', 'Mendel', 'Hugo de Vries', 'Lamarck (1809): use and disuse.'],
+  ['b_evo', 'The forelimbs of a human, a bat and a whale are:', 'Homologous organs', 'Analogous organs', 'Vestigial organs', 'Unrelated organs', 'Same basic structure, different jobs: evidence of a common ancestor.'],
+  ['b_evo', 'The wings of an insect and a bird are:', 'Analogous organs', 'Homologous organs', 'Vestigial organs', 'Identical organs', 'Same job, different origin: convergent evolution.'],
+  ['b_evo', 'A vestigial organ in humans is the:', 'Vermiform appendix', 'Heart', 'Liver', 'Kidney', 'The appendix no longer has a major digestive role in humans.'],
+  ['b_evo', 'In a population, 16% show a recessive trait (q² = 0.16). The frequency of the recessive allele is:', '0.4', '0.16', '0.6', '0.84', 'q = √0.16 = 0.4 (Hardy–Weinberg).'],
+  ['b_evo', 'If q = 0.4, the frequency of heterozygotes (2pq) is:', '0.48', '0.24', '0.16', '0.36', 'p = 0.6, so 2pq = 2 × 0.6 × 0.4 = 0.48.'],
+  ['b_evo', 'Darwin’s book “On the Origin of Species” was published in:', '1859', '1809', '1900', '1953', 'It appeared in 1859.'],
+  ['b_evo', 'Industrial melanism in the peppered moth shows:', 'Natural selection', 'Lamarckism', 'Artificial selection', 'Genetic engineering', 'Dark moths survived better on soot-darkened trees.'],
+  ['b_evo', 'The raw material of evolution is:', 'Variation (mutation and recombination)', 'Extinction', 'Fossils', 'Competition only', 'Natural selection acts on heritable variation.'],
+  // ---------- Biotechnology ----------
+  ['b_biotech', 'Enzymes that cut DNA at specific sequences are:', 'Restriction endonucleases', 'DNA ligases', 'Polymerases', 'Amylases', 'Restriction enzymes cut at recognition sites, often leaving sticky ends.'],
+  ['b_biotech', 'DNA fragments are joined together by:', 'DNA ligase', 'Restriction enzyme', 'Helicase', 'Reverse transcriptase', 'Ligase seals the sugar-phosphate backbone.'],
+  ['b_biotech', 'The most common vector used to carry genes into bacteria is a:', 'Plasmid', 'Ribosome', 'Mitochondrion', 'Lysosome', 'Plasmids are small circular DNA molecules in bacteria.'],
+  ['b_biotech', 'PCR is used to:', 'Make many copies of a DNA piece', 'Cut DNA', 'Join DNA pieces', 'Make proteins', 'The polymerase chain reaction amplifies DNA.'],
+  ['b_biotech', 'The heat-stable enzyme used in PCR is:', 'Taq polymerase', 'DNA ligase', 'Pepsin', 'RNA polymerase II', 'Taq polymerase comes from a hot-spring bacterium, Thermus aquaticus.'],
+  ['b_biotech', 'DNA fragments are separated by size using:', 'Gel electrophoresis', 'PCR', 'Centrifugation only', 'Chromatography of proteins', 'Smaller fragments move faster through the gel.'],
+  ['b_biotech', 'Human insulin for diabetics is now made by:', 'Genetically engineered bacteria', 'Extracting it from human blood', 'Chemical synthesis only', 'Plant leaves', 'The human insulin gene is put into E. coli (recombinant DNA).'],
+  ['b_biotech', 'The bacterium most commonly used as a host in genetic engineering is:', 'E. coli', 'Mycobacterium tuberculosis', 'Treponema pallidum', 'Vibrio cholerae', 'E. coli grows fast and is well understood.'],
+  ['b_biotech', 'Replacing a faulty gene with a working copy to treat disease is:', 'Gene therapy', 'Cloning', 'Fermentation', 'Vaccination', 'Gene therapy inserts a normal gene into the patient’s cells.']
+]);
+
+/* MDCAT Chemistry — FSc / PMDC curriculum facts. [topic, question, RIGHT, wrong, wrong, wrong, explanation] */
+BANK.chem = mk([
+  // ---------- Fundamental Concepts ----------
+  ['c_fund', 'Avogadro’s number is:', '6.02 × 10²³', '6.02 × 10²²', '3.01 × 10²³', '1.66 × 10⁻²⁴', 'One mole contains 6.02 × 10²³ particles.'],
+  ['c_fund', 'One mole of any ideal gas at STP occupies:', '22.4 dm³', '11.2 dm³', '24.0 dm³', '1 dm³', 'Molar volume at STP (0 °C, 1 atm) is 22.414 dm³.'],
+  ['c_fund', 'The empirical formula of glucose (C₆H₁₂O₆) is:', 'CH₂O', 'C₆H₁₂O₆', 'CHO', 'C₂H₄O₂', 'Divide by the common factor 6: CH₂O.'],
+  ['c_fund', 'The limiting reactant is the one that:', 'Is used up first', 'Is present in excess', 'Has the largest molar mass', 'Is a catalyst', 'It limits how much product can form.'],
+  ['c_fund', 'Isotopes of an element have the same number of:', 'Protons', 'Neutrons', 'Nucleons', 'Mass number', 'Same atomic number, different numbers of neutrons.'],
+  ['c_fund', 'The relative abundance of isotopes is found with a:', 'Mass spectrometer', 'Spectrophotometer', 'Voltmeter', 'Calorimeter', 'A mass spectrometer separates ions by mass-to-charge ratio.'],
+  // ---------- Atomic Structure ----------
+  ['c_atom', 'Cathode rays are a stream of:', 'Electrons', 'Protons', 'Neutrons', 'Alpha particles', 'J.J. Thomson showed cathode rays are negatively charged electrons.'],
+  ['c_atom', 'The neutron was discovered by:', 'Chadwick', 'Rutherford', 'Thomson', 'Bohr', 'James Chadwick, 1932.'],
+  ['c_atom', 'Rutherford’s gold-foil experiment showed that the atom has a:', 'Small, dense, positive nucleus', 'Uniform positive sphere', 'Negative nucleus', 'No empty space', 'Most α-particles passed through; a few bounced back from the tiny nucleus.'],
+  ['c_atom', 'The maximum number of electrons in the M shell (n = 3) is:', '18', '8', '32', '2', 'Maximum = 2n² = 2 × 3² = 18.'],
+  ['c_atom', 'A p-subshell has how many orbitals?', '3', '1', '5', '7', 's = 1, p = 3, d = 5, f = 7 orbitals.'],
+  ['c_atom', 'The electronic configuration of sodium (Z = 11) is:', '1s² 2s² 2p⁶ 3s¹', '1s² 2s² 2p⁷', '1s² 2s² 2p⁶ 3p¹', '1s² 2s¹ 2p⁶ 3s²', '11 electrons fill 1s, 2s, 2p, then one goes to 3s.'],
+  ['c_atom', 'The quantum number that gives the orientation of an orbital is the:', 'Magnetic quantum number', 'Principal quantum number', 'Azimuthal quantum number', 'Spin quantum number', 'm tells how an orbital is oriented in space.'],
+  ['c_atom', 'According to Pauli’s exclusion principle, one orbital can hold:', 'At most two electrons with opposite spins', 'Any number of electrons', 'Only one electron', 'Two electrons with the same spin', 'No two electrons in an atom have all four quantum numbers the same.'],
+  ['c_atom', 'Electrons fill degenerate orbitals singly before pairing. This is:', 'Hund’s rule', 'Aufbau principle', 'Pauli’s principle', 'Heisenberg’s principle', 'Hund’s rule of maximum multiplicity.'],
+  // ---------- Gases ----------
+  ['c_gas', 'At constant temperature, the volume of a fixed mass of gas is inversely proportional to its pressure. This is:', 'Boyle’s law', 'Charles’s law', 'Avogadro’s law', 'Dalton’s law', 'PV = constant at constant T.'],
+  ['c_gas', 'Absolute zero is:', '−273 °C', '0 °C', '−100 °C', '273 °C', '0 K = −273.15 °C.'],
+  ['c_gas', 'Real gases behave most like ideal gases at:', 'Low pressure and high temperature', 'High pressure and low temperature', 'High pressure and high temperature', 'Low pressure and low temperature', 'Then molecules are far apart and attractions are negligible.'],
+  ['c_gas', 'The value of the gas constant R in SI units is:', '8.314 J K⁻¹ mol⁻¹', '0.0821 J K⁻¹ mol⁻¹', '1.987 J K⁻¹ mol⁻¹', '22.4 J K⁻¹ mol⁻¹', 'R = 8.314 J K⁻¹ mol⁻¹ (= 0.0821 dm³ atm K⁻¹ mol⁻¹).'],
+  ['c_gas', 'Which gas diffuses fastest?', 'Hydrogen', 'Oxygen', 'Carbon dioxide', 'Chlorine', 'Graham’s law: rate ∝ 1/√M; H₂ is the lightest.'],
+  ['c_gas', 'Dalton’s law is about:', 'Partial pressures of gases in a mixture', 'Diffusion of gases', 'Volume and temperature', 'Moles and volume', 'Total pressure = sum of partial pressures.'],
+  // ---------- Liquids ----------
+  ['c_liq', 'Water has an unusually high boiling point because of:', 'Hydrogen bonding', 'London forces only', 'Ionic bonding', 'Metallic bonding', 'Strong hydrogen bonds hold water molecules together.'],
+  ['c_liq', 'A liquid boils when its vapour pressure equals the:', 'External pressure', 'Critical pressure', 'Osmotic pressure', 'Pressure of 2 atm', 'That is the definition of boiling point.'],
+  ['c_liq', 'At high altitude, water boils at:', 'A lower temperature', 'A higher temperature', 'Exactly 100 °C', '0 °C', 'Air pressure is lower, so boiling happens below 100 °C.'],
+  ['c_liq', 'Evaporation causes:', 'Cooling', 'Heating', 'No change in temperature', 'Freezing', 'The fastest molecules escape, so the average energy left drops.'],
+  ['c_liq', 'The strongest of these intermolecular forces is:', 'Hydrogen bonding', 'Dipole–dipole forces', 'London dispersion forces', 'Dipole–induced dipole forces', 'Hydrogen bonds are the strongest intermolecular forces.'],
+  // ---------- Solids ----------
+  ['c_sol', 'In a sodium chloride crystal, each Na⁺ is surrounded by how many Cl⁻ ions?', '6', '4', '8', '12', 'NaCl has a coordination number of 6.'],
+  ['c_sol', 'Diamond is an example of a:', 'Covalent network solid', 'Ionic solid', 'Molecular solid', 'Metallic solid', 'Each carbon is covalently bonded to four others in a giant network.'],
+  ['c_sol', 'Graphite conducts electricity because it has:', 'Delocalised electrons between layers', 'Free ions', 'Only single bonds', 'Hydrogen bonds', 'Each carbon uses three electrons in bonds; the fourth is delocalised.'],
+  ['c_sol', 'Metals conduct electricity because of:', 'Mobile (delocalised) electrons', 'Free protons', 'Ions that move in the solid', 'Covalent bonds', 'A “sea” of electrons moves through the metal lattice.'],
+  ['c_sol', 'Glass is an example of an:', 'Amorphous solid', 'Ionic crystal', 'Metallic crystal', 'Molecular crystal', 'Glass has no long-range order.'],
+  ['c_sol', 'Different crystalline forms of the same element are called:', 'Allotropes', 'Isotopes', 'Isomers', 'Isobars', 'E.g. diamond and graphite are allotropes of carbon.'],
+  // ---------- Chemical Equilibrium ----------
+  ['c_eq', 'For N₂ + 3H₂ ⇌ 2NH₃, increasing the pressure shifts the equilibrium:', 'To the right (more NH₃)', 'To the left', 'Not at all', 'First right, then left', 'It moves to the side with fewer gas molecules (4 → 2).'],
+  ['c_eq', 'The Haber reaction is exothermic. Raising the temperature:', 'Lowers the yield of NH₃', 'Raises the yield of NH₃', 'Has no effect on the yield', 'Stops the reaction', 'Le Chatelier: heat favours the endothermic (backward) reaction.'],
+  ['c_eq', 'A catalyst changes:', 'How fast equilibrium is reached', 'The position of equilibrium', 'The value of Kc', 'The yield at equilibrium', 'It speeds up both directions equally.'],
+  ['c_eq', 'The equilibrium constant Kc changes only with:', 'Temperature', 'Pressure', 'Concentration', 'A catalyst', 'Kc depends only on temperature.'],
+  ['c_eq', 'Adding a common ion to a sparingly soluble salt’s solution:', 'Decreases its solubility', 'Increases its solubility', 'Has no effect', 'Changes Ksp', 'The common-ion effect pushes the equilibrium back.'],
+  ['c_eq', 'A buffer solution:', 'Resists changes in pH', 'Always has pH 7', 'Is always a strong acid', 'Changes pH quickly', 'E.g. a weak acid with its salt.'],
+  ['c_eq', 'The pH of pure water at 25 °C is:', '7', '0', '14', '1', '[H⁺] = 10⁻⁷ M, so pH = 7.'],
+  // ---------- Reaction Kinetics ----------
+  ['c_kin', 'Raising the temperature speeds up a reaction mainly because:', 'More molecules have energy above the activation energy', 'The activation energy rises', 'The number of molecules increases', 'The catalyst becomes stronger', 'More collisions are energetic enough to react.'],
+  ['c_kin', 'The order of a reaction can be found:', 'Only by experiment', 'From the balanced equation', 'From the molar masses', 'From the colour', 'Order is an experimental quantity.'],
+  ['c_kin', 'The unit of the rate constant of a first-order reaction is:', 's⁻¹', 'mol dm⁻³ s⁻¹', 'dm³ mol⁻¹ s⁻¹', 'mol⁻² dm⁶ s⁻¹', 'For rate = k[A], k has units of s⁻¹.'],
+  ['c_kin', 'The half-life of a first-order reaction:', 'Does not depend on the starting concentration', 'Doubles when concentration doubles', 'Halves when concentration doubles', 'Is always 1 minute', 't½ = 0.693/k.'],
+  ['c_kin', 'A catalyst speeds up a reaction by:', 'Providing a path with lower activation energy', 'Raising the temperature', 'Increasing the yield', 'Being used up', 'It is unchanged chemically at the end.'],
+  // ---------- Thermochemistry ----------
+  ['c_thermo', 'For an exothermic reaction, ΔH is:', 'Negative', 'Positive', 'Zero', 'Always 100 kJ', 'Heat is given out, so the products have less enthalpy.'],
+  ['c_thermo', 'Hess’s law says the enthalpy change of a reaction:', 'Is the same whatever the route', 'Depends on the route', 'Is always positive', 'Depends on the catalyst', 'It follows from conservation of energy.'],
+  ['c_thermo', 'The enthalpy of neutralisation of a strong acid by a strong base is about:', '−57.3 kJ mol⁻¹', '+57.3 kJ mol⁻¹', '−5.73 kJ mol⁻¹', '−573 kJ mol⁻¹', 'H⁺ + OH⁻ → H₂O releases about 57.3 kJ per mole.'],
+  ['c_thermo', 'Heats of combustion are measured with a:', 'Bomb calorimeter', 'Glass calorimeter only', 'Barometer', 'Manometer', 'The sample burns in oxygen inside a sealed steel “bomb”.'],
+  ['c_thermo', 'Standard enthalpy changes are measured at:', '298 K and 1 atm', '273 K and 1 atm', '373 K and 2 atm', '0 K and 1 atm', 'Standard conditions in thermochemistry: 25 °C, 1 atm.'],
+  // ---------- Electrochemistry ----------
+  ['c_elec', 'Oxidation is:', 'Loss of electrons', 'Gain of electrons', 'Gain of hydrogen', 'Loss of oxygen', 'OIL RIG: oxidation is loss, reduction is gain.'],
+  ['c_elec', 'In electrolysis, oxidation takes place at the:', 'Anode', 'Cathode', 'Salt bridge', 'Both electrodes', 'Anions lose electrons at the anode.'],
+  ['c_elec', 'The oxidation number of Mn in KMnO₄ is:', '+7', '+5', '+6', '+4', '+1 + x + 4(−2) = 0, so x = +7.'],
+  ['c_elec', 'The oxidation number of Cr in K₂Cr₂O₇ is:', '+6', '+7', '+3', '+12', '2(+1) + 2x + 7(−2) = 0, so x = +6.'],
+  ['c_elec', 'The standard electrode potential of the hydrogen electrode is:', '0.00 V', '+1.00 V', '−0.76 V', '+0.34 V', 'The SHE is the reference, set at zero.'],
+  ['c_elec', 'In a galvanic cell, the anode is the:', 'Negative electrode', 'Positive electrode', 'Salt bridge', 'Electrode where reduction occurs', 'Oxidation at the anode releases electrons, making it negative.'],
+  ['c_elec', 'In the electrolysis of brine, the gas formed at the cathode is:', 'Hydrogen', 'Chlorine', 'Oxygen', 'Nitrogen', 'H₂ at the cathode, Cl₂ at the anode.'],
+  // ---------- Chemical Bonding ----------
+  ['c_bond', 'The shape of a methane molecule is:', 'Tetrahedral', 'Square planar', 'Trigonal planar', 'Linear', 'Four bond pairs, angle 109.5°.'],
+  ['c_bond', 'The bond angle in water is about:', '104.5°', '109.5°', '120°', '180°', 'Two lone pairs push the bonds closer.'],
+  ['c_bond', 'The shape of ammonia is:', 'Trigonal pyramidal', 'Trigonal planar', 'Tetrahedral', 'Linear', 'Three bond pairs and one lone pair, about 107°.'],
+  ['c_bond', 'BeCl₂ is:', 'Linear (180°)', 'Bent', 'Trigonal planar', 'Tetrahedral', 'Two bond pairs and no lone pairs.'],
+  ['c_bond', 'The carbon atoms in ethene are:', 'sp² hybridised', 'sp³ hybridised', 'sp hybridised', 'Not hybridised', 'Each carbon forms three σ bonds and one π bond.'],
+  ['c_bond', 'A π bond forms by:', 'Sideways overlap of p orbitals', 'Head-on overlap of orbitals', 'Transfer of electrons', 'Overlap of s orbitals only', 'σ bonds form head-on; π bonds sideways.'],
+  ['c_bond', 'The ammonium ion (NH₄⁺) contains a:', 'Coordinate covalent bond', 'Ionic bond only', 'Metallic bond', 'Hydrogen bond only', 'N donates its lone pair to H⁺.'],
+  ['c_bond', 'The most electronegative element is:', 'Fluorine', 'Oxygen', 'Chlorine', 'Nitrogen', 'Fluorine has the highest electronegativity (4.0).'],
+  ['c_bond', 'An ionic bond forms by:', 'Transfer of electrons', 'Sharing of electrons', 'Overlap of p orbitals only', 'Sharing of protons', 'E.g. Na gives an electron to Cl.'],
+  // ---------- s- and p-Block Elements ----------
+  ['c_sp', 'Alkali metals form ions with a charge of:', '+1', '+2', '−1', '+3', 'They lose their single outer s electron.'],
+  ['c_sp', 'Down a group of the periodic table, atomic radius:', 'Increases', 'Decreases', 'Stays the same', 'First falls, then rises', 'A new shell is added at each step.'],
+  ['c_sp', 'Gypsum is:', 'CaSO₄·2H₂O', 'CaSO₄·½H₂O', 'CaCO₃', 'Ca(OH)₂', 'Heating gypsum gives plaster of Paris, CaSO₄·½H₂O.'],
+  ['c_sp', 'The halogen that is a liquid at room temperature is:', 'Bromine', 'Chlorine', 'Iodine', 'Fluorine', 'Bromine is a red-brown liquid.'],
+  ['c_sp', 'In period 2, the highest first ionisation energy belongs to:', 'Neon', 'Lithium', 'Carbon', 'Oxygen', 'Ionisation energy rises across a period; neon has a full shell.'],
+  ['c_sp', 'Aluminium does not corrode easily because:', 'A thin oxide layer protects it', 'It is a noble metal', 'It does not react with oxygen', 'It is coated with zinc', 'A tough Al₂O₃ layer forms on its surface.'],
+  ['c_sp', 'Noble gases are unreactive because they have:', 'Full outer electron shells', 'Low ionisation energies', 'Large charges', 'Free electrons', 'A stable full valence shell (octet, or duet for He).'],
+  // ---------- Transition Elements ----------
+  ['c_trans', 'Transition elements are found in the:', 'd-block', 's-block', 'p-block', 'f-block only', 'Their d subshells are being filled.'],
+  ['c_trans', 'Most transition metal compounds are coloured because of:', 'Electron transitions between d orbitals', 'Their high melting points', 'Hydrogen bonding', 'Their metallic lustre', 'Partly filled d orbitals absorb visible light.'],
+  ['c_trans', 'The electronic configuration of chromium (Z = 24) is:', '[Ar] 3d⁵ 4s¹', '[Ar] 3d⁴ 4s²', '[Ar] 3d⁶', '[Ar] 4s² 4p⁴', 'A half-filled d subshell is extra stable.'],
+  ['c_trans', 'The electronic configuration of copper (Z = 29) is:', '[Ar] 3d¹⁰ 4s¹', '[Ar] 3d⁹ 4s²', '[Ar] 3d⁸ 4s² 4p¹', '[Ar] 4s² 4p⁹', 'A full d subshell is extra stable.'],
+  ['c_trans', 'The coordination number of Cu in [Cu(NH₃)₄]²⁺ is:', '4', '2', '6', '8', 'Four ammonia ligands are bonded to copper.'],
+  ['c_trans', 'Rust is mainly:', 'Hydrated iron(III) oxide', 'Iron(II) chloride', 'Iron carbonate', 'Pure iron', 'Fe₂O₃·xH₂O.'],
+  ['c_trans', 'In the Haber process, iron acts as a:', 'Catalyst', 'Reactant', 'Product', 'Inhibitor', 'Finely divided iron speeds up the reaction.'],
+  // ---------- Fundamentals of Organic Chemistry ----------
+  ['c_org', 'Organic chemistry is the chemistry of:', 'Carbon compounds (hydrocarbons and their derivatives)', 'Living things only', 'Metals', 'Inert gases', 'Carbon forms millions of compounds.'],
+  ['c_org', 'Carbon’s ability to form long chains is called:', 'Catenation', 'Isomerism', 'Hybridisation', 'Polymerisation', 'Carbon bonds strongly to itself.'],
+  ['c_org', 'Members of a homologous series differ by:', 'CH₂', 'CH₃', 'C₂H₄', 'OH', 'Each member adds one –CH₂– unit.'],
+  ['c_org', 'Isomers have the same:', 'Molecular formula', 'Structural formula', 'Physical properties', 'Boiling point', 'Same formula, different arrangement of atoms.'],
+  ['c_org', 'How many structural isomers does C₄H₁₀ have?', '2', '3', '4', '1', 'Butane and 2-methylpropane (isobutane).'],
+  ['c_org', 'How many structural isomers does C₅H₁₂ have?', '3', '2', '4', '5', 'Pentane, 2-methylbutane and 2,2-dimethylpropane.'],
+  ['c_org', 'Cracking is used to:', 'Break large hydrocarbons into smaller ones', 'Join small molecules', 'Purify water', 'Make salts', 'It turns heavy oil fractions into petrol and alkenes.'],
+  // ---------- Hydrocarbons ----------
+  ['c_hc', 'The general formula of alkanes is:', 'CₙH₂ₙ₊₂', 'CₙH₂ₙ', 'CₙH₂ₙ₋₂', 'CₙHₙ', 'E.g. methane CH₄, ethane C₂H₆.'],
+  ['c_hc', 'The general formula of alkynes is:', 'CₙH₂ₙ₋₂', 'CₙH₂ₙ', 'CₙH₂ₙ₊₂', 'CₙH₂ₙ₊₁', 'E.g. ethyne C₂H₂.'],
+  ['c_hc', 'Alkanes mainly undergo:', 'Substitution reactions', 'Addition reactions', 'Polymerisation', 'Hydration', 'They are saturated.'],
+  ['c_hc', 'Alkenes mainly undergo:', 'Addition reactions', 'Substitution reactions', 'Elimination reactions only', 'No reactions', 'The double bond opens up.'],
+  ['c_hc', 'Bromine water is decolourised by:', 'Alkenes', 'Alkanes', 'Benzene', 'Water', 'Br₂ adds across the C=C double bond.'],
+  ['c_hc', 'Benzene mainly undergoes:', 'Electrophilic substitution', 'Nucleophilic addition', 'Free-radical addition', 'Elimination', 'Substitution keeps the stable aromatic ring.'],
+  ['c_hc', 'Markovnikov’s rule applies to:', 'Adding HX to an unsymmetrical alkene', 'Combustion of alkanes', 'Nitration of benzene', 'Hydrolysis of esters', 'H goes to the carbon that already has more hydrogens.'],
+  ['c_hc', 'Ethene + hydrogen (nickel catalyst) gives:', 'Ethane', 'Ethyne', 'Ethanol', 'Methane', 'Catalytic hydrogenation saturates the double bond.'],
+  // ---------- Alkyl Halides ----------
+  ['c_alk', 'Alkyl halides typically undergo:', 'Nucleophilic substitution', 'Electrophilic substitution', 'Electrophilic addition', 'Free-radical polymerisation', 'The C–X carbon is attacked by nucleophiles.'],
+  ['c_alk', 'SN1 reactions go through a:', 'Carbocation intermediate', 'Carbanion intermediate', 'Free radical', 'Single step with inversion', 'SN1 is two-step and favoured by tertiary halides.'],
+  ['c_alk', 'SN2 reactions:', 'Occur in one step with inversion of configuration', 'Go through a carbocation', 'Are fastest with tertiary halides', 'Do not need a nucleophile', 'The nucleophile attacks from the back side.'],
+  ['c_alk', 'A Grignard reagent has the general formula:', 'RMgX', 'RNaX', 'RX₂', 'R₂Mg', 'Alkyl magnesium halide.'],
+  ['c_alk', 'An alkyl halide heated with alcoholic KOH gives mainly an:', 'Alkene', 'Alcohol', 'Ether', 'Alkane', 'Alcoholic KOH causes elimination (dehydrohalogenation).'],
+  ['c_alk', 'An alkyl halide with aqueous KOH gives an:', 'Alcohol', 'Alkene', 'Aldehyde', 'Alkyne', 'OH⁻ substitutes the halogen.'],
+  // ---------- Alcohols & Phenols ----------
+  ['c_alc', 'A primary alcohol is first oxidised to an:', 'Aldehyde', 'Ketone', 'Ester', 'Alkene', 'Further oxidation gives a carboxylic acid.'],
+  ['c_alc', 'Which alcohol resists oxidation by acidified dichromate?', 'A tertiary alcohol', 'A primary alcohol', 'A secondary alcohol', 'Methanol', 'It has no H on the carbon bearing –OH.'],
+  ['c_alc', 'The Lucas test distinguishes:', 'Primary, secondary and tertiary alcohols', 'Aldehydes from ketones', 'Alkanes from alkenes', 'Acids from bases', 'Tertiary alcohols turn cloudy at once with ZnCl₂/HCl.'],
+  ['c_alc', 'Phenol is more acidic than ethanol because:', 'The phenoxide ion is stabilised by resonance', 'Phenol has more hydrogen atoms', 'Ethanol is aromatic', 'Phenol is a gas', 'The negative charge spreads into the benzene ring.'],
+  ['c_alc', 'Drinking methanol can cause:', 'Blindness', 'Better eyesight', 'Nothing harmful', 'Only a mild cold', 'Methanol is oxidised to toxic formaldehyde and formic acid.'],
+  ['c_alc', 'Ethanol heated with excess concentrated H₂SO₄ at about 170 °C gives:', 'Ethene', 'Ethane', 'Ethanal', 'Ethanoic acid', 'Dehydration removes water.'],
+  // ---------- Aldehydes & Ketones ----------
+  ['c_ald', 'Aldehydes give a silver mirror with:', 'Tollens’ reagent', 'Fehling’s solution only', 'Bromine water', 'Lucas reagent', 'Ammoniacal silver nitrate is reduced to silver.'],
+  ['c_ald', 'Aldehydes and ketones typically undergo:', 'Nucleophilic addition', 'Electrophilic substitution', 'Free-radical substitution', 'Elimination only', 'Nucleophiles attack the carbon of C=O.'],
+  ['c_ald', 'Oxidation of a secondary alcohol gives a:', 'Ketone', 'Aldehyde', 'Carboxylic acid', 'Ester', 'E.g. propan-2-ol → propanone.'],
+  ['c_ald', 'Which gives a positive iodoform test?', 'Propanone (acetone)', 'Methanal', 'Propanal', 'Benzaldehyde', 'Methyl ketones (CH₃CO–) give yellow iodoform.'],
+  ['c_ald', 'Formalin is a 40% solution of:', 'Methanal (formaldehyde)', 'Ethanal', 'Propanone', 'Methanol', 'Used to preserve biological specimens.'],
+  ['c_ald', '2,4-dinitrophenylhydrazine gives an orange precipitate with:', 'Aldehydes and ketones', 'Alcohols', 'Alkenes', 'Carboxylic acids', 'It tests for the C=O group.'],
+  // ---------- Carboxylic Acids ----------
+  ['c_carb', 'The functional group of carboxylic acids is:', '–COOH', '–CHO', '–OH', '–CO–', 'Carboxyl = carbonyl + hydroxyl.'],
+  ['c_carb', 'A carboxylic acid and an alcohol, with an acid catalyst, form an:', 'Ester', 'Ether', 'Aldehyde', 'Amide', 'Esterification; esters often smell fruity.'],
+  ['c_carb', 'Vinegar is a dilute solution of:', 'Acetic (ethanoic) acid', 'Formic acid', 'Citric acid', 'Oxalic acid', 'About 4–5% ethanoic acid.'],
+  ['c_carb', 'The acid in ant stings is:', 'Formic (methanoic) acid', 'Acetic acid', 'Lactic acid', 'Citric acid', '“Formica” is Latin for ant.'],
+  ['c_carb', 'The strongest of these acids is:', 'Trichloroacetic acid', 'Acetic acid', 'Chloroacetic acid', 'Propanoic acid', 'Three electron-withdrawing Cl atoms stabilise the anion most.'],
+  ['c_carb', 'Amino acids are amphoteric because they contain:', 'Both –NH₂ and –COOH groups', 'Only –COOH groups', 'Only –NH₂ groups', 'A benzene ring', 'They can act as acids and bases (zwitterions).'],
+  // ---------- Macromolecules ----------
+  ['c_macro', 'Polythene is made by polymerising:', 'Ethene', 'Ethane', 'Ethyne', 'Ethanol', 'Addition polymerisation of ethene.'],
+  ['c_macro', 'PVC is made from:', 'Vinyl chloride (chloroethene)', 'Ethene', 'Styrene', 'Isoprene', 'Poly(vinyl chloride).'],
+  ['c_macro', 'Nylon-6,6 is a:', 'Polyamide made by condensation', 'Polyester made by addition', 'Natural polymer', 'Polysaccharide', 'Hexamethylenediamine + adipic acid, losing water.'],
+  ['c_macro', 'Natural rubber is a polymer of:', 'Isoprene', 'Ethene', 'Glucose', 'Amino acids', 'cis-1,4-polyisoprene.'],
+  ['c_macro', 'Which is an addition polymer?', 'Polythene', 'Nylon', 'Terylene (polyester)', 'Protein', 'Addition polymers form without losing small molecules.'],
+  // ---------- Industrial Chemistry ----------
+  ['c_ind', 'The Haber process makes:', 'Ammonia', 'Sulphuric acid', 'Nitric acid', 'Urea', 'N₂ + 3H₂ ⇌ 2NH₃ over an iron catalyst.'],
+  ['c_ind', 'The Contact process makes:', 'Sulphuric acid', 'Ammonia', 'Sodium carbonate', 'Nitric acid', 'SO₂ is oxidised to SO₃ over V₂O₅.'],
+  ['c_ind', 'The catalyst in the Contact process is:', 'Vanadium pentoxide (V₂O₅)', 'Iron', 'Nickel', 'Platinum only', 'V₂O₅ is cheaper and less easily poisoned than platinum.'],
+  ['c_ind', 'Urea fertiliser is made from:', 'Ammonia and carbon dioxide', 'Nitrogen and oxygen', 'Sulphur and ammonia', 'Methane and water', '2NH₃ + CO₂ → NH₂CONH₂ + H₂O.'],
+  ['c_ind', 'The main raw materials of cement are:', 'Limestone and clay', 'Sand and salt', 'Coal and iron ore', 'Gypsum and sulphur only', 'Gypsum is added later to slow setting.'],
+  ['c_ind', 'The Solvay process makes:', 'Sodium carbonate', 'Sodium hydroxide', 'Sulphuric acid', 'Ammonia', 'Washing soda from brine, limestone and ammonia.']
+]);
+
+/* MDCAT English and Logical Reasoning. [topic, question, RIGHT, wrong, wrong, wrong, explanation] */
+BANK.eng = mk([
+  // ---------- Vocabulary ----------
+  ['e_vocab', 'Choose the word closest in meaning to BENEVOLENT:', 'Kind', 'Cruel', 'Lazy', 'Proud', 'Benevolent = well-meaning and kindly.'],
+  ['e_vocab', 'Choose the word closest in meaning to CANDID:', 'Frank', 'Secretive', 'Angry', 'Shy', 'Candid = honest and direct.'],
+  ['e_vocab', 'Choose the word closest in meaning to METICULOUS:', 'Very careful', 'Careless', 'Quick', 'Noisy', 'Meticulous = showing great attention to detail.'],
+  ['e_vocab', 'Choose the word closest in meaning to EPHEMERAL:', 'Short-lived', 'Everlasting', 'Heavy', 'Ancient', 'Ephemeral = lasting a very short time.'],
+  ['e_vocab', 'Choose the word closest in meaning to LETHARGIC:', 'Sluggish', 'Energetic', 'Clever', 'Cheerful', 'Lethargic = lacking energy.'],
+  ['e_vocab', 'Choose the word closest in meaning to DILIGENT:', 'Hard-working', 'Idle', 'Rude', 'Forgetful', 'Diligent = careful and hard-working.'],
+  ['e_vocab', 'Choose the word closest in meaning to AMBIGUOUS:', 'Unclear', 'Obvious', 'Correct', 'Brief', 'Ambiguous = open to more than one meaning.'],
+  ['e_vocab', 'Choose the word closest in meaning to OBSOLETE:', 'Out of date', 'Modern', 'Useful', 'Expensive', 'Obsolete = no longer in use.'],
+  ['e_vocab', 'Choose the word closest in meaning to PRUDENT:', 'Wise', 'Reckless', 'Foolish', 'Hasty', 'Prudent = showing care and good judgement.'],
+  ['e_vocab', 'Choose the word closest in meaning to RELUCTANT:', 'Unwilling', 'Eager', 'Happy', 'Ready', 'Reluctant = not wanting to do something.'],
+  ['e_vocab', 'Choose the word opposite in meaning to SCARCE:', 'Plentiful', 'Rare', 'Little', 'Short', 'Scarce = in short supply; opposite: plentiful.'],
+  ['e_vocab', 'Choose the word opposite in meaning to HUMBLE:', 'Arrogant', 'Modest', 'Simple', 'Gentle', 'Humble ↔ arrogant.'],
+  ['e_vocab', 'Choose the word opposite in meaning to ANCIENT:', 'Modern', 'Old', 'Historic', 'Antique', 'Ancient ↔ modern.'],
+  ['e_vocab', 'Choose the word opposite in meaning to FRAGILE:', 'Sturdy', 'Weak', 'Delicate', 'Brittle', 'Fragile = easily broken; opposite: sturdy.'],
+  ['e_vocab', 'Choose the word opposite in meaning to TRANSPARENT:', 'Opaque', 'Clear', 'Visible', 'Bright', 'Transparent ↔ opaque.'],
+  // ---------- Tenses & Sentence Structure ----------
+  ['e_tense', 'She ___ to college every day.', 'goes', 'go', 'going', 'gone', 'Simple present, third person singular: goes.'],
+  ['e_tense', 'They ___ cricket when it started to rain.', 'were playing', 'are playing', 'play', 'have played', 'An action in progress in the past: past continuous.'],
+  ['e_tense', 'I ___ in Lahore since 2020.', 'have lived', 'live', 'am living', 'lived', '“Since” with a starting point takes the present perfect.'],
+  ['e_tense', 'By next year, he ___ his degree.', 'will have completed', 'completes', 'completed', 'has completed', 'Future perfect: completed before a future time.'],
+  ['e_tense', 'If I ___ a doctor, I would treat the poor for free.', 'were', 'am', 'will be', 'have been', 'Unreal condition (second conditional): were.'],
+  ['e_tense', 'The letter ___ yesterday.', 'was written', 'is written', 'has written', 'writes', 'Passive voice, past time: was written.'],
+  ['e_tense', 'He said that he ___ tired.', 'was', 'is', 'will be', 'has been', 'Reported speech moves the tense back: “I am tired” → he was tired.'],
+  ['e_tense', 'Hardly had she sat down ___ the phone rang.', 'when', 'than', 'then', 'that', '“Hardly … when” is the correct pair.'],
+  ['e_tense', 'She ___ for two hours when the doctor finally called her in.', 'had been waiting', 'was waited', 'has been waiting', 'waits', 'Past perfect continuous: an action going on up to a past moment.'],
+  // ---------- Subject–Verb Agreement ----------
+  ['e_agree', 'Each of the students ___ a laptop.', 'has', 'have', 'are having', 'were having', '“Each” is singular.'],
+  ['e_agree', 'Neither the teacher nor the students ___ present.', 'were', 'was', 'is', 'has been', 'With neither…nor, the verb agrees with the nearer subject (students).'],
+  ['e_agree', 'Mathematics ___ my favourite subject.', 'is', 'are', 'were', 'have been', 'Names of subjects ending in -s are singular.'],
+  ['e_agree', 'One of my friends ___ a doctor.', 'is', 'are', 'were', 'have been', 'The subject is “one”, which is singular.'],
+  ['e_agree', 'The news ___ good.', 'is', 'are', 'were', 'have been', '“News” is an uncountable singular noun.'],
+  ['e_agree', 'Either Ali or his brothers ___ coming.', 'are', 'is', 'was', 'has been', 'The verb agrees with the nearer subject (brothers).'],
+  ['e_agree', 'Bread and butter ___ his usual breakfast.', 'is', 'are', 'were', 'have been', 'Two nouns forming one idea take a singular verb.'],
+  ['e_agree', 'Everyone in the hall ___ to be heard.', 'wants', 'want', 'are wanting', 'were wanting', '“Everyone” is singular.'],
+  // ---------- Articles & Prepositions ----------
+  ['e_prep', 'He is good ___ mathematics.', 'at', 'in', 'on', 'for', 'Good at a subject or skill.'],
+  ['e_prep', 'She is afraid ___ dogs.', 'of', 'from', 'with', 'by', 'Afraid of.'],
+  ['e_prep', 'I have been waiting ___ morning.', 'since', 'for', 'from', 'by', '“Since” + a point in time; “for” + a length of time.'],
+  ['e_prep', 'He was born ___ 2008.', 'in', 'on', 'at', 'by', 'In + year; on + day/date; at + time.'],
+  ['e_prep', 'He died ___ cholera.', 'of', 'from', 'by', 'with', 'Die of a disease.'],
+  ['e_prep', 'She is senior ___ me.', 'to', 'than', 'from', 'over', 'Senior, junior, superior and inferior take “to”.'],
+  ['e_prep', 'He insisted ___ paying the bill.', 'on', 'for', 'at', 'to', 'Insist on.'],
+  ['e_prep', 'Divide the sweets ___ the two children.', 'between', 'among', 'within', 'across', '“Between” for two; “among” for more than two.'],
+  ['e_prep', 'He is ___ honest man.', 'an', 'a', 'the', 'no article', '“Honest” begins with a vowel sound (h is silent).'],
+  ['e_prep', 'She studies at ___ university in Karachi.', 'a', 'an', 'the', 'no article', '“University” begins with a “yu” consonant sound.'],
+  ['e_prep', '___ Indus is the longest river in Pakistan.', 'The', 'A', 'An', 'No article', 'Rivers take “the”.'],
+  // ---------- Punctuation & Spelling ----------
+  ['e_punct', 'Choose the correctly spelt word:', 'Accommodate', 'Acommodate', 'Accomodate', 'Acomodate', 'Double c, double m.'],
+  ['e_punct', 'Choose the correctly spelt word:', 'Necessary', 'Neccessary', 'Necesary', 'Neccesary', 'One collar (c), two sleeves (ss).'],
+  ['e_punct', 'Choose the correctly spelt word:', 'Receive', 'Recieve', 'Receeve', 'Recive', '“i before e except after c”.'],
+  ['e_punct', 'Choose the correctly spelt word:', 'Embarrass', 'Embarass', 'Embarras', 'Emberrass', 'Double r, double s.'],
+  ['e_punct', 'Choose the correctly spelt word:', 'Definitely', 'Definately', 'Definitly', 'Defenitely', 'Comes from “definite”.'],
+  ['e_punct', 'The dog wagged ___ tail.', 'its', 'it’s', 'its’', 'it is', '“Its” is possessive; “it’s” means “it is”.'],
+  ['e_punct', 'Choose the correct possessive: the toys of the children', 'the children’s toys', 'the childrens’ toys', 'the childrens toys', 'the children toys’', 'Plural not ending in s: add ’s.'],
+  ['e_punct', 'Choose the correctly punctuated sentence:', 'It’s a lovely day, isn’t it?', 'Its a lovely day, isnt it?', 'It’s a lovely day isn’t it.', 'Its’ a lovely day, isn’t it?', 'It’s = it is; a question tag needs a comma and a question mark.'],
+  // ---------- Choose the Correct Sentence ----------
+  ['e_correct', 'Choose the correct sentence:', 'He doesn’t know anything.', 'He doesn’t know nothing.', 'He don’t know anything.', 'He doesn’t knows anything.', 'Avoid the double negative; “does” + base verb.'],
+  ['e_correct', 'Choose the correct sentence:', 'She is taller than I am.', 'She is more taller than me.', 'She is tallest than me.', 'She is more tall than I.', 'One comparative form: taller.'],
+  ['e_correct', 'Choose the correct sentence:', 'I look forward to meeting you.', 'I look forward to meet you.', 'I look forward for meeting you.', 'I am look forward to meet you.', '“Look forward to” + -ing.'],
+  ['e_correct', 'Choose the correct sentence:', 'Despite the rain, we went out.', 'Despite of the rain, we went out.', 'Inspite the rain, we went out.', 'Despite of rain we went out.', '“Despite” takes no “of”; “in spite of” does.'],
+  ['e_correct', 'Choose the correct sentence:', 'He is one of the best students in the class.', 'He is one of the best student in the class.', 'He is one of best students in class.', 'He is one the best students in the class.', '“One of” + plural noun.'],
+  ['e_correct', 'Choose the correct sentence:', 'The furniture in this room is new.', 'The furnitures in this room are new.', 'The furniture in this room are new.', 'The furnitures in this room is new.', '“Furniture” is uncountable.'],
+  ['e_correct', 'Choose the correct sentence:', 'Please return my book.', 'Please return back my book.', 'Please return me back my book.', 'Please returned my book.', '“Return” already means “give back”.'],
+  ['e_correct', 'Choose the correct sentence:', 'Neither of the answers is correct.', 'Neither of the answers are correct.', 'Neither of the answer is correct.', 'Neither the answers is correct.', '“Neither of” takes a singular verb.']
+]);
+BANK.lr = mk([
+  // ---------- Course of Action ----------
+  ['l_action', 'Statement: Many candidates fail the entry test because they did not know the syllabus. Courses of action — I: Publish the syllabus early and widely. II: Cancel the entry test. Which follow?', 'Only I follows', 'Only II follows', 'Both follow', 'Neither follows', 'I tackles the cause; II is an extreme step that does not solve it.'],
+  ['l_action', 'Statement: Dengue cases are rising in a city. I: Spray against mosquitoes in the affected areas. II: Close all schools permanently. Which follow?', 'Only I follows', 'Only II follows', 'Both follow', 'Neither follows', 'Spraying is practical; permanent closure is unreasonable.'],
+  ['l_action', 'Statement: Cracks have appeared in a busy bridge. I: Stop heavy traffic until engineers inspect it. II: Ignore it, since it is still standing. Which follow?', 'Only I follows', 'Only II follows', 'Both follow', 'Neither follows', 'Safety first: inspect before heavy loads cross again.'],
+  ['l_action', 'Statement: A hospital’s emergency ward is overcrowded every night. I: Add beds and staff. II: Sort patients by urgency on arrival (triage). Which follow?', 'Both follow', 'Only I follows', 'Only II follows', 'Neither follows', 'Both are reasonable and help the problem.'],
+  ['l_action', 'Statement: Some students cheated in a class test. I: Expel every student in the school. II: Supervise tests more closely. Which follow?', 'Only II follows', 'Only I follows', 'Both follow', 'Neither follows', 'Punishing everyone is unjust; better supervision is practical.'],
+  // ---------- Cause & Effect ----------
+  ['l_cause', 'A: The price of petrol rose sharply. B: Transport fares went up. Which is true?', 'A is the cause and B is its effect', 'B is the cause and A is its effect', 'Both are independent', 'Both are effects of a common cause', 'Higher fuel costs push fares up.'],
+  ['l_cause', 'A: Heavy rain fell for a week. B: Low-lying areas were flooded. Which is true?', 'A is the cause and B is its effect', 'B is the cause and A is its effect', 'Both are independent', 'Both are effects of a common cause', 'The flooding follows from the rain.'],
+  ['l_cause', 'A: Most students passed the exam. B: The school bought new buses. Which is true?', 'Both are independent', 'A is the cause and B is its effect', 'B is the cause and A is its effect', 'Both are effects of a common cause', 'There is no causal link between the two.'],
+  ['l_cause', 'A: Sales of umbrellas rose. B: The monsoon began early this year. Which is true?', 'B is the cause and A is its effect', 'A is the cause and B is its effect', 'Both are independent', 'Neither is true', 'Early rain made people buy umbrellas.'],
+  ['l_cause', 'A: A factory closed down. B: Hundreds of workers lost their jobs. Which is true?', 'A is the cause and B is its effect', 'B is the cause and A is its effect', 'Both are independent', 'Both are effects of a common cause', 'The closure caused the job losses.'],
+  // ---------- Logical Deductions ----------
+  ['l_deduct', 'All cats are animals. All animals breathe. Therefore:', 'All cats breathe', 'All animals are cats', 'Some cats do not breathe', 'Nothing follows', 'If every cat is an animal and every animal breathes, every cat breathes.'],
+  ['l_deduct', 'No fish is a mammal. All whales are mammals. Therefore:', 'No whale is a fish', 'Some whales are fish', 'All mammals are whales', 'Some fish are whales', 'Whales are mammals, and no mammal is a fish.'],
+  ['l_deduct', 'Some students are athletes. All athletes are fit. Therefore:', 'Some students are fit', 'All students are fit', 'No student is fit', 'All fit people are students', 'The students who are athletes must be fit.'],
+  ['l_deduct', 'If it rains, the match is cancelled. The match was not cancelled. Therefore:', 'It did not rain', 'It rained', 'The match was cancelled', 'Nothing can be said', 'If P then Q; not Q, so not P.'],
+  ['l_deduct', 'All doctors are educated. Some educated people are rich. Does “Some doctors are rich” follow?', 'It does not necessarily follow', 'It definitely follows', 'It is definitely false', 'All doctors are rich', 'The rich educated people may not include any doctors.'],
+  // ---------- Critical Thinking ----------
+  ['l_crit', '“Ahmed topped the class, so he must have cheated.” The flaw in this argument is that:', 'The conclusion has no supporting evidence', 'It uses numbers', 'It is too long', 'It mentions a class', 'Topping a class does not prove cheating.'],
+  ['l_crit', 'Which of these is a fact rather than an opinion?', 'Water boils at 100 °C at sea level.', 'Biology is the most interesting subject.', 'Lahore is the best city to live in.', 'Mock tests are boring.', 'A fact can be checked; the others are personal views.'],
+  ['l_crit', '“Buy this book — every topper uses it.” The hidden assumption is that:', 'Using what toppers use will make you a topper', 'The book is cheap', 'Toppers do not study', 'Books are useless', 'The advert assumes the book caused their success.'],
+  ['l_crit', 'Which best strengthens the claim “Regular exercise improves exam performance”?', 'A study where students who exercised scored higher, with other factors kept the same', 'A famous athlete says so', 'Most people like exercise', 'Exams are stressful', 'A controlled study gives the strongest evidence.'],
+  // ---------- Logical Problems ----------
+  ['l_prob', 'A is taller than B, and B is taller than C. Who is the shortest?', 'C', 'A', 'B', 'Cannot be decided', 'A > B > C.'],
+  ['l_prob', 'In a code, CAT is written DBU. How is DOG written?', 'EPH', 'CNF', 'EPI', 'DPH', 'Each letter moves one step forward.'],
+  ['l_prob', 'Five machines make five items in five minutes. How long do 100 machines take to make 100 items?', '5 minutes', '100 minutes', '20 minutes', '1 minute', 'Each machine makes one item in five minutes.'],
+  ['l_prob', 'At 3:00, the angle between the hands of a clock is:', '90°', '180°', '45°', '120°', 'Each hour mark is 30°: 3 × 30° = 90°.'],
+  ['l_prob', 'P is the father of Q. Q is the sister of R. How is P related to R?', 'Father', 'Brother', 'Uncle', 'Grandfather', 'Q and R are siblings, so P is father to both.']
+]);
+
+/* MDCAT Physics — FSc / PMDC curriculum facts. [topic, question, RIGHT, wrong, wrong, wrong, explanation] */
+BANK.phy = mk([
+  // ---------- Vectors & Equilibrium ----------
+  ['p_vec', 'Which of these is a vector quantity?', 'Displacement', 'Speed', 'Mass', 'Time', 'Displacement has both size and direction.'],
+  ['p_vec', 'Which of these is a scalar quantity?', 'Work', 'Force', 'Velocity', 'Momentum', 'Work = F·d is a dot product, so it is a scalar.'],
+  ['p_vec', 'The dot product of two perpendicular vectors is:', 'Zero', 'Maximum', 'Equal to their cross product', 'Negative', 'A·B = AB cos 90° = 0.'],
+  ['p_vec', 'The cross product of two parallel vectors is:', 'Zero', 'Maximum', 'Equal to their dot product', 'A unit vector', '|A × B| = AB sin 0° = 0.'],
+  ['p_vec', 'The second condition of equilibrium requires:', 'Zero net torque', 'Zero net force', 'Zero velocity', 'Zero mass', 'First condition: ΣF = 0; second: Στ = 0.'],
+  ['p_vec', 'Torque is given by:', 'τ = rF sin θ', 'τ = F/r', 'τ = mv', 'τ = Fd cos θ', 'τ = r × F.'],
+  // ---------- Force & Motion ----------
+  ['p_force', 'Newton’s first law is also called the law of:', 'Inertia', 'Acceleration', 'Action and reaction', 'Gravitation', 'A body keeps its state unless a net force acts.'],
+  ['p_force', 'The area under a velocity–time graph gives:', 'Displacement', 'Acceleration', 'Force', 'Momentum', 'Area = velocity × time = displacement.'],
+  ['p_force', 'The slope of a velocity–time graph gives:', 'Acceleration', 'Displacement', 'Speed', 'Force', 'Slope = change in velocity / time.'],
+  ['p_force', 'A projectile has its maximum range when thrown at:', '45°', '30°', '60°', '90°', 'R = v² sin 2θ / g is largest when 2θ = 90°.'],
+  ['p_force', 'At the highest point of a projectile’s path, its vertical velocity is:', 'Zero', 'Maximum', 'Equal to the horizontal velocity', 'Equal to g', 'It stops rising before it starts falling.'],
+  ['p_force', 'Impulse equals the change in:', 'Momentum', 'Kinetic energy', 'Velocity only', 'Acceleration', 'F × t = Δp.'],
+  ['p_force', 'In an elastic collision:', 'Both momentum and kinetic energy are conserved', 'Only momentum is conserved', 'Only kinetic energy is conserved', 'Neither is conserved', 'Momentum is always conserved; elastic also keeps KE.'],
+  ['p_force', 'The SI unit of force, the newton, equals:', 'kg m s⁻²', 'kg m s⁻¹', 'kg m² s⁻²', 'kg s⁻²', 'F = ma.'],
+  // ---------- Work & Energy ----------
+  ['p_work', 'Work done by a force perpendicular to the displacement is:', 'Zero', 'Maximum', 'Negative', 'Equal to the force', 'W = Fd cos 90° = 0.'],
+  ['p_work', 'One kilowatt-hour equals:', '3.6 × 10⁶ J', '3.6 × 10³ J', '1000 J', '3600 J', '1000 W × 3600 s.'],
+  ['p_work', 'The work–energy principle says the work done on a body equals its change in:', 'Kinetic energy', 'Mass', 'Momentum', 'Temperature', 'W = ΔKE.'],
+  ['p_work', 'The escape velocity from Earth is about:', '11.2 km/s', '7.9 km/s', '3 × 10⁸ m/s', '340 m/s', 'v = √(2gR) ≈ 11.2 km/s.'],
+  ['p_work', 'Which of these is a conservative force?', 'Gravitational force', 'Friction', 'Air resistance', 'Viscous drag', 'Work done by gravity does not depend on the path.'],
+  ['p_work', 'The SI unit of power is the:', 'Watt', 'Joule', 'Newton', 'Pascal', '1 W = 1 J/s.'],
+  // ---------- Rotational & Circular Motion ----------
+  ['p_rot', 'One radian is about:', '57.3°', '90°', '180°', '3.14°', '180°/π ≈ 57.3°.'],
+  ['p_rot', 'Centripetal acceleration is:', 'v²/r', 'v/r', 'vr', 'v²r', 'It points towards the centre of the circle.'],
+  ['p_rot', 'Angular momentum is conserved when the net external:', 'Torque is zero', 'Force is zero', 'Velocity is zero', 'Energy is zero', 'L = Iω stays constant if no external torque acts.'],
+  ['p_rot', 'A geostationary satellite has a period of:', '24 hours', '12 hours', '1 hour', '30 days', 'It turns with the Earth, staying above one place.'],
+  ['p_rot', 'The orbital speed of a satellite close to Earth’s surface is about:', '7.9 km/s', '11.2 km/s', '1 km/s', '30 km/s', 'v = √(gR) ≈ 7.9 km/s.'],
+  ['p_rot', 'Moment of inertia depends on:', 'Mass and how it is spread about the axis', 'Mass only', 'Speed only', 'Colour of the body', 'I = Σmr².'],
+  // ---------- Fluid Dynamics ----------
+  ['p_fluid', 'Bernoulli’s equation is based on the conservation of:', 'Energy', 'Mass', 'Momentum', 'Charge', 'Pressure + KE per volume + PE per volume is constant.'],
+  ['p_fluid', 'The equation of continuity is based on the conservation of:', 'Mass', 'Energy', 'Momentum', 'Charge', 'A₁v₁ = A₂v₂ for an incompressible fluid.'],
+  ['p_fluid', 'Stokes’ law gives the drag on a sphere as:', '6πηrv', '4πr²', 'mg', 'ηv/r', 'F = 6πηrv for a small sphere moving slowly.'],
+  ['p_fluid', 'A falling body reaches terminal velocity when:', 'The drag force equals its weight', 'Its weight is zero', 'Its acceleration is g', 'It stops moving', 'Net force is zero, so speed stays constant.'],
+  ['p_fluid', 'Blood pressure is measured with a:', 'Sphygmomanometer', 'Venturi meter', 'Barometer', 'Hydrometer', 'Usually read in mmHg.'],
+  // ---------- Waves ----------
+  ['p_wave', 'Sound cannot travel through:', 'A vacuum', 'Water', 'Steel', 'Air', 'Sound needs a medium.'],
+  ['p_wave', 'The speed of sound in air at room temperature is about:', '340 m/s', '3 × 10⁸ m/s', '1500 m/s', '34 m/s', 'About 332 m/s at 0 °C, rising with temperature.'],
+  ['p_wave', 'Sound waves in air are:', 'Longitudinal', 'Transverse', 'Electromagnetic', 'Stationary only', 'Air particles vibrate along the direction of travel.'],
+  ['p_wave', 'The distance between two neighbouring nodes in a stationary wave is:', 'λ/2', 'λ', 'λ/4', '2λ', 'Node to node is half a wavelength.'],
+  ['p_wave', 'When a sound source moves towards a listener, the pitch heard:', 'Rises', 'Falls', 'Stays the same', 'Disappears', 'The Doppler effect.'],
+  ['p_wave', 'The beat frequency of two notes equals:', 'The difference of their frequencies', 'The sum of their frequencies', 'Their product', 'Their average', 'f(beat) = |f₁ − f₂|.'],
+  ['p_wave', 'The time period of a simple pendulum does NOT depend on its:', 'Mass of the bob', 'Length', 'Value of g', 'Location on another planet', 'T = 2π√(l/g).'],
+  ['p_wave', 'Ultrasound has frequencies:', 'Above 20 kHz', 'Below 20 Hz', 'Between 20 Hz and 20 kHz', 'Above 20 MHz only', 'Above the range of human hearing.'],
+  // ---------- Thermodynamics ----------
+  ['p_thermo', 'The first law of thermodynamics is a statement of the conservation of:', 'Energy', 'Mass', 'Momentum', 'Entropy', 'ΔU = Q − W.'],
+  ['p_thermo', 'In an isothermal process:', 'Temperature stays constant', 'No heat is exchanged', 'Volume stays constant', 'Pressure stays constant', 'Iso-thermal = same temperature.'],
+  ['p_thermo', 'In an adiabatic process:', 'No heat enters or leaves', 'Temperature stays constant', 'Pressure stays constant', 'Volume stays constant', 'Q = 0.'],
+  ['p_thermo', 'In natural processes, the entropy of the universe:', 'Increases', 'Decreases', 'Stays zero', 'Becomes negative', 'The second law of thermodynamics.'],
+  ['p_thermo', 'For an ideal gas, Cp − Cv equals:', 'R', 'Zero', '2R', 'γ', 'Mayer’s relation (molar heat capacities).'],
+  ['p_thermo', 'No heat engine can be:', '100% efficient', '30% efficient', '50% efficient', 'Used in cars', 'Some heat must always go to the cold reservoir.'],
+  // ---------- Electrostatics ----------
+  ['p_estat', 'By Coulomb’s law, the force between two charges varies as:', '1/r²', '1/r', 'r', 'r²', 'Doubling the distance makes the force one-quarter.'],
+  ['p_estat', 'The SI unit of electric field strength is:', 'N/C', 'C/N', 'J/C', 'N·C', 'Also written V/m.'],
+  ['p_estat', 'The electric field inside a charged hollow conductor is:', 'Zero', 'Maximum', 'Equal to the field outside', 'Infinite', 'Charges sit on the outer surface.'],
+  ['p_estat', 'One farad equals one:', 'Coulomb per volt', 'Volt per coulomb', 'Joule per coulomb', 'Ampere per volt', 'C = Q/V.'],
+  ['p_estat', 'Capacitors joined in parallel have a total capacitance equal to:', 'The sum of their capacitances', 'The smallest capacitance', 'The product of their capacitances', '1/(sum of reciprocals)', 'C = C₁ + C₂ + ...'],
+  ['p_estat', 'The electron volt is a unit of:', 'Energy', 'Potential', 'Charge', 'Current', '1 eV = 1.6 × 10⁻¹⁹ J.'],
+  ['p_estat', 'Putting a dielectric between the plates of a capacitor:', 'Increases its capacitance', 'Decreases its capacitance', 'Makes it zero', 'Has no effect', 'C = εᵣε₀A/d rises by the factor εᵣ.'],
+  // ---------- Current Electricity ----------
+  ['p_curr', 'Ohm’s law holds when the conductor’s:', 'Temperature stays constant', 'Current is zero', 'Voltage is zero', 'Length doubles', 'V ∝ I at constant temperature.'],
+  ['p_curr', 'The SI unit of resistivity is the:', 'Ohm metre (Ω m)', 'Ohm (Ω)', 'Ohm per metre', 'Siemens', 'ρ = RA/L.'],
+  ['p_curr', 'Kirchhoff’s first (junction) rule is based on the conservation of:', 'Charge', 'Energy', 'Mass', 'Momentum', 'Current in = current out at a junction.'],
+  ['p_curr', 'Kirchhoff’s second (loop) rule is based on the conservation of:', 'Energy', 'Charge', 'Mass', 'Momentum', 'Sum of emfs = sum of IR drops in a loop.'],
+  ['p_curr', 'The resistance of a metal wire, when it is heated:', 'Increases', 'Decreases', 'Stays the same', 'Becomes zero', 'Metals have a positive temperature coefficient.'],
+  ['p_curr', 'A Wheatstone bridge is used to measure:', 'An unknown resistance', 'Current', 'Power', 'Magnetic field', 'At balance, P/Q = R/S.'],
+  ['p_curr', 'The emf of a cell is the:', 'Energy given to each coulomb of charge', 'Force on each electron', 'Current it gives', 'Charge it stores', 'Measured in volts (J/C).'],
+  // ---------- Electromagnetism ----------
+  ['p_emag', 'The force on a charge q moving with velocity v in a field B is:', 'qvB sin θ', 'qB/v', 'qv/B', 'qvB cos θ', 'F = q(v × B).'],
+  ['p_emag', 'The SI unit of magnetic flux density is the:', 'Tesla', 'Weber', 'Henry', 'Gauss only', '1 T = 1 Wb/m².'],
+  ['p_emag', 'A galvanometer becomes an ammeter by connecting:', 'A low resistance in parallel (a shunt)', 'A high resistance in series', 'A high resistance in parallel', 'A capacitor in series', 'Most of the current goes through the shunt.'],
+  ['p_emag', 'A galvanometer becomes a voltmeter by connecting:', 'A high resistance in series', 'A low resistance in parallel', 'A low resistance in series', 'An inductor in parallel', 'The series resistance limits the current.'],
+  ['p_emag', 'A charged particle moving parallel to a magnetic field feels:', 'No magnetic force', 'Maximum force', 'A force along the field', 'A force that doubles its speed', 'sin 0° = 0.'],
+  ['p_emag', 'The magnetic field inside a long solenoid is:', 'μ₀nI', 'μ₀I/2πr', 'zero', 'μ₀I/2r', 'n is the number of turns per unit length.'],
+  // ---------- Electromagnetic Induction ----------
+  ['p_emi', 'By Faraday’s law, the induced emf is proportional to the:', 'Rate of change of magnetic flux', 'Magnetic flux itself', 'Resistance of the coil', 'Square of the current', 'ε = −N ΔΦ/Δt.'],
+  ['p_emi', 'Lenz’s law follows from the conservation of:', 'Energy', 'Charge', 'Mass', 'Momentum', 'The induced current opposes the change that causes it.'],
+  ['p_emi', 'A transformer works only with:', 'Alternating current', 'Direct current', 'Static charge', 'Batteries', 'It needs a changing flux (mutual induction).'],
+  ['p_emi', 'A step-up transformer has:', 'More turns on the secondary coil', 'More turns on the primary coil', 'Equal turns on both coils', 'No secondary coil', 'Vₛ/Vₚ = Nₛ/Nₚ.'],
+  ['p_emi', 'The SI unit of self-inductance is the:', 'Henry', 'Tesla', 'Weber', 'Farad', '1 H = 1 V s/A.'],
+  ['p_emi', 'An AC generator converts:', 'Mechanical energy into electrical energy', 'Electrical energy into mechanical energy', 'Heat into light', 'Chemical energy into electrical energy', 'A coil rotating in a magnetic field.'],
+  // ---------- Alternating Current ----------
+  ['p_ac', 'The frequency of mains electricity in Pakistan is:', '50 Hz', '60 Hz', '100 Hz', '220 Hz', 'Mains supply: about 220–230 V at 50 Hz.'],
+  ['p_ac', 'In a pure resistor, AC voltage and current are:', 'In phase', '90° out of phase', '180° out of phase', '45° out of phase', 'They peak together.'],
+  ['p_ac', 'In a pure capacitor, the current:', 'Leads the voltage by 90°', 'Lags the voltage by 90°', 'Is in phase with the voltage', 'Is always zero', 'ICE: in a capacitor, current leads.'],
+  ['p_ac', 'In a pure inductor, the current:', 'Lags the voltage by 90°', 'Leads the voltage by 90°', 'Is in phase with the voltage', 'Is always maximum', 'ELI: in an inductor, voltage leads current.'],
+  ['p_ac', 'An RLC series circuit is at resonance when:', 'X_L = X_C', 'R = 0', 'X_L = 0', 'The current is zero', 'Then the impedance is smallest and the current largest.'],
+  ['p_ac', 'The reactance of a capacitor, as the frequency rises:', 'Decreases', 'Increases', 'Stays constant', 'Becomes infinite', 'X_C = 1/(2πfC).'],
+  // ---------- Electronics ----------
+  ['p_elec', 'A p-n junction diode lets current flow:', 'In one direction only', 'In both directions equally', 'In neither direction', 'Only at high frequencies', 'Forward bias conducts; reverse bias blocks.'],
+  ['p_elec', 'Changing AC into DC is called:', 'Rectification', 'Amplification', 'Modulation', 'Oscillation', 'Diodes are used as rectifiers.'],
+  ['p_elec', 'An n-type semiconductor is made by adding a:', 'Pentavalent impurity (e.g. phosphorus)', 'Trivalent impurity (e.g. boron)', 'Noble gas', 'Metal oxide', 'The extra fifth electron becomes a free carrier.'],
+  ['p_elec', 'The majority charge carriers in a p-type semiconductor are:', 'Holes', 'Electrons', 'Protons', 'Neutrons', 'Trivalent impurities create holes.'],
+  ['p_elec', 'A transistor can be used as:', 'An amplifier and a switch', 'A rectifier only', 'A battery', 'A transformer', 'Small base current controls a large collector current.'],
+  ['p_elec', 'The logic gate whose output is 1 only when all inputs are 1 is:', 'AND', 'OR', 'NOR', 'NOT', 'AND: all inputs high.'],
+  ['p_elec', 'The “universal” logic gates are:', 'NAND and NOR', 'AND and OR', 'NOT and XOR', 'OR and NOT', 'Any circuit can be built from NAND (or NOR) gates alone.'],
+  // ---------- Dawn of Modern Physics ----------
+  ['p_modern', 'The photoelectric effect was explained by:', 'Einstein', 'Newton', 'Bohr', 'Faraday', 'Light comes in photons, E = hf (1905).'],
+  ['p_modern', 'Photoelectrons are emitted only if the light’s frequency is above the:', 'Threshold frequency', 'Resonant frequency', 'Beat frequency', 'Mains frequency', 'Below it, no electrons come out however bright the light.'],
+  ['p_modern', 'The maximum kinetic energy of photoelectrons depends on the light’s:', 'Frequency', 'Intensity', 'Exposure time', 'Direction', 'KEmax = hf − φ.'],
+  ['p_modern', 'The number of photoelectrons emitted per second depends on the light’s:', 'Intensity', 'Frequency only', 'Colour only', 'Speed', 'More photons → more electrons.'],
+  ['p_modern', 'The de Broglie wavelength of a particle is:', 'h/p', 'p/h', 'hp', 'h/E', 'λ = h/mv.'],
+  ['p_modern', 'Pair production needs a photon of at least:', '1.02 MeV', '0.51 eV', '13.6 eV', '1 keV', 'Twice the rest energy of an electron (2 × 0.51 MeV).'],
+  ['p_modern', 'The Compton effect shows that photons have:', 'Momentum', 'Charge', 'Rest mass', 'A negative energy', 'X-rays scattered by electrons lose energy and momentum.'],
+  // ---------- Atomic Spectra ----------
+  ['p_atom', 'The Lyman series of hydrogen lies in the:', 'Ultraviolet region', 'Visible region', 'Infrared region', 'Radio region', 'Transitions down to n = 1.'],
+  ['p_atom', 'The Balmer series of hydrogen lies in the:', 'Visible region', 'Ultraviolet region', 'Infrared region', 'X-ray region', 'Transitions down to n = 2.'],
+  ['p_atom', 'The ionisation energy of a hydrogen atom in its ground state is:', '13.6 eV', '3.4 eV', '1.51 eV', '10.2 eV', 'E₁ = −13.6 eV.'],
+  ['p_atom', 'In Bohr’s model, the angular momentum of the electron is:', 'nh/2π', 'h/2πn', 'nh', '2πnh', 'Bohr’s quantisation condition.'],
+  ['p_atom', 'X-rays are produced when:', 'Fast electrons hit a metal target', 'Light falls on a metal', 'Nuclei split', 'A gas is heated', 'Sudden slowing of electrons gives X-rays.'],
+  ['p_atom', 'LASER light is:', 'Monochromatic and coherent', 'White and incoherent', 'Made of many colours', 'Always invisible', 'Light Amplification by Stimulated Emission of Radiation.'],
+  // ---------- Nuclear Physics ----------
+  ['p_nuc', 'An alpha particle is a:', 'Helium nucleus', 'Fast electron', 'Photon', 'Neutron', '2 protons + 2 neutrons.'],
+  ['p_nuc', 'A beta particle (β⁻) is a:', 'Fast electron', 'Helium nucleus', 'Photon', 'Proton', 'Made when a neutron turns into a proton.'],
+  ['p_nuc', 'The most penetrating radiation is:', 'Gamma rays', 'Alpha particles', 'Beta particles', 'Cathode rays', 'Gamma rays need thick lead to stop them.'],
+  ['p_nuc', 'The most strongly ionising radiation is:', 'Alpha particles', 'Gamma rays', 'Beta particles', 'X-rays', 'Alpha is heavy and doubly charged.'],
+  ['p_nuc', 'In alpha decay, the mass number:', 'Falls by 4 and the atomic number by 2', 'Falls by 2 and the atomic number by 4', 'Stays the same and the atomic number rises by 1', 'Rises by 4', 'An α carries away ⁴₂He.'],
+  ['p_nuc', 'In beta (β⁻) decay, the atomic number:', 'Rises by 1', 'Falls by 1', 'Falls by 2', 'Stays the same', 'A neutron becomes a proton; mass number is unchanged.'],
+  ['p_nuc', 'In a nuclear reactor, the moderator:', 'Slows down neutrons', 'Absorbs all neutrons', 'Cools the fuel only', 'Starts the reaction', 'Graphite or heavy water slows fast neutrons.'],
+  ['p_nuc', 'Control rods in a reactor are made of:', 'Cadmium or boron', 'Graphite', 'Uranium', 'Lead', 'They absorb neutrons to control the chain reaction.'],
+  ['p_nuc', 'The Sun gets its energy from:', 'Nuclear fusion', 'Nuclear fission', 'Burning coal', 'Radioactive decay', 'Hydrogen nuclei fuse into helium.'],
+  ['p_nuc', 'The SI unit of radioactivity is the:', 'Becquerel', 'Curie', 'Gray', 'Sievert', '1 Bq = one decay per second.']
+]);
+
+/* Fresh MDCAT calculations: new numbers every time, so a student never runs out and can't memorise answers.
+   Each returns { q, o: [correct, three wrong], a: 0, e } — the engine shuffles the options. */
+const GEN = (() => {
+  const R = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+  const pick = a => a[Math.floor(Math.random() * a.length)];
+  const fx = (x, d = 2) => { const v = +x.toFixed(d); return String(v); };
+  const sup = n => String(n).split('').map(c => '⁰¹²³⁴⁵⁶⁷⁸⁹'[+c]).join('');
+  // three wrong answers that differ from the right one and from each other
+  function mc(q, right, wrong, unit, e) {
+    const u = unit ? ' ' + unit : '', seen = new Set([String(right)]), o = [String(right) + u];
+    for (const w of wrong) { const s = String(w); if (!seen.has(s) && o.length < 4) { seen.add(s); o.push(s + u); } }
+    const base = parseFloat(String(right).replace('−', '-')); let k = 2;
+    while (o.length < 4 && k < 50) { const s = isNaN(base) ? String(right) + ' (' + k + ')' : fx(base * k + 1); if (!seen.has(s)) { seen.add(s); o.push(s + u); } k++; }
+    return { q, o, a: 0, e };
+  }
+  const G = {};
+  /* ---------- physics ---------- */
+  G.p_vec = () => { const [a, b, c] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17], [9, 12, 15]]);
+    return mc(`Two forces of ${a} N and ${b} N act at right angles on a body. The magnitude of their resultant is:`, c, [a + b, Math.abs(b - a), fx(Math.sqrt(a * b))], 'N', `At 90°, R = √(${a}² + ${b}²) = √${a * a + b * b} = ${c} N.`); };
+  G.p_force = () => pick([
+    () => { const m = R(2, 12), a = R(2, 9), F = m * a; return mc(`A net force of ${F} N acts on a ${m} kg body. Its acceleration is:`, a, [F * m, fx(m / F), a + 2], 'm/s²', `a = F/m = ${F}/${m} = ${a} m/s².`); },
+    () => { const u = R(0, 10), a = R(1, 5), t = R(2, 10), v = u + a * t; return mc(`A car starts at ${u} m/s and accelerates uniformly at ${a} m/s² for ${t} s. Its final velocity is:`, v, [u + a, a * t, v + t], 'm/s', `v = u + at = ${u} + ${a}×${t} = ${v} m/s.`); },
+    () => { const a = pick([2, 4, 6]), t = R(2, 8), s = a * t * t / 2; return mc(`A body starts from rest with acceleration ${a} m/s². Distance covered in ${t} s:`, s, [a * t, a * t * t, s / 2], 'm', `s = ½at² = ½×${a}×${t}² = ${s} m.`); },
+    () => { const m = R(2, 10), v = R(2, 12), p = m * v; return mc(`Momentum of a ${m} kg body moving at ${v} m/s is:`, p, [fx(m * v * v / 2), m + v, fx(m / v)], 'kg m/s', `p = mv = ${m}×${v} = ${p} kg m/s.`); }])();
+  G.p_work = () => pick([
+    () => { const m = pick([2, 4, 6, 8, 10]), v = R(2, 10), k = m * v * v / 2; return mc(`Kinetic energy of a ${m} kg body moving at ${v} m/s is:`, k, [m * v, m * v * v, k / 2], 'J', `KE = ½mv² = ½×${m}×${v}² = ${k} J.`); },
+    () => { const m = R(2, 10), h = R(2, 20), pe = m * 10 * h; return mc(`A ${m} kg mass is raised ${h} m. Gain in potential energy (g = 10 m/s²):`, pe, [m * h, pe / 2, pe * 2], 'J', `PE = mgh = ${m}×10×${h} = ${pe} J.`); },
+    () => { const W = pick([200, 300, 600, 1200, 1500]), t = pick([2, 3, 5, 6]), P = W / t; return mc(`A machine does ${W} J of work in ${t} s. Its power is:`, fx(P), [W * t, fx(P / 2), fx(P + t)], 'W', `P = W/t = ${W}/${t} = ${fx(P)} W.`); },
+    () => { const F = R(5, 40), d = R(2, 10), W = F * d; return mc(`A force of ${F} N moves a body ${d} m in its own direction. Work done:`, W, [F + d, fx(F / d), W * 2], 'J', `W = Fd cos0° = ${F}×${d} = ${W} J.`); }])();
+  G.p_rot = () => pick([
+    () => { const m = R(1, 5), v = pick([2, 4, 6]), r = pick([1, 2, 4]), F = m * v * v / r; return mc(`A ${m} kg body moves in a circle of radius ${r} m at ${v} m/s. Centripetal force:`, fx(F), [fx(m * v / r), fx(m * v * v), fx(F / 2)], 'N', `F = mv²/r = ${m}×${v}²/${r} = ${fx(F)} N.`); },
+    () => { const v = pick([4, 6, 8, 10, 12]), r = pick([2, 4, 5]), w = v / r; return mc(`A point on a wheel of radius ${r} m moves at ${v} m/s. Its angular velocity is:`, fx(w), [v * r, fx(w * 2), fx(r / v)], 'rad/s', `ω = v/r = ${v}/${r} = ${fx(w)} rad/s.`); }])();
+  G.p_fluid = () => { const A1 = pick([2, 4, 6, 8]), v1 = R(1, 6), A2 = pick([1, 2]), v2 = A1 * v1 / A2;
+    return mc(`Water flows at ${v1} m/s through a pipe of area ${A1} cm². In a narrower part of area ${A2} cm², its speed is:`, fx(v2), [fx(v1 * A2 / A1), v1, fx(v2 * 2)], 'm/s', `Continuity: A₁v₁ = A₂v₂, so v₂ = ${A1}×${v1}/${A2} = ${fx(v2)} m/s.`); };
+  G.p_wave = () => pick([
+    () => { const f = pick([50, 100, 200, 250, 500]), l = pick([0.5, 1, 2, 4]), v = f * l; return mc(`A wave of frequency ${f} Hz has wavelength ${l} m. Its speed is:`, fx(v), [fx(f / l), fx(l / f), fx(v / 2)], 'm/s', `v = fλ = ${f}×${l} = ${fx(v)} m/s.`); },
+    () => { const T = pick([0.01, 0.02, 0.05, 0.1, 0.25]), f = 1 / T; return mc(`A wave has a time period of ${T} s. Its frequency is:`, fx(f), [fx(T), fx(f * 2), fx(f / 2)], 'Hz', `f = 1/T = 1/${T} = ${fx(f)} Hz.`); }])();
+  G.p_thermo = () => { const Th = pick([400, 500, 600, 800]), Tc = pick([200, 300]), e = 100 * (1 - Tc / Th);
+    return mc(`A Carnot engine works between ${Th} K and ${Tc} K. Its efficiency is:`, fx(e, 1), [fx(100 * Tc / Th, 1), fx(e / 2, 1), fx(100 * (Th - Tc) / (Th + Tc), 1)], '%', `η = 1 − T꜀/Tₕ = 1 − ${Tc}/${Th} = ${fx(e, 1)}%.`); };
+  G.p_estat = () => { const C = pick([2, 4, 5, 10, 20]), V = pick([6, 10, 12, 50, 100]), Q = C * V;
+    return mc(`A ${C} μF capacitor is connected to ${V} V. The charge on it is:`, Q, [fx(C / V), fx(V / C), Q * 2], 'μC', `Q = CV = ${C} μF × ${V} V = ${Q} μC.`); };
+  G.p_curr = () => pick([
+    () => { const I = R(1, 6), Rr = R(2, 12), V = I * Rr; return mc(`A current of ${I} A flows through a ${Rr} Ω resistor. Potential difference across it:`, V, [fx(Rr / I), I + Rr, V * 2], 'V', `V = IR = ${I}×${Rr} = ${V} V.`); },
+    () => { const a = R(2, 12), b = R(2, 12); return mc(`Resistors of ${a} Ω and ${b} Ω are joined in series. Equivalent resistance:`, a + b, [fx(a * b / (a + b)), a * b, Math.abs(a - b) || a + b + 1], 'Ω', `In series, R = R₁ + R₂ = ${a} + ${b} = ${a + b} Ω.`); },
+    () => { const [a, b] = pick([[6, 3], [12, 6], [4, 4], [10, 10], [12, 4], [20, 5]]), p = a * b / (a + b); return mc(`Resistors of ${a} Ω and ${b} Ω are joined in parallel. Equivalent resistance:`, fx(p), [a + b, fx(p * 2), fx((a + b) / 2 + 1)], 'Ω', `In parallel, R = R₁R₂/(R₁ + R₂) = ${a * b}/${a + b} = ${fx(p)} Ω.`); },
+    () => { const V = pick([6, 12, 24, 220]), I = pick([2, 3, 5]), P = V * I; return mc(`A device draws ${I} A from a ${V} V supply. Its power is:`, P, [fx(V / I), V + I, P * 2], 'W', `P = VI = ${V}×${I} = ${P} W.`); }])();
+  G.p_emi = () => { const B = pick([0.2, 0.5, 1, 2]), L = pick([0.5, 1, 2]), v = pick([2, 4, 5, 10]), e = B * L * v;
+    return mc(`A ${L} m rod moves at ${v} m/s at right angles to a ${B} T magnetic field. The induced emf is:`, fx(e), [fx(B * v), fx(e * 2), fx(B * L / v)], 'V', `ε = BLv = ${B}×${L}×${v} = ${fx(e)} V.`); };
+  G.p_ac = () => { const V0 = pick([10, 20, 100, 141.4, 311]), r = V0 / Math.SQRT2;
+    return mc(`The peak value of an alternating voltage is ${V0} V. Its rms value is about:`, fx(r, 1), [fx(V0 * Math.SQRT2, 1), fx(V0 / 2, 1), fx(V0, 1)], 'V', `V(rms) = V₀/√2 = ${V0}/1.414 ≈ ${fx(r, 1)} V.`); };
+  G.p_modern = () => { const l = pick([248, 310, 413, 496, 620]), E = 1240 / l;
+    return mc(`Energy of a photon of wavelength ${l} nm (use hc = 1240 eV·nm):`, fx(E, 1), [fx(l / 1240, 2), fx(E * 2, 1), fx(E / 2, 1)], 'eV', `E = hc/λ = 1240/${l} = ${fx(E, 1)} eV.`); };
+  G.p_nuc = () => { const T = pick([2, 3, 5, 8, 10]), n = R(1, 4), m0 = pick([16, 32, 64, 80, 160]), left = m0 / 2 ** n;
+    return mc(`A radioactive sample of ${m0} g has a half-life of ${T} days. Mass left after ${n * T} days:`, fx(left), [fx(m0 / (n + 1)), fx(left * 2), fx(m0 - m0 / 2 ** n)], 'g', `${n * T} days is ${n} half-lives: ${m0} × (½)^${n} = ${fx(left)} g.`); };
+  G.p_atom = () => { const n = R(2, 5), E = 13.6 / (n * n);
+    return mc(`In the Bohr model, the energy of the hydrogen electron in orbit n = ${n} is:`, '−' + fx(E, 2), ['−' + fx(13.6 / n, 2), '+' + fx(E, 2), '−' + fx(13.6 * n * n, 1)], 'eV', `Eₙ = −13.6/n² = −13.6/${n * n} = −${fx(E, 2)} eV.`); };
+  /* ---------- chemistry ---------- */
+  const M = [['H₂O', 18], ['CO₂', 44], ['NaOH', 40], ['CaCO₃', 100], ['H₂SO₄', 98], ['NaCl', 58.5], ['C₆H₁₂O₆ (glucose)', 180], ['NH₃', 17], ['CH₄', 16], ['O₂', 32]];
+  G.c_fund = () => pick([
+    () => { const [f, mm] = pick(M), n = pick([0.5, 1, 2, 3, 0.25]), g = mm * n; return mc(`How many moles are there in ${fx(g)} g of ${f}? (molar mass ${mm} g/mol)`, fx(n), [fx(g * mm), fx(n * 2), fx(mm / g)], 'mol', `n = mass/molar mass = ${fx(g)}/${mm} = ${fx(n)} mol.`); },
+    () => { const n = pick([0.5, 1, 2, 3]), N = n * 6.02; return mc(`Number of molecules in ${n} mol of a gas:`, fx(N) + ' × 10²³', [fx(N * 10) + ' × 10²³', fx(n) + ' × 10²³', fx(6.02 / n) + ' × 10²³'], '', `N = n × Nₐ = ${n} × 6.02 × 10²³ = ${fx(N)} × 10²³.`); },
+    () => { const [f, mm] = pick(M); return mc(`Mass of 1 mole of ${f} is:`, mm, [mm * 2, fx(mm / 2), mm + 16], 'g', `One mole of a substance has a mass equal to its molar mass: ${mm} g.`); }])();
+  G.c_gas = () => pick([
+    () => { const P1 = pick([1, 2, 3, 4]), V1 = pick([2, 4, 6, 12]), P2 = pick([2, 4, 6, 8].filter(x => x !== P1)), V2 = P1 * V1 / P2; return mc(`At constant temperature, a gas occupies ${V1} dm³ at ${P1} atm. Its volume at ${P2} atm is:`, fx(V2), [fx(V1 * P2 / P1), fx(V2 * 2), fx(V1 + P2 - P1)], 'dm³', `Boyle's law: P₁V₁ = P₂V₂, so V₂ = ${P1}×${V1}/${P2} = ${fx(V2)} dm³.`); },
+    () => { const T1 = pick([200, 300, 400]), V1 = pick([2, 3, 5, 6]), T2 = pick([400, 600, 800].filter(x => x !== T1)), V2 = V1 * T2 / T1; return mc(`At constant pressure, ${V1} dm³ of a gas at ${T1} K is heated to ${T2} K. New volume:`, fx(V2), [fx(V1 * T1 / T2), fx(V2 + 1), fx(V1 + (T2 - T1) / 100)], 'dm³', `Charles's law: V₁/T₁ = V₂/T₂, so V₂ = ${V1}×${T2}/${T1} = ${fx(V2)} dm³.`); },
+    () => { const c = R(-73, 127), k = c + 273; return mc(`${c} °C on the Kelvin scale is:`, k, [k + 100, k - 100, 273 - c === k ? k + 10 : 273 - c], 'K', `T(K) = t(°C) + 273 = ${c} + 273 = ${k} K.`); }])();
+  G.c_eq = () => pick([
+    () => { const n = R(1, 6); return mc(`A strong acid solution has [H⁺] = 10⁻${sup(n)} mol/dm³. Its pH is:`, n, [14 - n, n + 1, n === 1 ? 0.1 : n - 1], '', `pH = −log[H⁺] = −log 10⁻${sup(n)} = ${n}.`); },
+    () => { const p = R(1, 13); return mc(`An aqueous solution at 25 °C has pH ${p}. Its pOH is:`, 14 - p, [p, 15 - p, Math.max(0, 13 - p)], '', `pH + pOH = 14, so pOH = 14 − ${p} = ${14 - p}.`); }])();
+  G.c_kin = () => { const t = pick([10, 20, 30]), n = R(1, 3), c0 = pick([0.8, 1.6, 2.4, 3.2]);
+    return mc(`A first-order reaction has a half-life of ${t} min. Starting at ${c0} M, the concentration after ${n * t} min is:`, fx(c0 / 2 ** n, 3), [fx(c0 / (2 * n), 3), fx(c0 / 2 ** (n + 1), 3), fx(c0 - c0 / 2 ** n, 3)], 'M', `${n * t} min is ${n} half-life(s): ${c0} × (½)^${n} = ${fx(c0 / 2 ** n, 3)} M.`); };
+  G.c_atom = () => { const [sym, Z, A] = pick([['Na', 11, 23], ['Cl', 17, 35], ['K', 19, 39], ['Ca', 20, 40], ['Fe', 26, 56], ['Al', 13, 27], ['P', 15, 31], ['S', 16, 32]]);
+    return pick([() => mc(`An atom of ${sym} has mass number ${A} and atomic number ${Z}. Number of neutrons:`, A - Z, [A, Z, A + Z], '', `Neutrons = A − Z = ${A} − ${Z} = ${A - Z}.`),
+      () => mc(`Number of electrons in a neutral atom of ${sym} (atomic number ${Z}, mass number ${A}):`, Z, [A - Z, A, Z + 1], '', `A neutral atom has as many electrons as protons: ${Z}.`)])(); };
+  /* ---------- logical reasoning ---------- */
+  G.l_series = () => pick([
+    () => { const a = R(2, 20), d = R(3, 9), s = [0, 1, 2, 3, 4].map(i => a + i * d); return mc(`Find the next number: ${s.join(', ')}, ?`, a + 5 * d, [a + 5 * d + 1, a + 5 * d - 1, a + 6 * d], '', `Each term adds ${d}: ${s[4]} + ${d} = ${a + 5 * d}.`); },
+    () => { const a = R(1, 4), r = pick([2, 3]), s = [0, 1, 2, 3].map(i => a * r ** i); return mc(`Find the next number: ${s.join(', ')}, ?`, a * r ** 4, [a * r ** 4 + r, s[3] + s[2], a * r ** 3 * (r + 1)], '', `Each term is multiplied by ${r}: ${s[3]} × ${r} = ${a * r ** 4}.`); },
+    () => { const a = R(1, 10), s = [a]; for (let i = 1; i < 5; i++) s.push(s[i - 1] + i * 2); const nx = s[4] + 10; return mc(`Find the next number: ${s.join(', ')}, ?`, nx, [nx - 2, nx + 2, s[4] + 8 + 4], '', `The differences go 2, 4, 6, 8, so the next is +10: ${s[4]} + 10 = ${nx}.`); },
+    () => { const L = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', st = R(0, 8), k = R(2, 4), s = [0, 1, 2, 3].map(i => L[st + i * k]); const nx = L[st + 4 * k]; return mc(`Find the next letter: ${s.join(', ')}, ?`, nx, [L[st + 4 * k + 1], L[st + 4 * k - 1], L[st + 3 * k + 1]], '', `Each letter skips ahead by ${k}: ${s[3]} → ${nx}.`); },
+    () => { const L = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', st = R(0, 15), s = [0, 1, 2].map(i => L[st + i] + L[25 - st - i]); const nx = L[st + 3] + L[22 - st]; return mc(`Find the next pair: ${s.join(', ')}, ?`, nx, [L[st + 3] + L[23 - st], L[st + 4] + L[22 - st], L[22 - st] + L[st + 3]], '', `The first letter moves forward from ${L[st]}, the second backward from ${L[25 - st]} (opposite letters): ${nx}.`); }])();
+  G.l_prob = () => pick([
+    () => { const N = R(20, 45), k = R(3, N - 3); return mc(`In a row of ${N} students, Ali is ${k}th from the left. What is his position from the right?`, N - k + 1, [N - k, N - k + 2, k + 1], '', `Position from right = total − left position + 1 = ${N} − ${k} + 1 = ${N - k + 1}.`); },
+    () => { const a = R(8, 15), d = R(3, 8); return mc(`Sara is ${d} years older than her brother. Their ages add up to ${2 * a + d}. How old is the brother?`, a, [a + d, a - 1, a + 1], 'years', `b + (b + ${d}) = ${2 * a + d}, so 2b = ${2 * a}, b = ${a}.`); },
+    () => { const w = pick(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']), W = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], n = R(8, 30), t = W[(W.indexOf(w) + n) % 7]; return mc(`If today is ${w}, what day will it be after ${n} days?`, t, W.filter(x => x !== t).sort(() => Math.random() - .5).slice(0, 3), '', `${n} = ${Math.floor(n / 7)} weeks + ${n % 7} days; ${w} + ${n % 7} days = ${t}.`); }])();
+  return G;
+})();
+
+'use strict';
+/* =====================================================================
+   The exam engine (28 Nov 2026) — Road to MBBS first, Road to CSS next, from the same file.
+   The exam comes from EXAM (apps/<name>/config.js), its questions from BANK (bank/*.js) and fresh ones from GEN
+   (gen.js). Practice by subject and topic, mocks in the real format, mistakes, progress, passes (Easypaisa, the
+   same Google Form and backend as Road to Kakul), a free Pro day for new phones.
+   ===================================================================== */
+const $id = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const KEY = EXAM.key + '_state_v1', CFG_KEY = EXAM.key + '_cfg_v1';
+const pkDay = (t = Date.now()) => new Date(t + 5 * 3600e3).toISOString().slice(0, 10);   // Pakistan's date
+const today = () => pkDay();
+const rnd = n => Math.floor(Math.random() * n);
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = rnd(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const genId = () => Array.from({ length: 8 }, () => 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[rnd(32)]).join('');
+const pct = (c, n) => n ? Math.round(100 * c / n) : 0;
+const SUBJ = Object.fromEntries(EXAM.subjects.map(s => [s.id, s]));
+const TOPIC = {}; EXAM.subjects.forEach(s => s.topics.forEach(([id, n]) => { TOPIC[id] = { id, n, s: s.id }; }));
+
+/* ---------- state ---------- */
+function defState() {
+  return { v: 1, created: Date.now(), dev: genId(), onboard: false, name: '', testDate: '', stats: {}, seen: {}, mist: [], mocks: [],
+    days: {}, xp: 0, pay: null, payHist: [], payPlan: '', trial: null, trk: null, diag: null, freeMini: 0 };
+}
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.v) return Object.assign(defState(), s); } catch (e) { } return defState(); }
+let S = load(), saveT = 0;
+function save() { clearTimeout(saveT); saveT = setTimeout(saveNow, 120); }
+function saveNow() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { } }
+window.addEventListener('pagehide', saveNow);
+
+/* ---------- remote config: Road to Kakul's pack.json (the same form, block list and backend) ---------- */
+let CFG = (() => { try { return JSON.parse(localStorage.getItem(CFG_KEY)) || {}; } catch (e) { return {}; } })();
+function loadCfg() {
+  return fetch(EXAM.packUrl + '?t=' + Date.now(), { cache: 'no-store' }).then(r => r.json()).then(p => {
+    CFG = (p && p.config) || {}; try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch (e) { }
+    if (payActive() === false && S.pay && (CFG.blockTids || []).includes(S.pay.tid)) render();
+  }).catch(() => { });
+}
+const PAY = () => Object.assign({ tidMin: 10, tidMax: 20 }, CFG.pay || {});
+const apiOn = () => !!(CFG.api && /^https:\/\//.test(CFG.api));
+function apiCall(path, body) {
+  const o = body ? { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) } : {};
+  return fetch(CFG.api.replace(/\/+$/, '') + path, o).then(r => r.json());
+}
+function formLog(o) {
+  const P = PAY(); if (!P.logUrl) return;
+  try {
+    const f = new URLSearchParams(), map = P.logMap || {}, mapped = Object.keys(map).length > 0;
+    const data = Object.assign({ kind: '', plan: '', tid: '', id: S.dev, name: S.name || '', course: EXAM.key, at: new Date().toISOString(), note: '' }, o);
+    Object.keys(data).forEach(k => { if (mapped && !map[k]) return; f.append(map[k] || k, String(data[k])); });
+    fetch(P.logUrl, { method: 'POST', mode: 'no-cors', body: f }).catch(() => { });
+  } catch (e) { }
+}
+function howOpened() {
+  const ua = navigator.userAgent || '';
+  if (/Instagram|FBAN|FBAV|FB_IAB|FBIOS|Messenger/i.test(ua)) return 'insta-fb';
+  return (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone ? 'installed' : 'browser';
+}
+// anonymous usage counts, once a day per phone and kind: "<exam>_<event>" in the form's kind "event"
+function track(ev, note) {
+  try {
+    if (CFG.track !== true) return;
+    const t = S.trk && S.trk.d === today() ? S.trk : (S.trk = { d: today(), e: {} });
+    if (t.e[ev]) return; t.e[ev] = 1; save();
+    formLog({ kind: 'event', plan: EXAM.key + '_' + ev, note: note || howOpened(), name: '' });
+  } catch (e) { }
+}
+
+/* ---------- access: Free, the free Pro day, a pass ---------- */
+const TRIAL_H = () => EXAM.trialHours == null ? 24 : EXAM.trialHours;
+const trialLeft = () => S.trial && S.trial.until > Date.now() ? S.trial.until - Date.now() : 0;
+function payActive() { const p = S.pay; if (!p || !p.tid) return false; if ((CFG.blockTids || []).includes(p.tid) || p.off) return false; return p.until === 0 || p.until > Date.now(); }
+const isPro = () => payActive() || trialLeft() > 0;
+const freeLeftToday = () => Math.max(0, EXAM.freeDaily - ((S.days[today()] || {}).q || 0));
+const hoursLeft = ms => Math.max(1, Math.ceil(ms / 3600e3));
+
+/* ---------- questions ---------- */
+let QID = 0;
+const GENS = typeof GEN !== 'undefined' ? GEN : {};
+const ALL = [];
+Object.keys(BANK).forEach(s => BANK[s].forEach((x, i) => { if (TOPIC[x.t]) ALL.push(Object.assign({ id: s + ':' + i, s }, x)); else console.warn('no topic', x.t); }));
+const byTopic = {}; ALL.forEach(q => (byTopic[q.t] = byTopic[q.t] || []).push(q));
+function fresh(t, n) {           // generated questions for a topic (numbers change every time)
+  const g = GENS[t]; if (!g) return [];
+  const out = []; for (let i = 0; i < n; i++) { try { const q = g(); out.push(Object.assign({ id: 'g:' + t + ':' + (++QID) + ':' + Date.now(), t, s: TOPIC[t].s, gen: 1 }, q)); } catch (e) { console.error(e); } }
+  return out;
+}
+const hasQ = t => (byTopic[t] || []).length > 0 || !!GENS[t];
+// pick n questions from a topic: unseen first, then the longest ago; generated ones mixed in
+function pickTopic(t, n) {
+  const bank = (byTopic[t] || []).slice().sort((a, b) => (S.seen[a.id] || 0) - (S.seen[b.id] || 0) || Math.random() - .5);
+  const g = fresh(t, GENS[t] ? Math.min(n, Math.max(Math.ceil(n / 2), n - (byTopic[t] || []).length)) : 0);
+  return shuffle(bank.slice(0, Math.max(0, n - g.length)).concat(g)).slice(0, n);
+}
+// pick n questions for a subject, spread over its topics
+function pickSubject(s, n) {
+  const ts = SUBJ[s].topics.map(x => x[0]).filter(hasQ); if (!ts.length) return [];
+  const out = [], per = {}; for (let i = 0; i < n; i++) { const t = ts[i % ts.length]; per[t] = (per[t] || 0) + 1; }
+  shuffle(Object.keys(per)).forEach(t => { out.push(...pickTopic(t, per[t])); });
+  while (out.length < n) { const t = ts[rnd(ts.length)]; const extra = pickTopic(t, 1).filter(q => !out.some(o => o.id === q.id)); if (!extra.length) break; out.push(extra[0]); }
+  return shuffle(out).slice(0, n);
+}
+// a paper with the real split (EXAM.format: [[subject, count]...])
+function paper(scale) {          // exactly round(total × scale) questions, split like the real paper (largest remainders)
+  const want = Math.max(EXAM.format.length, Math.round(EXAM.total * scale));
+  const raw = EXAM.format.map(([s, n]) => ({ s, x: n * want / EXAM.total }));
+  raw.forEach(r => { r.k = Math.max(1, Math.floor(r.x)); });
+  let left = want - raw.reduce((a, r) => a + r.k, 0);
+  raw.slice().sort((a, b) => (b.x - Math.floor(b.x)) - (a.x - Math.floor(a.x))).forEach(r => { if (left > 0) { r.k++; left--; } });
+  return raw.flatMap(r => pickSubject(r.s, r.k));
+}
+// options shuffled for each sitting; the answer follows
+function present(q) { const ord = shuffle(q.o.map((_, i) => i)); return Object.assign({}, q, { o: ord.map(i => q.o[i]), a: ord.indexOf(q.a) }); }
+
+/* ---------- views ---------- */
+const V = {}, ACT = {};
+let stack = [['home', {}]];
+const cur = () => stack[stack.length - 1];
+function go(v, p) { stack.push([v, p || {}]); render(); window.scrollTo(0, 0); }
+function tab(v) { stack = [[v, {}]]; render(); window.scrollTo(0, 0); }
+function back() { if (stack.length > 1) stack.pop(); else stack = [['home', {}]]; render(); }
+function toast(t) { const d = document.createElement('div'); d.className = 'toast'; d.innerHTML = t; document.body.appendChild(d); setTimeout(() => d.classList.add('out'), 2200); setTimeout(() => d.remove(), 2700); }
+function modal(html) { closeModal(); const m = document.createElement('div'); m.className = 'modal'; m.id = 'modal'; m.innerHTML = '<div class="sheet">' + html + '</div>'; m.addEventListener('click', e => { if (e.target === m) closeModal(); }); document.body.appendChild(m); }
+function closeModal() { const m = $id('modal'); if (m) m.remove(); }
+const bar = (p, cls) => '<div class="bar ' + (cls || '') + '"><i style="width:' + Math.max(0, Math.min(100, p)) + '%"></i></div>';
+const chip = () => isPro() ? '<span class="chip pro" data-go="passes">★ PRO' + (!payActive() ? ' · ' + hoursLeft(trialLeft()) + 'h' : '') + '</span>' : '<span class="chip" data-go="passes">FREE</span>';
+const NAV = [['home', 'Home', 'M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z'], ['practice', 'Practice', 'M4 5h16M4 12h16M4 19h10'],
+  ['mocks', 'Mocks', 'M12 7v5l3 2M12 3a9 9 0 100 18 9 9 0 000-18z'], ['progress', 'Progress', 'M4 20V10M10 20V4M16 20v-7M22 20H2'], ['passes', 'Passes', 'M12 2l3 6.5 7 1-5 5 1.2 7L12 18l-6.2 3.5L7 14.5l-5-5 7-1z']];
+const ico = d => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>';
+
+function render() {
+  closeModal(); clearInterval(render.tick);
+  if (!S.onboard) { draw(V.welcome()); return; }
+  const [v, p] = cur(); const r = (V[v] || V.home)(p || {});
+  draw(r);
+}
+function draw(r) {
+  const app = $id('app');
+  const head = r.noHead ? '' : '<header><div class="hl">' + (stack.length > 1 ? '<button class="ib" data-act="back" aria-label="Back">' + ico('M15 18l-6-6 6-6') + '</button>' : '<span class="logo">' + EXAM.logo + '</span>') +
+    '<b class="ttl">' + esc(r.title || EXAM.name) + '</b></div><div class="hr">' + (S.streak ? '<span class="chip">🔥 ' + streak() + '</span>' : '') + chip() + '</div></header>';
+  const nav = r.noNav ? '' : '<nav class="bn">' + NAV.map(([k, n, d]) => '<button class="' + ((r.tab || cur()[0]) === k ? 'on' : '') + '" data-tab="' + k + '">' + ico(d) + '<span>' + n + '</span></button>').join('') + '</nav>';
+  app.className = r.noNav ? 'nonav' : '';
+  app.innerHTML = head + '<main class="enter">' + r.html + '</main>' + nav;
+  if (r.after) try { r.after(); } catch (e) { console.error(e); }
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-act],[data-go],[data-tab]'); if (!t) return;
+  if (t.tagName === 'A') e.preventDefault();
+  if (t.dataset.tab) return tab(t.dataset.tab);
+  if (t.dataset.go) return go(t.dataset.go, t.dataset.arg ? { k: t.dataset.arg } : {});
+  const f = ACT[t.dataset.act]; if (f) f(t.dataset.arg, t);
+});
+ACT.back = back; ACT.close = closeModal;
+
+/* ---------- progress numbers ---------- */
+function addDay(q, c) { const d = S.days[today()] = S.days[today()] || { q: 0, c: 0 }; d.q += q; d.c += c; }
+function streak() { let n = 0; for (let k = 0; k < 400; k++) { const d = pkDay(Date.now() - k * 864e5); if ((S.days[d] || {}).q) n++; else if (k > 0) break; } return n; }
+function subjStat(s) { let n = 0, c = 0; SUBJ[s].topics.forEach(([t]) => { const x = S.stats[t]; if (x) { n += x.n; c += x.c; } }); return { n, c }; }
+function totalQ() { return Object.values(S.stats).reduce((a, x) => a + x.n, 0); }
+// readiness: accuracy weighted by each subject's share of the paper, scaled by how much of the syllabus has been practised
+function readiness() {
+  let acc = 0, cov = 0, w = 0;
+  EXAM.format.forEach(([s, n]) => { const st = subjStat(s); const ts = SUBJ[s].topics.filter(([t]) => (S.stats[t] || {}).n >= 5).length;
+    acc += n * (st.n ? st.c / st.n : 0); cov += n * ts / SUBJ[s].topics.length; w += n; });
+  return Math.round(100 * (acc / w) * Math.min(1, 0.35 + 0.65 * cov / w));
+}
+const estScore = () => Math.round(EXAM.total * readiness() / 100);
+function weakTopics(k) {
+  return Object.keys(S.stats).filter(t => TOPIC[t] && S.stats[t].n >= 4).sort((a, b) => S.stats[a].c / S.stats[a].n - S.stats[b].c / S.stats[b].n).slice(0, k);
+}
+const daysTo = () => { if (!S.testDate) return null; return Math.ceil((Date.parse(S.testDate + 'T09:00:00+05:00') - Date.now()) / 864e5); };
+
+/* ---------- welcome: one tap ---------- */
+V.welcome = () => {
+  track('ob_view');
+  return { noHead: true, noNav: true, html: '<div class="welcome"><div class="wl">' + EXAM.logo + '</div><h1>' + esc(EXAM.name) + '</h1><p class="tag">' + esc(EXAM.tagline) + '</p>' +
+    '<p class="hook">' + esc(EXAM.hook) + '</p>' + (TRIAL_H() ? '<p class="trialnote">★ <b>Your first day is Pro, free.</b></p>' : '') +
+    '<div class="card feats">' + EXAM.format.map(([s, n]) => '<div><span class="dot" style="background:' + SUBJ[s].c + '"></span><b>' + esc(SUBJ[s].n) + '</b><small>' + n + ' MCQs in the paper</small></div>').join('') + '</div>' +
+    '<button class="btn gold big" data-act="start">Start practising free →</button>' +
+    '<p class="fine">' + esc(EXAM.disclaimer) + '</p></div>' };
+};
+ACT.start = () => {
+  const first = !S.onboard; S.onboard = true; S.name = S.name || 'Doctor-to-be';
+  if (first) { track('ob_start'); track('first'); if (TRIAL_H() && !S.trial) S.trial = { at: Date.now(), until: Date.now() + TRIAL_H() * 3600e3, q: totalQ() }; }
+  save(); stack = [['home', {}]]; render();
+};
+
+/* ---------- home ---------- */
+V.home = () => {
+  const d = daysTo(), rd = readiness(), done = (S.days[today()] || {}).q || 0, goal = EXAM.dailyGoal;
+  const trial = trialLeft() && !payActive() ? '<div class="card trialc">★ <b>Your free Pro day</b> · ' + hoursLeft(trialLeft()) + ' h left — full mocks and unlimited practice are open. <button class="btn sm gold" data-act="keepPro">Keep Pro — Rs ' + EXAM.plans[0].p + ' a week</button></div>' : '';
+  const start = !S.diag ? '<div class="card startc"><small class="k">START HERE</small><h3>' + esc(EXAM.diagName) + '</h3><p class="mute">' + EXAM.diagN + ' questions in the real mix, about ' + Math.round(EXAM.diagN * EXAM.secPerQ / 60) + ' minutes. You get your estimated score out of ' + EXAM.total + ' and your weakest topics.</p><button class="btn gold big" data-act="diag">Take it free →</button></div>' : '';
+  const hero = '<div class="hero"><div><small>' + (d != null ? (d >= 0 ? 'DAYS TO ' + esc(EXAM.short) : 'UPDATE YOUR TEST DATE') : 'YOUR ESTIMATED SCORE') + '</small><div class="big">' + (d != null ? Math.max(0, d) : estScore() + '<span>/' + EXAM.total + '</span>') + '</div>' +
+    (d == null ? '<button class="btn sm ghost" data-go="settings">Set test date</button>' : '<small>Estimated score: <b>' + estScore() + '/' + EXAM.total + '</b></small>') + '</div><div class="ring" style="--p:' + rd + '"><b>' + rd + '</b><small>READY</small></div></div>';
+  const today_ = '<div class="card"><div class="row sp"><h3>Today</h3><span class="pill">' + Math.min(done, goal) + '/' + goal + '</span></div>' + bar(pct(done, goal), 'gold') +
+    '<button class="btn big" data-act="smart">' + (done ? 'Keep going' : 'Start today’s ' + goal) + ' — smart practice</button><small class="mute">Picks your weak topics first.' + (!isPro() ? ' Free: ' + freeLeftToday() + ' of ' + EXAM.freeDaily + ' questions left today.' : '') + '</small></div>';
+  const subs = '<div class="tiles">' + EXAM.subjects.map(s => { const st = subjStat(s.id); return '<div class="tile" data-go="subject" data-arg="' + s.id + '"><span class="dot" style="background:' + s.c + '"></span><b>' + esc(s.n) + '</b><small>' + (st.n ? pct(st.c, st.n) + '% · ' + st.n + ' done' : s.topics.length + ' topics') + '</small></div>'; }).join('') + '</div>';
+  const mocks = '<div class="card row sp tap" data-tab="mocks"><div><b>Full mock: ' + EXAM.total + ' MCQs, ' + (EXAM.minutes / 60) + ' hours</b><small>The real split, timed. ' + (S.mocks.length ? 'Last: ' + S.mocks[0].sc + '/' + S.mocks[0].n : 'Like test day.') + '</small></div><span class="btn sm gold">Open</span></div>';
+  const mist = S.mist.length ? '<div class="card row sp tap" data-act="mistakes"><div><b>Your mistakes</b><small>' + S.mist.length + ' questions to get right</small></div><span class="btn sm">Review</span></div>' : '';
+  return { title: EXAM.name, tab: 'home', html: trial + hero + start + today_ + subs + mocks + mist + '<p class="fine c">' + esc(EXAM.disclaimer) + '</p>' };
+};
+ACT.keepPro = () => { S.payPlan = EXAM.plans[0].id; save(); go('passes'); };
+
+/* ---------- practice ---------- */
+V.practice = () => ({ title: 'Practice', tab: 'practice', html: '<p class="intro">Questions follow ' + esc(EXAM.syllabusNote) + '. Explanations after every answer.</p>' +
+  EXAM.subjects.map(s => { const st = subjStat(s.id); return '<div class="card tap row sp" data-go="subject" data-arg="' + s.id + '"><div><b><span class="dot" style="background:' + s.c + '"></span>' + esc(s.n) + '</b><small>' + s.topics.length + ' topics · ' + (st.n ? pct(st.c, st.n) + '% right of ' + st.n : 'not started') + '</small></div><span class="chev">›</span></div>'; }).join('') +
+  '<div class="card tap row sp" data-act="smart"><div><b>Smart practice</b><small>Your weakest topics first, across subjects</small></div><span class="chev">›</span></div>' });
+V.subject = p => {
+  const s = SUBJ[p.k] || EXAM.subjects[0];
+  return { title: s.n, tab: 'practice', html: '<div class="card"><button class="btn big" data-act="subj" data-arg="' + s.id + '">Mixed ' + esc(s.n) + ' · 10 questions</button></div>' +
+    s.topics.map(([t, n]) => { const x = S.stats[t] || { n: 0, c: 0 }, ok = hasQ(t); return '<div class="trow' + (ok ? ' tap' : ' off') + '"' + (ok ? ' data-act="topic" data-arg="' + t + '"' : '') + '><div><b>' + esc(n) + '</b><small>' + (ok ? (x.n ? pct(x.c, x.n) + '% right · ' + x.n + ' done' : 'Start') : 'Coming soon') + '</small></div>' + (x.n ? bar(pct(x.c, x.n)) : '') + '</div>'; }).join('') };
+};
+function gate(n) {             // free users: EXAM.freeDaily practice questions a day
+  if (isPro()) return n;
+  const left = freeLeftToday(); if (left <= 0) { limitSheet(); return 0; } return Math.min(n, left);
+}
+function limitSheet() {
+  track('limit');
+  modal('<h3>That’s today’s ' + EXAM.freeDaily + ' free questions</h3><p>Come back tomorrow for more — or get <b>unlimited practice and full mocks</b> from <b>Rs ' + EXAM.plans[0].p + ' a week</b>.</p><button class="btn gold big" data-act="toPasses">See the passes</button><button class="btn ghost big" data-act="close">Tomorrow</button>');
+}
+ACT.toPasses = () => { closeModal(); go('passes'); };
+ACT.topic = t => { const n = gate(10); if (n) startQuiz({ title: TOPIC[t].n, items: pickTopic(t, n), mode: 'practice' }); };
+ACT.subj = s => { const n = gate(10); if (n) startQuiz({ title: SUBJ[s].n, items: pickSubject(s, n), mode: 'practice' }); };
+ACT.smart = () => {
+  const n = gate(10); if (!n) return;
+  const weak = weakTopics(4), untried = Object.keys(TOPIC).filter(t => !S.stats[t] && hasQ(t));
+  const ts = shuffle(weak.concat(shuffle(untried).slice(0, 6))).slice(0, 5);
+  const items = ts.length ? shuffle(ts.flatMap(t => pickTopic(t, 2))).slice(0, n) : paper(n / EXAM.total).slice(0, n);
+  startQuiz({ title: 'Smart practice', items, mode: 'practice' });
+};
+ACT.mistakes = () => { const ids = S.mist.slice(-20); const items = ids.map(x => typeof x === 'string' ? ALL.find(q => q.id === x) : x).filter(Boolean); if (!items.length) { toast('No mistakes saved'); return; } startQuiz({ title: 'Your mistakes', items: shuffle(items).slice(0, 10), mode: 'practice', review: 1 }); };
+
+/* ---------- the quiz ---------- */
+let Q = null;
+function startQuiz(o) {
+  if (!o.items.length) { toast('No questions here yet'); return; }
+  Q = Object.assign({ i: 0, picks: [], start: Date.now() }, o, { items: o.items.map(present) });
+  if (Q.mode !== 'practice') track(Q.mode);
+  go('quiz');
+}
+function record(q, ok) {
+  const st = S.stats[q.t] = S.stats[q.t] || { n: 0, c: 0 }; st.n++; if (ok) st.c++;
+  S.seen[q.id] = Date.now(); addDay(1, ok ? 1 : 0); S.xp += ok ? 2 : 1;
+  const key = q.gen ? null : q.id;
+  if (!ok) { if (key) { if (!S.mist.includes(key)) S.mist.push(key); } else S.mist.push({ t: q.t, s: q.s, q: q.q, o: q.o, a: q.a, e: q.e, id: q.id, gen: 1 }); }
+  else S.mist = S.mist.filter(x => (typeof x === 'string' ? x : x.id) !== q.id);
+  if (S.mist.length > 300) S.mist = S.mist.slice(-300);
+  const ks = Object.keys(S.seen); if (ks.length > 4000) ks.sort((a, b) => S.seen[a] - S.seen[b]).slice(0, 1000).forEach(k => delete S.seen[k]);
+}
+V.quiz = () => {
+  if (!Q) return V.home();
+  const q = Q.items[Q.i], n = Q.items.length, picked = Q.picks[Q.i], mock = Q.mode !== 'practice';
+  const shown = !mock && picked != null;
+  const opts = q.o.map((o, i) => '<button class="opt' + (shown ? (i === q.a ? ' ok' : i === picked ? ' bad' : '') : (picked === i ? ' sel' : '')) + '" data-act="pick" data-arg="' + i + '"' + (shown ? ' disabled' : '') + '><i>' + 'ABCD'[i] + '</i><span>' + esc(o) + '</span></button>').join('');
+  const timer = mock ? '<span class="timer" id="qtimer"></span>' : '';
+  const foot = shown ? '<div class="expl ' + (picked === q.a ? 'ok' : 'bad') + '"><b>' + (picked === q.a ? 'Correct' : 'The answer is ' + 'ABCD'[q.a]) + '</b>' + (q.e ? '<p>' + esc(q.e) + '</p>' : '') + '</div><button class="btn gold big" data-act="next">' + (Q.i + 1 < n ? 'Next' : 'Finish') + '</button>'
+    : mock ? '<div class="row g"><button class="btn" data-act="prev"' + (Q.i ? '' : ' disabled') + '>‹ Back</button><button class="btn gold wide" data-act="next">' + (Q.i + 1 < n ? 'Next ›' : 'Review & submit') + '</button></div><button class="btn ghost sm" data-act="grid">All questions</button>' : '';
+  return { title: Q.title, noNav: true, html: '<div class="qhead"><small>' + esc(SUBJ[q.s].n) + ' · ' + esc(TOPIC[q.t].n) + '</small><small>' + (Q.i + 1) + ' / ' + n + '</small>' + timer + '</div>' + bar(100 * (Q.i + (shown ? 1 : 0)) / n, 'thin') +
+    '<div class="qcard"><p class="q">' + esc(q.q) + '</p>' + opts + '</div>' + foot,
+    after() { if (mock) tickTimer(); } };
+};
+function tickTimer() {
+  const el = $id('qtimer'); if (!el || !Q.limit) return;
+  const f = () => { const left = Math.max(0, Q.limit * 1000 - (Date.now() - Q.start)); const m = Math.floor(left / 60000), s = Math.floor(left / 1000) % 60; el.textContent = m + ':' + String(s).padStart(2, '0'); el.classList.toggle('low', left < 300000); if (!left) finishQuiz(); };
+  f(); render.tick = setInterval(f, 1000);
+}
+ACT.pick = i => {
+  i = +i; const q = Q.items[Q.i];
+  if (Q.mode === 'practice') { if (Q.picks[Q.i] != null) return; Q.picks[Q.i] = i; record(q, i === q.a); save(); }
+  else Q.picks[Q.i] = i;
+  render();
+};
+ACT.next = () => { if (Q.mode === 'practice' && Q.picks[Q.i] == null) return; if (Q.i + 1 < Q.items.length) { Q.i++; render(); window.scrollTo(0, 0); } else if (Q.mode === 'practice') finishQuiz(); else ACT.grid(); };
+ACT.prev = () => { if (Q.i) { Q.i--; render(); } };
+ACT.grid = () => {
+  const a = Q.picks.filter(x => x != null).length;
+  modal('<h3>' + a + ' of ' + Q.items.length + ' answered</h3><div class="grid">' + Q.items.map((_, i) => '<button class="' + (Q.picks[i] != null ? 'on' : '') + '" data-act="jump" data-arg="' + i + '">' + (i + 1) + '</button>').join('') + '</div><button class="btn gold big" data-act="submit">Submit the paper</button>');
+};
+ACT.jump = i => { Q.i = +i; closeModal(); render(); };
+ACT.submit = () => { closeModal(); finishQuiz(); };
+function finishQuiz() {
+  if (!Q || Q.done) return; Q.done = 1; clearInterval(render.tick);
+  const mock = Q.mode !== 'practice';
+  if (mock) Q.items.forEach((q, i) => record(q, Q.picks[i] === q.a));
+  const c = Q.items.filter((q, i) => Q.picks[i] === q.a).length, n = Q.items.length;
+  const per = {}; Q.items.forEach((q, i) => { const p = per[q.s] = per[q.s] || { n: 0, c: 0 }; p.n++; if (Q.picks[i] === q.a) p.c++; });
+  Q.res = { c, n, per, secs: Math.round((Date.now() - Q.start) / 1000) };
+  if (Q.mode === 'mock' || Q.mode === 'mini') { S.mocks.unshift({ d: today(), kind: Q.mode, sc: c, n, per }); S.mocks = S.mocks.slice(0, 30); }
+  if (Q.mode === 'diag') { S.diag = { d: today(), c, n, est: Math.round(EXAM.total * c / n), per }; track('diag_done', String(S.diag.est)); }
+  save(); stack[stack.length - 1] = ['result', {}]; render(); window.scrollTo(0, 0);
+}
+V.result = () => {
+  if (!Q || !Q.res) return V.home();
+  const { c, n, per, secs } = Q.res, diag = Q.mode === 'diag';
+  const big = diag ? '<small>ESTIMATED ' + esc(EXAM.short) + ' SCORE</small><div class="big">' + S.diag.est + '<span>/' + EXAM.total + '</span></div><small>' + c + ' of ' + n + ' right, in the real mix of subjects</small>'
+    : '<small>YOUR SCORE</small><div class="big">' + c + '<span>/' + n + '</span></div><small>' + pct(c, n) + '% · ' + Math.floor(secs / 60) + ' min ' + secs % 60 + ' s</small>';
+  const rows = Object.keys(per).map(s => '<div class="trow"><div><b><span class="dot" style="background:' + SUBJ[s].c + '"></span>' + esc(SUBJ[s].n) + '</b><small>' + per[s].c + ' / ' + per[s].n + '</small></div>' + bar(pct(per[s].c, per[s].n)) + '</div>').join('');
+  // the topics missed most in this sitting first, then the weakest overall
+  const miss = {}; Q.items.forEach((q, i) => { if (Q.picks[i] !== q.a) miss[q.t] = (miss[q.t] || 0) + 1; });
+  const ts = Object.keys(miss).sort((a, b) => miss[b] - miss[a]).concat(weakTopics(3)).filter((t, i, a) => a.indexOf(t) === i).slice(0, 3);
+  const weak = ts.map(t => '<li>' + esc(TOPIC[t].n) + ' <small>(' + esc(SUBJ[TOPIC[t].s].n) + ')</small></li>').join('');
+  const up = !isPro() ? '<div class="card upsell"><h3>Close the gap faster</h3><p>Unlimited practice on your weak topics and full ' + EXAM.total + '-question mocks — from <b>Rs ' + EXAM.plans[0].p + ' a week</b>.</p><button class="btn gold big" data-act="toPasses">See the passes</button></div>' : '';
+  return { title: diag ? EXAM.diagName : 'Result', noNav: true, html: '<div class="card center res">' + big + '</div><div class="card">' + rows + '</div>' + (weak ? '<div class="card"><h3>Work on these first</h3><ul>' + weak + '</ul><button class="btn" data-act="drill" data-arg="' + ts.join(',') + '">Practise them now</button></div>' : '') + up +
+    '<div class="row g"><button class="btn wide" data-act="review">Review answers</button><button class="btn wide ghost" data-act="home">Home</button></div>' };
+};
+ACT.home = () => tab('home');
+ACT.drill = list => { const ts = String(list || '').split(',').filter(t => TOPIC[t]); const n = gate(10); if (!n || !ts.length) return; startQuiz({ title: 'Your weak topics', items: shuffle(ts.flatMap(t => pickTopic(t, Math.ceil(n / ts.length)))).slice(0, n), mode: 'practice' }); };
+ACT.review = () => go('review');
+V.review = () => ({ title: 'Answers', noNav: true, html: Q.items.map((q, i) => { const p = Q.picks[i]; return '<div class="card rv ' + (p === q.a ? 'ok' : 'bad') + '"><small>' + (i + 1) + ' · ' + esc(TOPIC[q.t].n) + '</small><p class="q">' + esc(q.q) + '</p><p><b>Answer: ' + esc(q.o[q.a]) + '</b>' + (p != null && p !== q.a ? '<br><span class="mute">You chose: ' + esc(q.o[p]) + '</span>' : p == null ? '<br><span class="mute">Not answered</span>' : '') + '</p>' + (q.e ? '<small>' + esc(q.e) + '</small>' : '') + '</div>'; }).join('') });
+
+/* ---------- mocks ---------- */
+const miniN = () => EXAM.mini;
+V.mocks = () => ({ title: 'Mock tests', tab: 'mocks', html:
+  '<div class="card"><h3>Full mock — like test day</h3><p class="mute">' + EXAM.total + ' MCQs in ' + EXAM.minutes / 60 + ' hours: ' + EXAM.format.map(([s, n]) => n + ' ' + SUBJ[s].n).join(', ') + '. No answers until you submit.</p><button class="btn gold big" data-act="mock">' + (isPro() ? 'Start the full mock' : '★ Pro: start the full mock') + '</button></div>' +
+  '<div class="card"><h3>Mini mock</h3><p class="mute">' + miniN() + ' MCQs in ' + Math.round(miniN() * EXAM.secPerQ / 60) + ' minutes, the same split. ' + (!isPro() ? (S.freeMini ? 'Your free mini mock is used.' : 'Your first one is free.') : '') + '</p><button class="btn big" data-act="mini">Start a mini mock</button></div>' +
+  (S.diag ? '' : '<div class="card"><h3>' + esc(EXAM.diagName) + '</h3><p class="mute">' + EXAM.diagN + ' questions, free.</p><button class="btn big" data-act="diag">Take it</button></div>') +
+  (S.mocks.length ? '<div class="card"><h3>Your mocks</h3>' + S.mocks.slice(0, 10).map(m => '<div class="trow"><div><b>' + (m.kind === 'mock' ? 'Full' : 'Mini') + ' · ' + m.sc + '/' + m.n + '</b><small>' + m.d + '</small></div>' + bar(pct(m.sc, m.n)) + '</div>').join('') + '</div>' : '') });
+ACT.mock = () => { if (!isPro()) { track('paywall_mock'); go('passes'); return; } startQuiz({ title: 'Full mock', items: paper(1), mode: 'mock', limit: EXAM.minutes * 60 }); };
+ACT.mini = () => { if (!isPro()) { if (S.freeMini) { go('passes'); return; } S.freeMini = 1; save(); } const items = paper(EXAM.mini / EXAM.total); startQuiz({ title: 'Mini mock', items, mode: 'mini', limit: Math.round(items.length * EXAM.secPerQ) }); };
+ACT.diag = () => { track('start'); const items = paper(EXAM.diagN / EXAM.total); startQuiz({ title: EXAM.diagName, items, mode: 'diag', limit: Math.round(items.length * EXAM.secPerQ * 1.2) }); };
+
+/* ---------- progress ---------- */
+V.progress = () => {
+  const total = totalQ(), right = Object.values(S.stats).reduce((a, x) => a + x.c, 0);
+  const days = []; for (let k = 13; k >= 0; k--) { const d = pkDay(Date.now() - k * 864e5); days.push((S.days[d] || {}).q || 0); }
+  const mx = Math.max(10, ...days);
+  return { title: 'Progress', tab: 'progress', html: '<div class="card stats3"><div><b>' + total + '</b><small>questions</small></div><div><b>' + pct(right, total) + '%</b><small>right</small></div><div><b>' + streak() + '</b><small>day streak</small></div></div>' +
+    '<div class="card"><h3>Last 14 days</h3><div class="spark">' + days.map(v => '<i style="height:' + Math.round(100 * v / mx) + '%" title="' + v + '"></i>').join('') + '</div></div>' +
+    '<div class="card"><h3>By subject</h3>' + EXAM.subjects.map(s => { const st = subjStat(s.id); return '<div class="trow tap" data-go="subject" data-arg="' + s.id + '"><div><b><span class="dot" style="background:' + s.c + '"></span>' + esc(s.n) + '</b><small>' + (st.n ? pct(st.c, st.n) + '% of ' + st.n : '—') + '</small></div>' + bar(pct(st.c, st.n)) + '</div>'; }).join('') + '</div>' +
+    (weakTopics(5).length ? '<div class="card"><h3>Weakest topics</h3>' + weakTopics(5).map(t => '<div class="trow tap" data-act="topic" data-arg="' + t + '"><div><b>' + esc(TOPIC[t].n) + '</b><small>' + pct(S.stats[t].c, S.stats[t].n) + '% right</small></div><span class="chev">›</span></div>').join('') + '</div>' : '') +
+    '<button class="btn ghost big" data-go="settings">Settings</button>' };
+};
+V.settings = () => ({ title: 'Settings', html: '<div class="card"><label>Your name<input id="st_name" class="inp" maxlength="30" value="' + esc(S.name) + '"></label><label>Your ' + esc(EXAM.short) + ' date<input id="st_date" type="date" class="inp" value="' + esc(S.testDate) + '"></label><button class="btn gold big" data-act="saveSet">Save</button></div>' +
+  '<div class="card"><h3>About</h3><p class="mute">' + esc(EXAM.disclaimer) + '</p><p class="mute">Questions: ' + ALL.length + ' written ones plus fresh calculations generated each time.</p><button class="btn ghost" data-act="share">Share the app</button></div>' +
+  '<div class="card"><button class="btn ghost" data-act="reset">Reset my progress</button></div>' });
+ACT.saveSet = () => { S.name = ($id('st_name').value || '').trim() || S.name; S.testDate = $id('st_date').value || ''; save(); toast('Saved'); back(); };
+ACT.reset = () => { if (!confirm('Delete all your progress on this phone?')) return; const keep = { dev: S.dev, pay: S.pay, payHist: S.payHist, trial: S.trial, onboard: true, name: S.name, testDate: S.testDate }; S = Object.assign(defState(), keep); saveNow(); tab('home'); };
+ACT.share = () => { const t = EXAM.shareText + ' ' + EXAM.url; if (navigator.share) navigator.share({ text: t }).catch(() => { }); else location.href = 'https://wa.me/?text=' + encodeURIComponent(t); };
+
+/* ---------- passes ---------- */
+V.passes = () => {
+  track('paywall');
+  const P = PAY(), plans = EXAM.plans, sel = plans.find(p => p.id === S.payPlan) || (S.payHist.length ? plans[2] : plans[0]);
+  const status = payActive() ? '<div class="callout okc">✓ <b>' + esc(plans.find(p => p.id === S.pay.plan)?.n || 'Pass') + '</b> — ' + (S.pay.until ? 'until ' + pkDay(S.pay.until) : 'yours for good') + '</div>'
+    : trialLeft() ? '<div class="callout tip">★ <b>Your free Pro day ends in ' + hoursLeft(trialLeft()) + ' h.</b> A pass keeps everything open — from Rs ' + plans[0].p + ' a week.</div>' : '';
+  const qr = P.qr || EXAM.qr;
+  return { title: 'Passes', tab: 'passes', html: status +
+    '<div class="card"><h3>What Pro opens</h3><ul class="incl">' + EXAM.proIncl.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul><small class="mute">Free: ' + EXAM.freeDaily + ' practice questions a day, one mini mock and ' + esc(EXAM.diagName) + '.</small></div>' +
+    '<div class="card"><h3>1. Choose your pass</h3><div class="plans">' + plans.map(p => '<div class="plan' + (p.id === sel.id ? ' sel' : '') + '" data-act="plan" data-arg="' + p.id + '">' + (p.tag ? '<em>' + esc(p.tag) + '</em>' : '') + '<b>' + esc(p.n) + '</b><div class="pr">Rs ' + p.p + '</div><small>' + (p.d ? 'Only Rs ' + (Math.round(10 * p.p / p.d) / 10) + ' a day' : 'One payment, yours for good') + '</small></div>').join('') + '</div></div>' +
+    '<div class="card center"><h3>2. Pay with Easypaisa</h3>' + (qr ? '<img src="' + qr + '" alt="Easypaisa QR code" class="payqr">' : '') +
+    '<ol class="steps"><li>Take a screenshot of this QR code.</li><li>In Easypaisa: Scan QR → gallery icon → pick the screenshot → pay Rs ' + sel.p + '.</li><li>Paste the Transaction ID from the receipt below.</li></ol><small class="mute">JazzCash, SadaPay, NayaPay and bank apps can scan it too. No app? <a href="#" data-act="family">Ask family to pay</a>.</small></div>' +
+    '<div class="card"><h3>3. Enter your Transaction ID</h3><input id="pay_tid" class="inp big mono" inputmode="numeric" autocomplete="off" placeholder="e.g. 41234567890" maxlength="20"><label class="oath"><input type="checkbox" id="pay_oath"> <span>I confirm I have actually paid Rs ' + sel.p + '.</span></label><button class="btn gold big" data-act="unlock">Unlock ' + esc(sel.n) + '</button><small class="mute">Unlocks at once. Every Transaction ID is checked against the account; fake or reused IDs are switched off.</small></div>' };
+};
+ACT.plan = id => { S.payPlan = id; save(); render(); };
+ACT.family = () => { const P = EXAM.plans.find(p => p.id === S.payPlan) || EXAM.plans[0]; const t = 'Assalam o Alaikum! I am preparing for ' + EXAM.short + ' with ' + EXAM.name + ' (' + EXAM.url + '). Please help me with the ' + P.n + ': Rs ' + P.p + '. Open the link, tap Passes, scan the QR in Easypaisa, then send me the Transaction ID. 🙏'; location.href = 'https://wa.me/?text=' + encodeURIComponent(t); };
+ACT.unlock = () => {
+  const P = PAY(), plan = EXAM.plans.find(p => p.id === S.payPlan) || EXAM.plans[0];
+  const tid = ($id('pay_tid').value || '').replace(/\D/g, '');
+  if (tid.length < P.tidMin || tid.length > P.tidMax) { toast('Type the Transaction ID from the Easypaisa receipt'); return; }
+  if (!$id('pay_oath').checked) { toast('Tick the box to confirm you paid'); return; }
+  if ((CFG.blockTids || []).includes(tid)) { modal('<h3>Not unlocked</h3><p>This Transaction ID cannot be used.</p><button class="btn big" data-act="close">OK</button>'); return; }
+  const before = S.pay;
+  const base = payActive() && S.pay.until ? S.pay.until : Date.now();
+  S.pay = { plan: plan.id, tid, at: Date.now(), until: plan.d ? base + plan.d * 864e5 : 0 };
+  S.payHist.push({ plan: plan.id, tid, at: Date.now() }); save();
+  formLog({ kind: 'pay', plan: EXAM.short + ' ' + plan.n + ' Rs ' + plan.p, tid, note: EXAM.name });
+  track('paid', plan.id);
+  if (apiOn()) apiCall('/pass/claim', { tid, plan: EXAM.key + '_' + plan.id, rs: plan.p, dev: S.dev, name: S.name || '', course: EXAM.key }).then(r => {
+    if (r && r.ok === false && ['full', 'declined', 'blocked'].includes(r.status)) {
+      S.pay = before; S.payHist.pop(); save(); render();
+      modal('<h3>Not unlocked</h3><p>' + ({ full: 'This Transaction ID is already in use on two phones.', declined: 'This Transaction ID was not found in our Easypaisa account.', blocked: 'This Transaction ID cannot be used.' }[r.status]) + '</p><button class="btn big" data-act="close">OK</button>');
+    }
+  }).catch(() => { });
+  tab('home'); setTimeout(() => modal('<h3>★ Unlocked: ' + esc(plan.n) + '</h3><p>Unlimited practice and full mocks are open. Make every day count.</p><button class="btn gold big" data-act="close">Start</button>'), 300);
+};
+// a declined or blocked ID is switched off within the hour
+function passCheck() {
+  if (!apiOn() || !S.pay || !S.pay.tid || S.pay.off) return;
+  if (S.passChk && Date.now() - S.passChk < 3600e3) return; S.passChk = Date.now(); save();
+  apiCall('/pass/check?tid=' + encodeURIComponent(S.pay.tid) + '&dev=' + encodeURIComponent(S.dev)).then(o => {
+    if (o && (o.pass === 'declined' || o.pass === 'blocked')) { S.pay.off = 1; save(); render(); toast('Your Transaction ID was not found — the pass is off'); }
+  }).catch(() => { });
+}
+
+/* ---------- the free Pro day ends: once ---------- */
+function trialEnd() {
+  if (!S.onboard || !S.trial || S.trial.told || trialLeft() > 0 || payActive()) return;
+  S.trial.told = 1; save(); track('trial_end');
+  const q = Math.max(0, totalQ() - (S.trial.q || 0));
+  if (cur()[0] === 'quiz') return;
+  render();
+  setTimeout(() => modal('<h3>★ Your free Pro day is over</h3>' + (q ? '<p>You practised <b>' + q + ' questions</b> in it.</p>' : '') + '<p>Keep unlimited practice and full mocks for <b>Rs ' + EXAM.plans[0].p + ' a week</b> — about Rs ' + Math.round(EXAM.plans[0].p / 7) + ' a day.</p><button class="btn gold big" data-act="keepPro2">Keep Pro</button><button class="btn ghost big" data-act="close">Not now</button>'), 400);
+}
+ACT.keepPro2 = () => { closeModal(); ACT.keepPro(); };
+
+/* ---------- start ---------- */
+function boot() {
+  render(); loadCfg().then(() => { if (S.onboard) track('open'); passCheck(); });
+  setTimeout(trialEnd, 2500); setInterval(() => { if (!document.hidden) { trialEnd(); passCheck(); } }, 60000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(trialEnd, 1000); });
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => { });
+}
+boot();
+</script></body></html>
