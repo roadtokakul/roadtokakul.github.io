@@ -2,7 +2,7 @@
    2.9: the phone can wake it while the app is closed - a push from the Road to Kakul team (sent by the studio) or
    Chrome's periodic refresh for installed apps. It then looks for what is new (a team message or new messages in the
    Community chat, a new answer from the team, news), shows one notification, and a tap opens that place. */
-const CACHE = 'rtk-3.2.0-mwouo9fm';
+const CACHE = 'rtk-3.3.0-mwyras3u';
 const META = 'rtk-meta';                 // what the app last showed: kept across versions
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'privacy.html', 'fonts/inter.woff2', 'fonts/barlowc-600.woff2', 'fonts/barlowc-700.woff2'];
 self.addEventListener('install', e => {

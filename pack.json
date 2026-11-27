@@ -58,7 +58,7 @@
   "shareUrl": "https://roadtokakul.github.io/",
   "pay": {
    "honourMin": 5,
-   "honourMax": 10,
+   "honourMax": 7,
    "honourTimes": 1,
    "honourWords": 5,
    "honourDays": 7,
