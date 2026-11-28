@@ -1,7 +1,7 @@
 {
  "name": "Road to MBBS",
  "short_name": "MBBS",
- "description": "MDCAT practice that follows the PMDC syllabus — free, right now.",
+ "description": "Real past papers, a real exam hall and 24,000+ MCQs on the PMDC syllabus.",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",

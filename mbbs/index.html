@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Road to MBBS — MDCAT practice</title><meta name="description" content="MDCAT practice that follows the PMDC syllabus — free, right now.">
+<title>Road to MBBS — MDCAT practice</title><meta name="description" content="Real past papers, a real exam hall and 24,000+ MCQs on the PMDC syllabus.">
 <meta name="theme-color" content="#060908"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
-<meta property="og:title" content="Road to MBBS"><meta property="og:description" content="MDCAT practice that follows the PMDC syllabus — free, right now.">
+<meta property="og:title" content="Road to MBBS"><meta property="og:description" content="Real past papers, a real exam hall and 24,000+ MCQs on the PMDC syllabus.">
 <style>/* The exam apps' look: Road to Kakul's family — dark, brass and green. */
 @font-face{font-family:"InterV";src:url("../fonts/inter.woff2") format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"BarlowC";src:url("../fonts/barlowc-700.woff2") format("woff2");font-weight:700 900;font-display:swap}
@@ -89,26 +89,147 @@ ul.notes{padding-left:18px;margin:4px 0}ul.notes li{margin:8px 0;color:var(--fg2
 .agv{font-family:var(--fd);font-size:1.5rem;color:var(--gold2)}
 .upsell{background:linear-gradient(160deg,rgba(217,180,95,.12),transparent 60%),var(--card)}.upsell.tap:active{transform:scale(.99)}
 @media (max-width:380px){.papers{grid-template-columns:repeat(3,1fr)}.rate .btn{font-size:.78rem}}
+/* ===== v3: the premium layer ===== */
+:root{--glass:rgba(16,25,20,.72);--gline:linear-gradient(135deg,rgba(244,214,133,.55),rgba(217,180,95,.12) 40%,rgba(63,191,116,.25));--shadow:0 10px 30px rgba(0,0,0,.35);--ok:#3fbf74;--warn:#f0a93b}
+body{background:radial-gradient(900px 480px at 50% -200px,#1b4d33 0%,transparent 70%),radial-gradient(600px 300px at 110% 20%,rgba(217,180,95,.08),transparent 70%),var(--bg)}
+.card{box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 6px 18px rgba(0,0,0,.18);transition:transform .15s var(--ease),border-color .2s}
+.tap:active,.qt:active,.pcard:active{transform:scale(.985)}
+.btn{transition:transform .12s var(--ease),filter .2s}.btn:active{transform:scale(.97)}.btn.gold{letter-spacing:.01em}
+.btn.glow{box-shadow:0 0 0 0 rgba(244,214,133,.6),0 10px 26px rgba(217,180,95,.35);animation:glow 2.4s infinite}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(244,214,133,.45),0 10px 26px rgba(217,180,95,.3)}70%{box-shadow:0 0 0 14px rgba(244,214,133,0),0 10px 26px rgba(217,180,95,.3)}100%{box-shadow:0 0 0 0 rgba(244,214,133,0),0 10px 26px rgba(217,180,95,.3)}}
+.k{display:block;font-size:.68rem;letter-spacing:.14em;color:var(--gold);font-weight:800;margin-bottom:4px}
+/* tiers */
+.tier{display:inline-block;border-radius:99px;padding:3px 11px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line2);color:var(--fg2)}
+.tier.t1{border-color:rgba(134,227,174,.5);color:var(--ac2)}.tier.t2{background:rgba(217,180,95,.14);border-color:rgba(217,180,95,.5);color:var(--gold2)}
+.tier.t3{background:linear-gradient(135deg,rgba(244,214,133,.25),rgba(217,180,95,.1));border-color:var(--gold);color:var(--gold2)}
+.tier.t4{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1405;border:0}
+/* welcome */
+.welcome.v3{justify-content:flex-start;padding-top:42px}.welcome.v3 h1{font-size:2.5rem;margin-bottom:0;background:linear-gradient(180deg,#fff,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:16px 0 10px}.stats4 div{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:10px 4px}
+.stats4 b{display:block;font-family:var(--fd);font-size:1.15rem;color:var(--gold2)}.stats4 small{font-size:.62rem;line-height:1.2}
+.promise{list-style:none;padding:0;margin:8px 0 14px;text-align:left}.promise li{padding:7px 0 7px 30px;position:relative;font-weight:600}
+.promise li:before{content:"✓";position:absolute;left:4px;top:6px;width:20px;height:20px;border-radius:50%;background:rgba(63,191,116,.18);color:var(--ac2);display:grid;place-items:center;font-size:.75rem}
+.wq{text-align:left}.wq b{display:block;margin:10px 0 6px}.trialnote{color:var(--mute);font-size:.82rem}
+.tgs{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}.tg{border:1px solid var(--line2);background:var(--card2);color:var(--fg2);border-radius:99px;padding:7px 12px;font:inherit;font-size:.84rem;cursor:pointer}
+.tg.on{border-color:var(--gold);background:rgba(217,180,95,.16);color:var(--gold2);font-weight:700}
+.bigtick{width:64px;height:64px;margin:4px auto 8px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:radial-gradient(circle,rgba(63,191,116,.35),rgba(63,191,116,.08));color:var(--ac2);animation:pop .4s var(--ease)}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+/* home */
+.greet{display:flex;justify-content:space-between;align-items:center;margin:2px 2px 12px}.greet h2{margin:0;font-size:1.5rem}.greet small{color:var(--mute)}
+.qtiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.qt{position:relative;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:14px;cursor:pointer;overflow:hidden}
+.qt span{font-size:1.4rem}.qt b{display:block;margin-top:6px}.qt.hall{border-color:rgba(217,180,95,.55);background:linear-gradient(160deg,rgba(217,180,95,.16),var(--card) 70%)}
+.taste{border-color:rgba(63,191,116,.45);background:linear-gradient(160deg,rgba(63,191,116,.12),var(--card) 70%)}.taste b{display:block}
+.resume{border-color:rgba(217,180,95,.6)}.hallc{border-color:rgba(217,180,95,.45);background:linear-gradient(160deg,rgba(217,180,95,.1),var(--card) 65%)}
+.upsell ul{margin:6px 0 0}.ticks{list-style:none;padding:0;margin:8px 0}.ticks li{padding:6px 0 6px 26px;position:relative}.ticks li:before{content:"✓";position:absolute;left:2px;color:var(--ac2);font-weight:800}
+.ticks li small{display:block}.ticks.sm li{padding:3px 0 3px 22px;font-size:.88rem}
+.skel{height:84px;background:linear-gradient(90deg,var(--card) 20%,var(--card2) 50%,var(--card) 80%);background-size:200% 100%;animation:sk 1.2s infinite}@keyframes sk{to{background-position:-200% 0}}
+/* exam hall */
+.hbar{position:sticky;top:52px;z-index:4;display:flex;align-items:center;gap:8px;padding:8px 10px;margin:0 -4px 8px;background:var(--glass);backdrop-filter:blur(12px);border:1px solid var(--line2);border-radius:16px;box-shadow:var(--shadow)}
+.hbar .timer{font-size:1.25rem;min-width:64px;cursor:pointer}.hbar .timer.hid{color:transparent;background:rgba(255,255,255,.06);border-radius:8px}.hbar .timer.hid:after{content:"⏱";color:var(--mute);margin-left:-40px}
+.hcount{flex:1;color:var(--mute);font-size:.85rem}.hcount b{color:var(--fg);font-size:1rem}
+.secbar{display:flex;gap:6px;overflow-x:auto;margin:0 0 8px;padding-bottom:2px;scrollbar-width:none}.secbar::-webkit-scrollbar{display:none}
+.secjump{flex:none;border:1px solid var(--line2);background:var(--card2);color:var(--fg2);border-radius:99px;padding:5px 10px;font:inherit;font-size:.78rem}
+.hnote{color:var(--mute);font-size:.8rem;margin:0 2px 10px}
+.hsec{display:flex;align-items:center;gap:6px;font-family:var(--fd);font-size:1.2rem;margin:18px 2px 8px;scroll-margin-top:120px}.hsec small{margin-left:auto}
+.hq{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-bottom:10px;scroll-margin-top:130px;transition:border-color .2s}
+.hq.done{border-color:rgba(63,191,116,.35)}.hq.fl{border-color:rgba(167,139,250,.7);box-shadow:inset 3px 0 0 #a78bfa}.hq.pulse{animation:pulse .9s}
+@keyframes pulse{30%{box-shadow:0 0 0 3px rgba(244,214,133,.6)}}
+.hqh{display:flex;align-items:center;gap:8px}.hn{font-family:var(--fd);font-size:1.05rem;color:var(--gold2);min-width:28px}
+.real{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.06em;color:#0b1a12;background:var(--ac2);border-radius:6px;padding:1px 6px;margin-bottom:4px}
+.hflag{margin-left:auto;border:1px solid var(--line2);background:transparent;color:var(--mute);border-radius:10px;width:34px;height:30px;font-size:.95rem;cursor:pointer}.hq.fl .hflag{color:#c4b5fd;border-color:#a78bfa;background:rgba(167,139,250,.15)}
+.hq .q{font-size:1rem;margin:6px 0 8px}
+.hopt{display:flex;align-items:center;gap:10px;padding:9px 6px 9px 8px;border-radius:12px;border:1px solid transparent;cursor:pointer}
+.hopt+.hopt{margin-top:2px}.hopt:active{background:rgba(255,255,255,.04)}
+.bub{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--line2);display:grid;place-items:center;font-weight:800;font-size:.85rem;color:var(--fg2);transition:all .15s var(--ease)}
+.hopt .ot{flex:1}.hopt.sel{background:rgba(217,180,95,.1);border-color:rgba(217,180,95,.4)}.hopt.sel .bub{background:linear-gradient(180deg,var(--gold2),var(--gold));border-color:var(--gold);color:#1b1405;transform:scale(1.06)}
+.hopt.x .ot{text-decoration:line-through;color:var(--mute);opacity:.6}.hopt.x .bub{opacity:.35}
+.elim{flex:none;border:0;background:transparent;color:var(--mute);width:30px;height:30px;border-radius:8px;opacity:.55;cursor:pointer}.hopt.x .elim{opacity:1;color:var(--red)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;font-size:.78rem;color:var(--mute);margin-bottom:8px}.lg{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:2px}
+.lg.a,.pal .a{background:rgba(63,191,116,.85);color:#06130b}.lg.n,.pal .n{background:var(--card2);border:1px solid var(--line2)}.lg.f{background:#a78bfa}
+.pal{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;max-height:46vh;overflow:auto;margin:6px 0 10px}.pal button{border:1px solid var(--line2);border-radius:8px;padding:7px 0;font:inherit;font-size:.78rem;color:var(--fg)}
+.pal .f{box-shadow:inset 0 -4px 0 #a78bfa}.pal .n.f{background:rgba(167,139,250,.25)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:8px;text-align:center;margin:8px 0}.kpis b{display:block;font-family:var(--fd);font-size:1.8rem}
+/* score x-ray */
+.xhero{display:flex;align-items:center;gap:16px;padding:18px;border-radius:var(--r);margin-bottom:12px;background:linear-gradient(160deg,#17432c,#0b1a12);border:1px solid rgba(217,180,95,.35);box-shadow:var(--shadow)}
+.xhero h2{font-size:2.4rem;margin:2px 0 6px}.ring.big{width:112px;height:112px}.ring.big b{font-size:2.1rem}
+.pill.ok{background:rgba(63,191,116,.16);color:var(--ac2)}.pill.warn{background:rgba(240,169,59,.16);color:#f6c16e}.xhero .pill{display:inline-block;margin-bottom:6px}
+.bar.warn i{background:var(--warn)}
+.kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 10px}.kc{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:10px 8px;text-align:center}
+.kc b{display:block;font-family:var(--fd);font-size:1.6rem}.kc span{display:block;font-weight:700;font-size:.8rem}.kc small{font-size:.68rem}
+.kc.perfect b{color:var(--ac2)}.kc.fast b,.kc.blank b{color:var(--red)}.kc.slowR b,.kc.slowW b{color:var(--warn)}
+.tcs{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}.tc{border-radius:99px;padding:5px 10px;font-size:.8rem;cursor:pointer;border:1px solid var(--line2)}.tc i{font-style:normal;opacity:.7;margin-left:2px}
+.tc.w{background:rgba(240,100,92,.14);border-color:rgba(240,100,92,.45)}.tc.a{background:rgba(240,169,59,.12);border-color:rgba(240,169,59,.4)}.tc.s{background:rgba(63,191,116,.14);border-color:rgba(63,191,116,.45)}
+.gain{border-color:rgba(63,191,116,.5);background:linear-gradient(160deg,rgba(63,191,116,.14),var(--card) 70%)}.gain b{font-family:var(--fd);font-size:1.5rem;color:var(--ac2);display:block}
+.plan7{padding-left:22px}.plan7 li{margin:7px 0}.spark.tall{height:110px}.wrapb{flex-wrap:wrap}
+.locked{position:relative;overflow:hidden;min-height:150px}.locked .blur{filter:blur(5px);opacity:.55;pointer-events:none}
+.lockover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;background:linear-gradient(180deg,rgba(6,9,8,.2),rgba(6,9,8,.75))}
+/* past papers, frequency, custom, vault, guide */
+.prow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.prow:last-child{border-bottom:0}.pbtns{display:flex;gap:6px;flex:none}
+.frq{padding:8px 0;border-bottom:1px solid var(--line)}.frq:last-child{border-bottom:0}.frq .bar{margin:6px 0 0}
+.lockrow{margin-top:8px;padding:10px;border-radius:12px;border:1px dashed rgba(217,180,95,.5);color:var(--gold2);text-align:center;cursor:pointer;font-weight:700}
+.vaultc{border-color:rgba(167,139,250,.4)}.card.now{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+details.gd summary{list-style:none;display:flex;gap:12px;align-items:center;cursor:pointer}details.gd summary::-webkit-details-marker{display:none}
+.gi{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;background:rgba(217,180,95,.12);border:1px solid rgba(217,180,95,.3)}
+details.gd summary small{display:block}details.gd[open] summary{margin-bottom:6px}details.gd ul{margin:4px 0 0}details.gd li{color:var(--fg2);margin:7px 0}
+/* plans */
+.phero{text-align:center;margin:4px 0 12px}.phero h2{margin:4px 0}
+.pcards{display:grid;gap:10px;margin-bottom:12px}
+.pcard{position:relative;border:1px solid var(--line2);border-radius:18px;padding:14px 16px;cursor:pointer;background:var(--card2)}
+.pcard.sel{border:1.5px solid var(--gold);background:linear-gradient(160deg,rgba(217,180,95,.16),var(--card2) 70%);box-shadow:0 8px 24px rgba(217,180,95,.15)}
+.pcard em{position:absolute;top:-10px;right:14px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1405;font-style:normal;font-size:.68rem;font-weight:800;border-radius:99px;padding:2px 10px}
+.pcard.t4 em{background:linear-gradient(135deg,#86e3ae,#3fbf74)}
+.pn{font-family:var(--fd);font-size:1.3rem}.pp{font-family:var(--fd);font-size:1.4rem;color:var(--gold2)}.tl2{color:var(--fg2)}
+.fx{list-style:none;padding:0;margin:0}.fx li{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.fx li:last-child{border-bottom:0}
+.fx i{font-style:normal;flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:800}
+.fx .y i{background:rgba(63,191,116,.18);color:var(--ac2)}.fx .n i{background:rgba(240,100,92,.12);color:var(--red)}.fx .n{opacity:.55}.fx small{display:block}
+.cmp summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none}.cmp summary::-webkit-details-marker{display:none}
+.cmp table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.72rem;table-layout:fixed}.cmp th{font-size:.66rem;color:var(--gold2);padding:4px 1px;font-weight:800}
+.cmp td{padding:6px 1px;border-top:1px solid var(--line);text-align:center}.cmp td:first-child{text-align:left;width:34%;color:var(--fg2);padding-right:4px}.cmp th:first-child{width:34%}
+.cmp td.y{color:var(--ac2);font-weight:800}.cmp td.n{color:rgba(240,100,92,.7)}
+.sheethead{text-align:center}.sheethead h3{margin:8px 0 2px}
+@media (max-width:370px){.stats4{grid-template-columns:repeat(2,1fr)}.kgrid{grid-template-columns:repeat(2,1fr)}.pal{grid-template-columns:repeat(6,1fr)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div id="app"></div>
 <noscript><p style="padding:20px">Road to MBBS needs JavaScript switched on.</p></noscript>
 <script>/* Road to MBBS — MDCAT practice (28 Nov 2026). The paper: 180 MCQs in 3 hours — Biology 81, Chemistry 45, Physics 36,
    English 9, Logical Reasoning 9 (PMDC MDCAT curriculum 2025, used for 2026). Prices as Road to Kakul's. */
 const EXAM = {
   key: 'mbbs', name: 'Road to MBBS', short: 'MDCAT', url: 'https://roadtokakul.github.io/mbbs/', packUrl: '../pack.json',
-  tagline: 'Your MDCAT, one question at a time',
-  hook: 'MDCAT practice that follows the PMDC syllabus — free, right now.',
+  tagline: 'Your seat in medical college starts here',
+  hook: 'Real past papers, a real exam hall and 24,000+ MCQs on the PMDC syllabus.',
+  promise: ['2,293 real past-paper MCQs with keys', 'Full 180-MCQ Exam Hall, like the real paper', 'Score X-Ray after every paper', '24,000+ practice MCQs with explanations'],
   disclaimer: 'Independent practice app. Not affiliated with PMDC, NUMS, any university or any academy. Questions follow the PMDC MDCAT curriculum.',
   syllabusNote: 'the PMDC MDCAT curriculum (2025, used for 2026)',
   shareText: 'Free MDCAT practice that follows the PMDC syllabus:',
   total: 180, minutes: 180, secPerQ: 60, mini: 50, diagN: 30, diagName: 'MDCAT check', freeDaily: 30, dailyGoal: 40, trialHours: 24,
   defaultName: 'Doctor-to-be', papers: 20, paperSalt: 'v1', patternName: 'PMDC MDCAT pattern',
   format: [['bio', 81], ['chem', 45], ['phy', 36], ['eng', 9], ['lr', 9]],
-  plans: [{ id: 'w1', n: 'Pro · 7 days', p: 99, d: 7, tag: 'Try it' }, { id: 'm1', n: 'Pro · 30 days', p: 399, d: 30 },
-    { id: 'q3', n: 'Pro · 90 days', p: 799, d: 90, tag: 'Popular' }, { id: 'life', n: 'Pro · Lifetime', p: 1499, d: 0 }],
-  proIncl: ['Chapter tests (25 MCQs in 25 minutes) and full subject tests', '20 sample papers in the PMDC pattern, with your national rank',
-    'Full 180-question mocks with an answer sheet and mark-for-review', 'High-yield sets on the most-tested topics',
-    'Unlimited practice, flashcards and mini mocks', 'Ask a teacher: send your doubts'],
-  freeNote: 'Free: 30 practice questions a day, the daily challenge, 20 new flashcards a day, one mini mock, all notes and formula sheets, and the MDCAT check.',
+  // passes: each opens a tier (like Claude's Pro / Max): the plan table shows ✓ and ✗ for every feature
+  plans: [{ id: 'w1', n: 'Starter · 7 days', p: 99, d: 7, tier: 1, tag: 'Try it' }, { id: 'm1', n: 'Pro · 30 days', p: 399, d: 30, tier: 2 },
+    { id: 'q3', n: 'Max · 90 days', p: 799, d: 90, tier: 3, tag: 'Most popular' }, { id: 'life', n: 'Ultra · Lifetime', p: 1499, d: 0, tier: 4, tag: 'Best value' }],
+  tiers: ['Free', 'Starter', 'Pro', 'Max', 'Ultra'],
+  tierLine: ['', 'A focused week of unlimited practice', 'Real exam practice, real past papers', 'Everything to master the paper', 'Every feature, for good'],
+  // [key, name, what it gives, lowest tier]
+  features: [
+    ['free', 'Daily practice, notes & formula sheets', '30 MCQs a day, the daily challenge, the MDCAT check, the full guide', 0],
+    ['practice', 'Unlimited Practice', 'All 24,000+ MCQs with explanations, no daily limit', 1],
+    ['chapter', 'Chapter Tests', '25 MCQs in 25 minutes on any of the 64 topics', 1],
+    ['cards', 'Smart Flashcards', '60 new cards a day with spaced repetition', 1],
+    ['vault', 'Mistake Vault', 'Every wrong answer saved, re-tested after 48 hours', 1],
+    ['hall', 'Exam Hall', 'Full 180-MCQ papers laid out like the real paper, one page, one submit', 2],
+    ['past', 'Real Past Papers', '2,293 real MCQs from 18 papers: UHS 2008–2025, SZABMU, NUMS', 2],
+    ['subject', 'Subject Tests', 'The exact MDCAT section sizes, timed', 2],
+    ['xray', 'Score X-Ray', 'Where every mark went, your behaviour, and a 7-day fix plan', 2],
+    ['rank', 'National Rank', 'See how many students you are ahead of', 2],
+    ['paper', '20 Grand Tests', 'Full papers in the PMDC pattern, the same for every student', 3],
+    ['hy', 'High-Yield Sets', 'The most-tested topics, weighted like the paper', 3],
+    ['freq', 'Repeat-o-Meter', 'What real MDCATs asked most, topic by topic, 2008–2026', 3],
+    ['custom', 'Custom Test Builder', 'Your subjects, your topics, your timer', 3],
+    ['expected', '2027 Most-Expected Papers', '5 full forecast papers built from what real papers asked most', 4],
+    ['final', 'Final-30-Days Battle Plan', 'A day-by-day plan for the last month', 4],
+    ['life', 'Lifetime access', 'MDCAT 2027 and any retake — pay once', 4]],
+  freeNote: 'Free forever: 30 practice MCQs a day, the daily challenge, 20 new flashcards a day, one mini mock, a 15-MCQ taste of a real paper, all notes, formula sheets, the guide and the MDCAT check.',
   // topics that MDCAT prep sites' analyses of past papers flag as tested most often - where to start, not a prediction
   highYield: ['b_cell', 'b_enz', 'b_energy', 'b_circ', 'b_coord', 'b_homeo', 'b_inher', 'c_eq', 'c_thermo', 'c_elec', 'c_org', 'c_hc', 'c_ald',
     'p_estat', 'p_curr', 'p_wave', 'p_emag', 'p_modern'],
@@ -116,16 +237,6 @@ const EXAM = {
   aggregate: [{ n: 'UHS (Punjab public colleges)', how: 'MDCAT 50% + FSc 40% + Matric 10%', w: { test: 50, fsc: 40, matric: 10 } },
     { n: 'NUMS', how: 'MDCAT 50% + FSc 50% (no Matric)', w: { test: 50, fsc: 50 } }],
   aggNote: 'Formulas as reported for recent admissions. Universities can change them every year — check the official notice. MDCAT is out of 180 marks since 2025.',
-  guide: [
-    ['The paper', ['180 multiple-choice questions in 3 hours.', 'Biology 81 (45%), Chemistry 45 (25%), Physics 36 (20%), English 9 (5%), Logical Reasoning 9 (5%).',
-      'It follows the PMDC MDCAT curriculum (2025, which PMDC confirmed for 2026).', 'The 2025 paper was reported as about 15% easy, 70% moderate and 15% difficult questions.']],
-    ['Passing marks', ['For 2025 the reported pass mark was 55% for MBBS and 50% for BDS, later relaxed by a few points where seats were left unfilled.', 'PMDC sets the pass mark every year: read your year’s notice.']],
-    ['The steps', ['Register on PMDC’s portal when the window opens, and choose your test city.', 'Download your admit card before the test.', 'Take the test, then check your result on PMDC’s site.',
-      'Apply to universities (UHS, KMU, DUHS, NUMS and others) and follow their merit lists — the aggregate calculator shows how merit is worked out.']],
-    ['On test day', ['About one minute a question: keep moving and come back to hard ones (mark them for review).', 'Start with your strongest subject to bank marks early.', 'Keep the last 10 minutes to check marked questions and empty answers.', 'Read PMDC’s instructions on marking for your year.']],
-    ['How to prepare', ['Follow the PMDC syllabus, not just an old book.', 'Do mixed practice every day and a full timed mock every week.', 'Review every mistake — the Mistakes list does it for you.',
-      'Revise facts with flashcards: a few minutes daily beats one long night.', 'Biology is 45% of the paper: give it the most time.']]],
-  guideNote: 'Rules change every year. Always confirm dates, pass marks and merit rules on PMDC’s and your university’s official notices.',
   subjects: [
     { id: 'bio', n: 'Biology', c: '#3fbf74', topics: [['b_mol', 'Biological Molecules'], ['b_enz', 'Enzymes'], ['b_cell', 'Cell Structure & Function'],
       ['b_acell', 'Acellular Life (Viruses)'], ['b_energy', 'Bioenergetics'], ['b_dig', 'Digestion'], ['b_resp', 'Respiration & Gaseous Exchange'],
@@ -2464,6 +2575,102 @@ const FORMULAS = {
     ['b_resp', 'Vital capacity', 'VC = TV + IRV + ERV'], ['b_energy', 'Respiratory quotient', 'RQ = CO₂ given out ÷ O₂ taken in'], ['b_cell', 'Magnification', 'M = image size ÷ actual size']]
 };
 
+/* The MDCAT guide: every side of it, in plain words. Facts carry their source year; rules change, so the last line of every
+   section that depends on a notice says so. [title, icon, intro, [points]] */
+const GUIDE = [
+  ['MDCAT in one minute', '⏱', 'The one test between you and a medical college.', [
+    '180 MCQs in 3 hours: Biology 81, Chemistry 45, Physics 36, English 9, Logical Reasoning 9.',
+    'One mark for each right answer and no negative marking (since 2020) — never leave a question blank.',
+    'Pass mark in 2025: 55% for MBBS and 50% for BDS.',
+    '140,125 candidates sat MDCAT 2025 for about 22,000 MBBS and BDS seats (PMDC) — roughly one seat for every six candidates.',
+    'PMDC sets the syllabus and the rules; provincial universities run the test in their province.']],
+  ['Who runs your test', '🏛', 'The same national syllabus, run province by province.', [
+    'Punjab: University of Health Sciences (UHS), Lahore.',
+    'Khyber Pakhtunkhwa: Khyber Medical University (KMU) with ETEA.',
+    'Sindh: Dow University (DUHS) and IBA Sukkur / SIBA testing services.',
+    'Islamabad and federal: Shaheed Zulfiqar Ali Bhutto Medical University (SZABMU).',
+    'Armed forces medical colleges: NUMS runs its own entry test with its own aggregate.',
+    'Check which university runs your test this year — it is announced in the MDCAT notice.']],
+  ['Eligibility', '✅', 'Before you register.', [
+    'FSc Pre-Medical, or A-levels with an IBCC equivalence certificate.',
+    'PMDC sets the minimum FSc marks for MBBS and BDS each year — read the year’s notice before you apply.',
+    'Students waiting for FSc results can usually register; keep your documents ready.']],
+  ['Registration, step by step', '📝', 'Do it early: portals slow down on the last days.', [
+    'Watch PMDC’s and your university’s websites for the MDCAT notice.',
+    'Create your account with your own CNIC/B-form number and mobile number.',
+    'Fill the form, upload a recent photo and the documents asked for.',
+    'Pay the fee the way the notice says (bank challan or online) and keep the receipt.',
+    'Choose your test city, then download and print the admit card when it is issued — keep two copies.']],
+  ['Exam-day checklist', '🎒', 'From UHS’s 2026 instructions — your university’s admit card has the final word.', [
+    'Bring: the printed admit card and your original CNIC, juvenile card or passport. UHS did not accept a B-form, birth certificate or driving licence.',
+    'Carry only: a transparent clipboard, two blue ballpoint pens and a small transparent water bottle.',
+    'Banned: mobile phones, calculators, books, notes or any written material, smart or digital watches.',
+    'Reach early. Late candidates are not allowed in.',
+    'Sleep 7–8 hours the night before; eat a light breakfast; leave home with time to spare.']],
+  ['How to use the 3 hours', '🧭', 'About one minute a question — the Exam Hall trains exactly this.', [
+    'First pass: answer what you know, mark the rest for review and move on.',
+    'Second pass: come back to marked questions; eliminate wrong options first.',
+    'Never leave a blank: there is no negative marking.',
+    'Keep the last 10 minutes to check marked questions and your bubbling.',
+    'Start with your strongest subject to bank marks and calm your nerves.']],
+  ['Aggregate and merit', '📊', 'Your MDCAT is half of your merit.', [
+    'Public colleges (UHS formula): 10% Matric + 40% FSc + 50% MDCAT. Use the Aggregate Calculator in Learn.',
+    'Top public colleges have recently closed at roughly 93–95% aggregate (figures reported by admission sites; they change every year).',
+    'Every MDCAT mark is worth about 0.28% of aggregate — five extra right answers can move you hundreds of places.',
+    'Private colleges close lower but cost far more; some colleges also have self-finance and reserved seats.']],
+  ['Strategy by subject', '🧪', 'Where the marks are.', [
+    'Biology (45%): read the PMDC syllabus line by line; physiology, cell biology, genetics, enzymes and bioenergetics come up again and again.',
+    'Chemistry (25%): organic reactions and tests, equilibrium, kinetics and electrochemistry; practise calculations until they are quick.',
+    'Physics (20%): numericals every day; keep the formula sheet open while practising; waves, electricity and motion carry many marks.',
+    'English (5%): grammar rules (tenses, agreement, prepositions) and vocabulary — small, quick marks.',
+    'Logical Reasoning (5%): patterns repeat — series, syllogisms, cause and effect. Ten minutes a day is enough.']],
+  ['The five study rules', '🏆', 'What toppers and every serious prep site agree on.', [
+    'Start with the last three real papers, then work backwards — the Past Papers library is ordered that way.',
+    'Use the older UHS papers (2008–2016) for concept depth, not for timing: they had 220 MCQs and negative marking.',
+    'When your mock scores stop rising, switch to chapter drills on your weakest topics.',
+    'Keep an error log — the Mistake Vault does it for you — and re-test every mistake 48 hours later.',
+    'Attempt every full paper like the real thing: one sitting, timed, no phone.']],
+  ['Plans by time left', '🗓', 'Pick the one that matches your countdown.', [
+    '90 days: two topics a day with 40 practice MCQs, flashcards daily, a full Exam Hall paper every Sunday.',
+    '60 days: finish the syllabus in 40 days; then a full paper every 3 days with a Score X-Ray after each.',
+    '30 days: one full paper every other day; the days between fix the weak topics the X-Ray finds.',
+    '15 days: past papers and Grand Tests only; revise notes and formula sheets; no new books.',
+    '7 days: light revision, two full papers, early nights. The last day: rest, check your documents, pack your clipboard.']],
+  ['For parents', '👨‍👩‍👧', 'How to help without adding pressure.', [
+    'A quiet corner, regular meals and 7–8 hours of sleep matter more than another academy.',
+    'Ask about the plan, not the score: “What are you revising today?” helps more than “How much did you get?”.',
+    'Do not compare with cousins or neighbours; every student’s weak topics are different.',
+    'Watch for burnout: no sleep, no appetite, crying or giving up — a day off can save a month.',
+    'Road to MBBS starts at Rs 99 a week and works on any phone, even offline.']],
+  ['For repeaters', '🔁', 'A second attempt is a strong attempt — if it is different.', [
+    'Start from facts: take a full Exam Hall paper now and read its Score X-Ray.',
+    'Most repeaters lose marks in a few topics again and again; fix those first.',
+    'Your FSc marks are fixed: every MDCAT mark now counts double in your head — plan for 160+.',
+    'Do a full paper every week from the start, not only in the last month.']],
+  ['Stress, sleep and focus', '🧘', 'Your brain is the tool — look after it.', [
+    'Study in 50-minute blocks with 10-minute breaks; put the phone in another room.',
+    'A 20-minute walk or exercise improves memory more than an extra hour of tired reading.',
+    'Sleep is when memory is stored: 7–8 hours, especially in the last month.',
+    'On a bad day, do 20 easy questions — a small win keeps the habit alive.']],
+  ['Myths and facts', '🔍', 'Do not prepare for the wrong test.', [
+    'Myth: past papers repeat word for word. Fact: in the 18 real papers in this app only 12 questions repeat exactly — the topics repeat, the words change.',
+    'Myth: only academy students get in. Fact: the paper tests the PMDC syllabus; disciplined self-study with real practice works.',
+    'Myth: leave hard questions blank to be safe. Fact: there is no negative marking — always choose an answer.',
+    'Myth: Biology alone is enough. Fact: Chemistry and Physics together are 45% of the paper.']],
+  ['After the result', '🎓', 'The admission race starts the day results come out.', [
+    'Download your result and keep several printed copies.',
+    'Apply to every admission portal you are eligible for (UHS, KMU, DUHS, NUMS and others) before the deadlines.',
+    'Merit lists come out in rounds; upgrades happen as seats are left — keep checking.',
+    'Keep originals and attested copies ready: Matric, FSc, CNIC/B-form, domicile, MDCAT result and photos.']],
+  ['Words you will hear', '📖', 'A small glossary.', [
+    'Aggregate: your combined merit from Matric, FSc and MDCAT.',
+    'Closing merit: the aggregate of the last student admitted to a college in a merit list.',
+    'Open merit: seats given purely on aggregate; reserved seats have their own lists.',
+    'Self-finance seat: a seat with a higher fee and a separate merit.',
+    'Percentile: the share of students who scored lower than you.']]
+];
+const GUIDE_NOTE = 'Rules, dates and pass marks change every year. Always confirm them in PMDC’s and your university’s official notices.';
+
 /* Fresh MDCAT calculations: new numbers every time, so a student never runs out and can't memorise answers.
    Each returns { q, o: [correct, three wrong], a: 0, e } — the engine shuffles the options. */
 const GEN = (() => {
@@ -2936,7 +3143,7 @@ const GEN = (() => {
   return G;
 })();
 
-EXAM.genCount = {"p_vec":5,"p_force":603,"p_work":514,"p_rot":60,"p_fluid":48,"p_wave":841,"p_thermo":8,"p_estat":297,"p_curr":838,"p_emi":48,"p_ac":5,"p_modern":5,"p_nuc":100,"p_atom":4,"c_fund":242,"c_gas":234,"c_eq":132,"c_kin":42,"c_atom":52,"l_series":854,"l_prob":1901,"c_thermo":1593,"c_elec":21,"e_punct":1095,"e_vocab":105,"e_tense":1257,"e_prep":78,"e_agree":1331,"e_correct":762,"l_deduct":1408,"l_crit":42,"b_inher":1550,"b_evo":32,"b_mol":1422,"b_repro":108,"b_cell":84,"b_circ":105,"b_resp":57,"b_energy":8,"p_emag":262,"p_elec":82};
+EXAM.genCount = {"p_vec":5,"p_force":627,"p_work":540,"p_rot":60,"p_fluid":48,"p_wave":831,"p_thermo":8,"p_estat":306,"p_curr":846,"p_emi":48,"p_ac":5,"p_modern":5,"p_nuc":100,"p_atom":4,"c_fund":243,"c_gas":238,"c_eq":132,"c_kin":42,"c_atom":52,"l_series":842,"l_prob":1892,"c_thermo":1593,"c_elec":21,"e_punct":1057,"e_vocab":105,"e_tense":1261,"e_prep":78,"e_agree":1284,"e_correct":772,"l_deduct":1535,"l_crit":42,"b_inher":1593,"b_evo":32,"b_mol":1421,"b_repro":108,"b_cell":84,"b_circ":105,"b_resp":57,"b_energy":8,"p_emag":270,"p_elec":82};
 'use strict';
 /* =====================================================================
    The exam engine — Road to MBBS first, Road to CSS next, from the same file.
@@ -2944,7 +3151,9 @@ EXAM.genCount = {"p_vec":5,"p_force":603,"p_work":514,"p_rot":60,"p_fluid":48,"p
    ways, wrong answers from the same table), generators (GEN: new numbers each time) and verified packs the studio
    publishes (bank/extra.json). Practice, chapter/subject tests, 20 sample papers, high-yield sets, a daily challenge,
    flashcards with spaced repetition, bookmarks, reports, search, notes, formula sheets, a study plan, an aggregate
-   calculator, a guide, ask-a-teacher, a national rank and passes (Easypaisa, Road to Kakul's form and backend).
+   calculator, a guide, a national rank and passes (Easypaisa, Road to Kakul's form and backend).
+   v3 (29 Nov 2026, in v3.js): tiers (Starter/Pro/Max/Ultra), the Exam Hall (a whole paper on one page), the Score X-Ray,
+   2,293 real past-paper MCQs, the Repeat-o-Meter, forecast papers, a custom test builder, the Mistake Vault and a full guide.
    ===================================================================== */
 const $id = id => document.getElementById(id);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -2967,7 +3176,7 @@ let FIXED = false;
 function defState() {
   return { v: 2, created: Date.now(), dev: genId(), onboard: false, name: '', testDate: '', stats: {}, seen: {}, mist: [], mocks: [],
     days: {}, xp: 0, pay: null, payHist: [], payPlan: '', trial: null, trk: null, diag: null, freeMini: 0,
-    bm: [], hidden: {}, cards: {}, cardDay: null, daily: {}, papers: {}, asked: [] };
+    bm: [], hidden: {}, cards: {}, cardDay: null, daily: {}, papers: {}, prefs: {}, mistT: {}, freeze: {}, hall: null, past: {}, exp: {} };
 }
 function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.v) return Object.assign(defState(), s); } catch (e) { } return defState(); }
 let S = load(), saveT = 0;
@@ -3021,15 +3230,24 @@ function track(ev, note) {
 const TRIAL_H = () => EXAM.trialHours == null ? 24 : EXAM.trialHours;
 const trialLeft = () => S.trial && S.trial.until > Date.now() ? S.trial.until - Date.now() : 0;
 function payActive() { const p = S.pay; if (!p || !p.tid) return false; if ((CFG.blockTids || []).includes(p.tid) || p.off) return false; return p.until === 0 || p.until > Date.now(); }
-const isPro = () => payActive() || trialLeft() > 0;
+// v3: every pass opens a tier (Starter 1, Pro 2, Max 3, Ultra 4); the free first day and passes bought before v3 open everything
+const PLAN_TIER = Object.fromEntries(EXAM.plans.map(p => [p.id, p.tier || 4]));
+const V3_START = Date.parse('2026-11-28T23:59:59+05:00');   // passes bought before Road to MBBS 3 were sold as full access
+function tierNow() { if (payActive()) return S.pay.at && S.pay.at < V3_START ? 4 : (PLAN_TIER[S.pay.plan] || 1); return trialLeft() > 0 ? 4 : 0; }
+const tierName = t => (EXAM.tiers || [])[t] || 'Pro';
+const isPro = () => tierNow() >= 1;
+const FEAT = Object.fromEntries((EXAM.features || []).map(f => [f[0], f]));
+const featTier = k => (FEAT[k] || [0, 0, 0, 1])[3];
+const has = k => tierNow() >= featTier(k);
+function need(k) { if (has(k)) return false; track('paywall_' + k); planSheet(k); return true; }
 const freeLeftToday = () => Math.max(0, EXAM.freeDaily - ((S.days[today()] || {}).q || 0));
 const hoursLeft = ms => Math.max(1, Math.ceil(ms / 3600e3));
-function needPro(what) { if (isPro()) return false; track('paywall_' + what); proSheet(what); return true; }
-function proSheet(what) {
+const needPro = what => need({ mock: 'hall', ask: 'hall' }[what] || what);
+const proSheet = what => planSheet({ mock: 'hall' }[what] || what);
+function oldProSheet(what) {
   modal('<h3>★ ' + esc(PRO_WHAT[what] || 'This is part of Pro') + '</h3><p>Pro opens chapter and subject tests, ' + EXAM.papers + ' sample papers, high-yield sets, full mocks, unlimited practice and flashcards, and Ask a teacher — from <b>Rs ' + EXAM.plans[0].p + ' a week</b>.</p><button class="btn gold big" data-act="toPasses">See the passes</button><button class="btn ghost big" data-act="close">Not now</button>');
 }
-const PRO_WHAT = { chapter: 'Chapter tests are part of Pro', subject: 'Subject tests are part of Pro', paper: 'Sample papers are part of Pro', hy: 'High-yield sets are part of Pro',
-  mock: 'Full mocks are part of Pro', ask: 'Ask a teacher is part of Pro', cards: 'More flashcards today are part of Pro' };
+const PRO_WHAT = {};
 
 /* ---------- the question bank ---------- */
 let QID = 0;
@@ -3066,7 +3284,7 @@ function loadExtra() {
     (o.hide || []).forEach(id => { HIDE[id] = 1; });
     const have = new Set(ALL.map(q => q.id));
     (o.questions || []).forEach(q => { if (q && q.id && !have.has(q.id) && TOPIC[q.t]) addQ({ id: q.id, t: q.t, s: TOPIC[q.t].s, q: q.q, o: q.o, a: q.a, e: q.e, ai: 1 }); });
-    indexBank(); if (['home', 'practice', 'learn'].includes(cur()[0])) render();
+    indexBank(); if (!$id('modal') && ['home', 'practice', 'learn'].includes(cur()[0])) render();
   }).catch(() => { });
 }
 function fresh(t, n) {           // generated questions for a topic (numbers change every time)
@@ -3083,7 +3301,7 @@ const subjCount = s => SUBJ[s].topics.reduce((a, [t]) => a + shownCount(t), 0);
 function pickTopic(t, n) {
   // a fixed paper (sample papers, the daily challenge) is drawn from the whole bank so it is the same on every phone;
   // a question this phone reported is then swapped for the next one in the same fixed order
-  const pool = FIXED ? ALL.filter(q => q.t === t) : (byTopic[t] || []).slice();
+  const pool = FIXED ? ALL.filter(q => q.t === t && !q.src) : (byTopic[t] || []).slice();   // fixed papers never depend on the real papers loading
   if (FIXED) { const order = shuffle(pool).filter(q => !S.hidden[q.id] && !HIDE[q.id]), share = GENS[t] ? Math.min(n, Math.max(Math.ceil(n / 4), n - pool.length)) : 0;
     return shuffle(order.slice(0, Math.max(0, n - share)).concat(fresh(t, share))).slice(0, n); }
   const bank = FIXED ? shuffle(pool) : pool.sort((a, b) => (S.seen[a.id] || 0) - (S.seen[b.id] || 0) || Math.random() - .5);
@@ -3124,10 +3342,10 @@ function toast(t) { const d = document.createElement('div'); d.className = 'toas
 function modal(html) { closeModal(); const m = document.createElement('div'); m.className = 'modal'; m.id = 'modal'; m.innerHTML = '<div class="sheet">' + html + '</div>'; m.addEventListener('click', e => { if (e.target === m) closeModal(); }); document.body.appendChild(m); }
 function closeModal() { const m = $id('modal'); if (m) m.remove(); }
 const bar = (p, cls) => '<div class="bar ' + (cls || '') + '"><i style="width:' + Math.max(0, Math.min(100, p)) + '%"></i></div>';
-const chip = () => isPro() ? '<span class="chip pro" data-go="passes">★ PRO' + (!payActive() ? ' · ' + hoursLeft(trialLeft()) + 'h' : '') + '</span>' : '<span class="chip" data-go="passes">FREE · Go Pro</span>';
-const lock = () => isPro() ? '' : ' <span class="lk">★ Pro</span>';
+const chip = () => tierNow() ? '<span class="chip pro" data-go="passes">★ ' + tierName(tierNow()).toUpperCase() + (!payActive() ? ' · ' + hoursLeft(trialLeft()) + 'h' : '') + '</span>' : '<span class="chip" data-go="passes">FREE · Upgrade</span>';
+const lock = k => has(k || 'chapter') ? '' : ' <span class="lk">★ ' + tierName(featTier(k || 'chapter')) + '</span>';
 const NAV = [['home', 'Home', 'M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z'], ['practice', 'Practice', 'M4 5h16M4 12h16M4 19h10'],
-  ['tests', 'Tests', 'M12 7v5l3 2M12 3a9 9 0 100 18 9 9 0 000-18z'], ['learn', 'Learn', 'M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5zM4 19.5A2.5 2.5 0 006.5 22H20v-5'],
+  ['tests', 'Exams', 'M12 7v5l3 2M12 3a9 9 0 100 18 9 9 0 000-18z'], ['learn', 'Learn', 'M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5zM4 19.5A2.5 2.5 0 006.5 22H20v-5'],
   ['me', 'Me', 'M20 21a8 8 0 10-16 0M12 13a5 5 0 100-10 5 5 0 000 10z']];
 const ico = d => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>';
 const row = (title, sub, attrs, right) => '<div class="card tap row sp" ' + attrs + '><div><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</div>' + (right || '<span class="chev">›</span>') + '</div>';
@@ -3224,21 +3442,21 @@ ACT.chapterWeak = () => { const t = weakTopics(1)[0] || shuffle(Object.keys(TOPI
 /* ---------- practice ---------- */
 V.practice = () => ({ title: 'Practice', tab: 'practice', html: '<p class="intro">' + fmt(ALL.length) + '+ questions following ' + esc(EXAM.syllabusNote) + ', plus fresh calculations every time. Explanations after every answer.</p>' +
   EXAM.subjects.map(s => { const st = subjStat(s.id); return row('<span class="dot" style="background:' + s.c + '"></span>' + esc(s.n), fmt(subjCount(s.id)) + '+ questions · ' + s.topics.length + ' topics · ' + (st.n ? pct(st.c, st.n) + '% right of ' + st.n : 'not started'), 'data-go="subject" data-arg="' + s.id + '"'); }).join('') +
-  row('High-yield' + lock(), 'The most-tested topics, weighted like the paper', 'data-go="hy"') +
+  row('High-yield' + lock('hy'), 'The most-tested topics, weighted like the paper', 'data-go="hy"') +
   row('Smart practice', 'Your weakest topics first, across subjects', 'data-act="smart"') +
   row('Search questions', 'Find any topic or word', 'data-go="search"') +
   row('Saved questions', S.bm.length + ' bookmarked', 'data-act="saved"') });
 V.subject = p => {
   const s = SUBJ[p.k] || EXAM.subjects[0], fmtN = EXAM.format.find(f => f[0] === s.id);
   return { title: s.n, tab: 'practice', html: '<div class="card"><button class="btn big" data-act="subj" data-arg="' + s.id + '">Mixed ' + esc(s.n) + ' · 10 questions</button>' +
-    (fmtN ? '<button class="btn ghost big" data-act="subjTest" data-arg="' + s.id + '">Subject test: ' + fmtN[1] + ' MCQs, ' + fmtN[1] + ' min' + lock() + '</button>' : '') + '</div>' +
+    (fmtN ? '<button class="btn ghost big" data-act="subjTest" data-arg="' + s.id + '">Subject test: ' + fmtN[1] + ' MCQs, ' + fmtN[1] + ' min' + lock('subject') + '</button>' : '') + '</div>' +
     s.topics.map(([t, n]) => { const x = S.stats[t] || { n: 0, c: 0 }, ok = hasQ(t); return '<div class="trow' + (ok ? ' tap' : ' off') + '"' + (ok ? ' data-go="topicp" data-arg="' + t + '"' : '') + '><div><b>' + esc(n) + (EXAM.highYield && EXAM.highYield.includes(t) ? ' <span class="hy">HIGH-YIELD</span>' : '') + '</b><small>' + (ok ? fmt(shownCount(t)) + (GENS[t] ? '+' : '') + ' questions · ' + (x.n ? pct(x.c, x.n) + '% right of ' + x.n : 'start') : 'Coming soon') + '</small></div>' + (x.n ? bar(pct(x.c, x.n)) : '') + '</div>'; }).join('') };
 };
 V.topicp = p => {
   const t = TOPIC[p.k]; if (!t) return V.practice();
   const x = S.stats[t.id] || { n: 0, c: 0 }, notes = (typeof NOTES !== 'undefined' && NOTES[t.id]) || [];
   return { title: t.n, tab: 'practice', html: '<div class="card"><small>' + esc(SUBJ[t.s].n) + ' · ' + fmt(shownCount(t.id)) + (GENS[t.id] ? '+' : '') + ' questions' + (x.n ? ' · ' + pct(x.c, x.n) + '% right of ' + x.n : '') + '</small>' +
-    '<button class="btn gold big" data-act="topic" data-arg="' + t.id + '">Practise · 10 questions</button><button class="btn big" data-act="chapter" data-arg="' + t.id + '">Chapter test: 25 MCQs, 25 min' + lock() + '</button>' +
+    '<button class="btn gold big" data-act="topic" data-arg="' + t.id + '">Practise · 10 questions</button><button class="btn big" data-act="chapter" data-arg="' + t.id + '">Chapter test: 25 MCQs, 25 min' + lock('chapter') + '</button>' +
     (CARDS.some(c => c.t === t.id) ? '<button class="btn ghost big" data-act="cards" data-arg="' + t.id + '">Flashcards for this topic</button>' : '') + '</div>' +
     (notes.length ? '<div class="card"><h3>Key points</h3><ul class="notes">' + notes.map(n => '<li>' + esc(n) + '</li>').join('') + '</ul></div>' : '') };
 };
@@ -3265,7 +3483,7 @@ ACT.saved = () => { const items = S.bm.map(x => typeof x === 'string' ? findQ(x)
 // tests: a chapter (25 in 25 min), a subject's full section, high-yield sets
 ACT.chapter = t => { if (!TOPIC[t] || needPro('chapter')) return; startQuiz({ title: 'Chapter test · ' + TOPIC[t].n, items: pickTopic(t, 25), mode: 'test', limit: 25 * EXAM.secPerQ }); };
 ACT.subjTest = s => { const f = EXAM.format.find(x => x[0] === s); if (!f || needPro('subject')) return; startQuiz({ title: SUBJ[s].n + ' test', items: pickSubject(s, f[1]), mode: 'test', limit: f[1] * EXAM.secPerQ }); };
-V.hy = () => ({ title: 'High-yield', tab: 'practice', html: '<p class="intro">' + esc(EXAM.highYieldNote) + '</p><div class="card"><button class="btn gold big" data-act="hyMix">High-yield mix · 30 questions' + lock() + '</button><button class="btn big" data-act="hyPaper">High-yield paper · ' + EXAM.mini + ' MCQs, timed' + lock() + '</button></div>' +
+V.hy = () => ({ title: 'High-yield', tab: 'practice', html: '<p class="intro">' + esc(EXAM.highYieldNote) + '</p><div class="card"><button class="btn gold big" data-act="hyMix">High-yield mix · 30 questions' + lock('hy') + '</button><button class="btn big" data-act="hyPaper">High-yield paper · ' + EXAM.mini + ' MCQs, timed' + lock('hy') + '</button></div>' +
   EXAM.subjects.map(s => { const ts = s.topics.filter(([t]) => (EXAM.highYield || []).includes(t)); return ts.length ? '<div class="card"><h3><span class="dot" style="background:' + s.c + '"></span>' + esc(s.n) + '</h3>' + ts.map(([t, n]) => '<div class="trow tap" data-go="topicp" data-arg="' + t + '"><div><b>' + esc(n) + '</b><small>' + fmt(shownCount(t)) + (GENS[t] ? '+' : '') + ' questions</small></div><span class="chev">›</span></div>').join('') + '</div>' : ''; }).join('') });
 ACT.hyMix = () => { if (needPro('hy')) return; const hy = EXAM.highYield || []; startQuiz({ title: 'High-yield mix', items: shuffle(hy.filter(hasQ).flatMap(t => pickTopic(t, 2))).slice(0, 30), mode: 'practice' }); };
 ACT.hyPaper = () => { if (needPro('hy')) return; const items = paper(EXAM.mini / EXAM.total, EXAM.highYield); startQuiz({ title: 'High-yield paper', items, mode: 'test', limit: items.length * EXAM.secPerQ }); };
@@ -3287,8 +3505,9 @@ ACT.searchGo = () => { const n = gate(Math.min(20, SRES.length)); if (n) startQu
 let Q = null;
 function startQuiz(o) {
   if (!o.items.length) { toast('No questions here yet'); return; }
-  Q = Object.assign({ i: 0, picks: [], flags: [], tq: [], start: Date.now(), at: Date.now() }, o, { items: o.items.map(present) });
+  Q = Object.assign({ i: 0, picks: [], flags: [], tq: [], elim: [], start: Date.now(), at: Date.now() }, o, { items: o.keep ? o.items.map(q => Object.assign({}, q)) : o.items.map(present) });
   if (Q.mode !== 'practice') track(Q.mode);
+  if (Q.hall) { saveHall(); go('hall'); return; }
   go('quiz');
 }
 const isMock = () => Q && Q.mode !== 'practice';
@@ -3313,7 +3532,7 @@ V.quiz = () => {
     (mock ? '<button class="tl' + (Q.flags[Q.i] ? ' on' : '') + '" data-act="flag">⚑ ' + (Q.flags[Q.i] ? 'Marked' : 'Mark for review') + '</button>' : '') + '<button class="tl" data-act="report">Report a mistake</button></div>';
   const foot = shown ? '<div class="expl ' + (picked === q.a ? 'ok' : 'bad') + '"><b>' + (picked === q.a ? 'Correct' : 'The answer is ' + 'ABCD'[q.a]) + '</b>' + (q.e ? '<p>' + esc(q.e) + '</p>' : '') + '</div><button class="btn gold big" data-act="next">' + (Q.i + 1 < n ? 'Next' : 'Finish') + '</button>'
     : mock ? '<div class="row g"><button class="btn" data-act="prev"' + (Q.i ? '' : ' disabled') + '>‹ Back</button><button class="btn gold wide" data-act="next">' + (Q.i + 1 < n ? 'Next ›' : 'Review & submit') + '</button></div><button class="btn ghost sm" data-act="grid">All questions · answer sheet</button>' : '';
-  return { title: Q.title, noNav: true, html: '<div class="qhead"><small>' + esc(SUBJ[q.s].n) + ' · ' + esc(TOPIC[q.t].n) + '</small><small>' + (Q.i + 1) + ' / ' + n + '</small>' + timer + '</div>' + bar(100 * (Q.i + (shown ? 1 : 0)) / n, 'thin') +
+  return { title: Q.title, noNav: true, html: (q.src ? '<span class="real">REAL MDCAT · ' + esc(q.src) + '</span>' : '') + '<div class="qhead"><small>' + esc(SUBJ[q.s].n) + ' · ' + esc(TOPIC[q.t].n) + '</small><small>' + (Q.i + 1) + ' / ' + n + '</small>' + timer + '</div>' + bar(100 * (Q.i + (shown ? 1 : 0)) / n, 'thin') +
     '<div class="qcard"><p class="q">' + esc(q.q) + '</p>' + opts + '</div>' + foot + tools,
     after() { if (Q.limit) tickTimer(); } };
 };
@@ -3352,12 +3571,13 @@ function finishQuiz() {
   const c = Q.items.filter((q, i) => Q.picks[i] === q.a).length, n = Q.items.length;
   const per = {}; Q.items.forEach((q, i) => { const p = per[q.s] = per[q.s] || { n: 0, c: 0, ms: 0 }; p.n++; p.ms += Q.tq[i] || 0; if (Q.picks[i] === q.a) p.c++; });
   Q.res = { c, n, per, secs: Math.round((Date.now() - Q.start) / 1000), answered: Q.picks.filter(x => x != null).length };
-  if (Q.mode === 'mock' || Q.mode === 'mini' || Q.mode === 'paper') { S.mocks.unshift({ d: today(), kind: Q.mode, sc: c, n, per, p: Q.paper }); S.mocks = S.mocks.slice(0, 40); }
+  if (!['practice', 'daily', 'diag'].includes(Q.mode)) { S.mocks.unshift({ d: today(), kind: Q.mode, sc: c, n, per, p: Q.paper, t: Q.title }); S.mocks = S.mocks.slice(0, 40); }
   if (Q.mode === 'paper') { const b = S.papers[Q.paper]; if (!b || c > b) S.papers[Q.paper] = c; }
   if (Q.mode === 'daily') { S.daily[today()] = c; const ks = Object.keys(S.daily).sort(); while (ks.length > 60) delete S.daily[ks.shift()]; }
   if (Q.mode === 'diag') { S.diag = { d: today(), c, n, est: Math.round(EXAM.total * c / n), per }; track('diag_done', String(S.diag.est)); }
   save(); stack[stack.length - 1] = ['result', {}]; render(); window.scrollTo(0, 0);
-  if ((Q.mode === 'mock' || Q.mode === 'paper') && n === EXAM.total) rankMe(c);
+  if (Q.hall && n === EXAM.total) rankMe(c);
+  if (typeof afterFinish === 'function') afterFinish();
 }
 V.result = () => {
   if (!Q || !Q.res) return V.home();
@@ -3466,22 +3686,8 @@ V.me = () => {
     '<div class="card"><h3>By subject</h3>' + EXAM.subjects.map(s => { const st = subjStat(s.id); return '<div class="trow tap" data-go="subject" data-arg="' + s.id + '"><div><b><span class="dot" style="background:' + s.c + '"></span>' + esc(s.n) + '</b><small>' + (st.n ? pct(st.c, st.n) + '% of ' + st.n : '—') + '</small></div>' + bar(pct(st.c, st.n)) + '</div>'; }).join('') + '</div>' +
     (weakTopics(5).length ? '<div class="card"><h3>Weakest topics</h3>' + weakTopics(5).map(t => '<div class="trow tap" data-go="topicp" data-arg="' + t + '"><div><b>' + esc(TOPIC[t].n) + '</b><small>' + pct(S.stats[t].c, S.stats[t].n) + '% right</small></div><span class="chev">›</span></div>').join('') + '</div>' : '') +
     row(payActive() ? 'Your pass' : '★ Passes', payActive() ? 'Active' : 'From Rs ' + EXAM.plans[0].p + ' a week', 'data-go="passes"') +
-    row('Ask a teacher' + lock(), 'Send your doubt; answers appear here', 'data-go="ask"') +
     row('Saved questions', S.bm.length + ' bookmarked', 'data-act="saved"') + row('Your mistakes', S.mist.length + ' to get right', 'data-act="mistakes"') +
     row('Settings', 'Name, test date, share, reset', 'data-go="settings"') };
-};
-V.ask = () => {
-  const mine = (CFG.qa || []).filter(x => x && x.q && x.a && (x.c === EXAM.key || (Array.isArray(x.c) && x.c.includes(EXAM.key))));
-  return { title: 'Ask a teacher', tab: 'me', html: '<div class="card"><p class="mute">Stuck on a concept or a question? Send it — the team answers the most asked ones here.</p><select id="ask_s" class="inp">' + EXAM.subjects.map(s => '<option value="' + s.id + '">' + esc(s.n) + '</option>').join('') + '</select><textarea id="ask_q" class="inp" rows="4" maxlength="500" placeholder="Write your question clearly"></textarea><button class="btn gold big" data-act="askGo">Send' + lock() + '</button>' +
-    (S.asked.length ? '<small class="mute">You have sent ' + S.asked.length + ' question(s).</small>' : '') + '</div>' +
-    (mine.length ? '<div class="card"><h3>Answers from the team</h3>' + mine.slice(0, 30).map(x => '<div class="qa"><b>' + esc(x.q) + '</b><p>' + esc(x.a) + '</p></div>').join('') + '</div>' : '') };
-};
-ACT.askGo = () => {
-  if (needPro('ask')) return;
-  const q = ($id('ask_q').value || '').trim(), s = $id('ask_s').value;
-  if (q.length < 10) { toast('Write a little more'); return; }
-  formLog({ kind: 'question', plan: SUBJ[s].n, note: q.slice(0, 500) });
-  S.asked.push({ d: today(), s, q: q.slice(0, 200) }); S.asked = S.asked.slice(-50); save(); toast('Sent — thank you'); render();
 };
 V.settings = () => ({ title: 'Settings', html: '<div class="card"><label>Your name<input id="st_name" class="inp" maxlength="30" value="' + esc(S.name) + '"></label><label>Your ' + esc(EXAM.short) + ' date<input id="st_date" type="date" class="inp" value="' + esc(S.testDate) + '"></label><button class="btn gold big" data-act="saveSet">Save</button></div>' +
   '<div class="card"><h3>About</h3><p class="mute">' + esc(EXAM.disclaimer) + '</p><p class="mute">' + fmt(ALL.length) + ' questions in the bank, plus fresh calculations generated each time. The team adds checked questions regularly.</p><button class="btn ghost" data-act="share">Share the app</button></div>' +
@@ -3529,7 +3735,7 @@ ACT.unlock = () => {
       modal('<h3>Not unlocked</h3><p>' + ({ full: 'This Transaction ID is already in use on two phones.', declined: 'This Transaction ID was not found in our Easypaisa account.', blocked: 'This Transaction ID cannot be used.' }[r.status]) + '</p><button class="btn big" data-act="close">OK</button>');
     }
   }).catch(() => { });
-  tab('home'); setTimeout(() => modal('<h3>★ Unlocked: ' + esc(plan.n) + '</h3><p>Every test, sample paper and flashcard is open. Make every day count.</p><button class="btn gold big" data-act="close">Start</button>'), 300);
+  tab('home'); buzz(40); setTimeout(() => modal('<h3>★ Unlocked: ' + esc(plan.n) + '</h3><p>Everything in ' + esc(tierName(plan.tier || 4)) + ' is open. Make every day count.</p><button class="btn gold big" data-act="close">Start</button>'), 300);
 };
 // a declined or blocked ID is switched off within the hour
 function passCheck() {
@@ -3543,11 +3749,11 @@ function passCheck() {
 /* ---------- the free Pro day ends: once ---------- */
 function trialEnd() {
   if (!S.onboard || !S.trial || S.trial.told || trialLeft() > 0 || payActive()) return;
-  if (cur()[0] === 'quiz' || cur()[0] === 'card') return;
+  if (['quiz', 'card', 'hall'].includes(cur()[0])) return;
   S.trial.told = 1; save(); track('trial_end');
   const q = Math.max(0, totalQ() - (S.trial.q || 0));
   render();
-  setTimeout(() => modal('<h3>★ Your free Pro day is over</h3>' + (q ? '<p>You practised <b>' + q + ' questions</b> in it.</p>' : '') + '<p>Keep every test, sample paper and flashcard for <b>Rs ' + EXAM.plans[0].p + ' a week</b> — about Rs ' + Math.round(EXAM.plans[0].p / 7) + ' a day.</p><button class="btn gold big" data-act="keepPro2">Keep Pro</button><button class="btn ghost big" data-act="close">Not now</button>'), 400);
+  setTimeout(() => modal('<h3>★ Your free Ultra day is over</h3>' + (q ? '<p>You practised <b>' + q + ' questions</b> in it.</p>' : '') + '<p>Keep unlimited practice from <b>Rs ' + EXAM.plans[0].p + ' a week</b>, or the Exam Hall and real past papers with Pro — about Rs ' + Math.round(EXAM.plans[0].p / 7) + ' a day.</p><button class="btn gold big" data-act="keepPro2">Keep Pro</button><button class="btn ghost big" data-act="close">Not now</button>'), 400);
 }
 ACT.keepPro2 = () => { closeModal(); ACT.keepPro(); };
 
@@ -3559,5 +3765,362 @@ function boot() {
   document.addEventListener('visibilitychange', () => { if (!document.hidden) setTimeout(trialEnd, 1000); });
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => { });
 }
+
+/* =====================================================================
+   v3 (29 Nov 2026): the premium layer on top of engine.js.
+   Tiers with ✓/✗ plans · the Exam Hall (a whole paper on one page, one submit) · the Score X-Ray · real past papers
+   (past.json) · the Repeat-o-Meter · 2027 forecast papers · a custom test builder · the Mistake Vault · a full guide.
+   ===================================================================== */
+const buzz = (ms = 8) => { try { if (navigator.vibrate) navigator.vibrate(ms); } catch (e) { } };
+const pick1 = a => a[rnd(a.length)];
+
+/* ---------- plans: what a feature needs ---------- */
+function planFor(k) { const t = featTier(k); return EXAM.plans.find(p => (p.tier || 4) >= t) || EXAM.plans[EXAM.plans.length - 1]; }
+function planSheet(k) {
+  const f = FEAT[k] || ['', 'This feature', '', 1], t = f[3], p = planFor(k);
+  const adds = EXAM.features.filter(x => x[3] === t).map(x => '<li><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join('');
+  modal('<div class="sheethead"><span class="tier t' + t + '">' + tierName(t) + '</span><h3>' + esc(f[1]) + '</h3><p class="mute">' + esc(f[2]) + '</p></div>' +
+    '<p>Part of <b>' + tierName(t) + '</b> and above — from <b>Rs ' + p.p + '</b>' + (p.d ? ' for ' + p.d + ' days' : ', once, for good') + '. ' + esc(tierName(t)) + ' brings:</p><ul class="ticks">' + adds + '</ul>' +
+    '<button class="btn gold big" data-act="choosePlan" data-arg="' + p.id + '">Get ' + tierName(t) + ' →</button><button class="btn ghost big" data-act="close">Not now</button>');
+}
+ACT.choosePlan = id => { S.payPlan = id; save(); closeModal(); go('passes'); };
+const nextTier = () => Math.min(4, tierNow() + 1);
+
+/* ---------- real past papers (past.json, built from the boards' own papers) ---------- */
+let PP = null, PPLOAD = null;
+const srcName = p => p.board + ' ' + p.year + (p.code ? ' · ' + p.code : '');
+const keyLine = p => p.key === 'official' ? 'Answer from the official ' + p.board + ' ' + p.year + ' key.' : 'Answer from a key compiled by MDCAT prep sites — ' + p.board + ' publishes no official key. Report it if you disagree.';
+function loadPast() {
+  if (PPLOAD) return PPLOAD;
+  PPLOAD = fetch('past.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).then(o => {
+    if (!o || !o.papers) return;
+    PP = o.papers.map(p => Object.assign({}, p, { qs: p.q.map(([t, q, a1, a2, a3, a4, a, n]) => TOPIC[t] ? { id: 'p:' + p.id + ':' + n, t, s: TOPIC[t].s, q, o: [a1, a2, a3, a4], a, n, src: p.board + ' ' + p.year, pid: p.id, e: keyLine(p) } : null).filter(Boolean) }));
+    PP.forEach(p => p.qs.forEach(addQ)); indexBank();
+    if (!$id('modal') && ['home', 'past', 'practice', 'tests', 'freq', 'expected', 'custom'].includes(cur()[0])) render();   // never close a sheet the student is reading
+  }).catch(() => { PPLOAD = null; });
+  return PPLOAD;
+}
+const pastCount = () => PP ? PP.reduce((a, p) => a + p.qs.length, 0) : 2293;
+const pastWait = (f) => { if (PP) return f(); toast('Loading the real papers…'); loadPast().then(() => { if (PP) f(); }); };
+
+/* ---------- the Exam Hall: a whole paper on one page, answers saved as you go, one submit ---------- */
+function startHall(o) { startQuiz(Object.assign({ hall: 1, mode: 'mock' }, o)); }
+function saveHall() {
+  if (!Q || !Q.hall || Q.done) return;
+  S.hall = { title: Q.title, mode: Q.mode, items: Q.items, picks: Q.picks, flags: Q.flags, elim: Q.elim, tq: Q.tq, start: Q.start, limit: Q.limit, paper: Q.paper, pid: Q.pid, lastPick: Q.lastPick, at: Date.now() }; save();
+}
+ACT.resume = () => { const h = S.hall; if (!h) return; Q = Object.assign({ i: 0, at: Date.now(), hall: 1 }, h); go('hall'); };
+ACT.discard = () => { if (!confirm('Throw away this unfinished paper?')) return; S.hall = null; save(); render(); };
+function hq(q, i) {
+  const p = Q.picks[i], el = Q.elim[i] || [];
+  return '<div class="hq' + (p != null ? ' done' : '') + (Q.flags[i] ? ' fl' : '') + '" id="hq' + i + '"><div class="hqh"><b class="hn">' + (i + 1) + '</b>' + (q.src ? '<span class="real">' + esc(q.src) + '</span>' : '') +
+    '<button class="hflag" data-act="hf" data-arg="' + i + '" aria-label="Mark for review">⚑</button></div><p class="q">' + esc(q.q) + '</p>' +
+    q.o.map((o, j) => '<div class="hopt' + (p === j ? ' sel' : '') + (el.includes(j) ? ' x' : '') + '" data-act="hp" data-arg="' + i + ':' + j + '"><span class="bub">' + 'ABCD'[j] + '</span><span class="ot">' + esc(o) + '</span><button class="elim" data-act="hx" data-arg="' + i + ':' + j + '" aria-label="Cross out option ' + 'ABCD'[j] + '">✕</button></div>').join('') + '</div>';
+}
+V.hall = () => {
+  if (!Q || !Q.hall) return V.home();
+  let last = null, body = '';
+  Q.items.forEach((q, i) => {
+    if (q.s !== last) { last = q.s; body += '<div class="hsec" id="hs_' + q.s + '"><span class="dot" style="background:' + SUBJ[q.s].c + '"></span>' + esc(SUBJ[q.s].n) + '<small>' + Q.items.filter(x => x.s === q.s).length + ' MCQs</small></div>'; }
+    body += hq(q, i);
+  });
+  const secs = uniq(Q.items.map(q => q.s)).map(s => '<button class="secjump" data-act="hsec" data-arg="' + s + '"><span class="dot" style="background:' + SUBJ[s].c + '"></span>' + esc(SUBJ[s].n.split(' ')[0]) + '</button>').join('');
+  return { title: Q.title, noNav: true, html: '<div class="hbar"><span class="timer' + (S.prefs.hideTimer ? ' hid' : '') + '" id="qtimer" data-act="htime" title="Tap to hide or show the clock"></span><span class="hcount" id="hcount"></span><button class="btn sm" data-act="hpal">Answer sheet</button><button class="btn sm gold" data-act="hsub">Submit</button></div>' +
+    '<div class="secbar">' + secs + '</div><p class="hnote">' + Q.items.length + ' MCQs on one page, like the real paper. Tap an option to answer · ⚑ marks for review · ✕ crosses out an option. Every answer is saved — you can leave and come back.</p>' +
+    body + '<button class="btn gold big" data-act="hsub">Submit the paper</button>', after() { hallCount(); hallTick(); } };
+};
+function hallTick() {
+  const el = $id('qtimer'); if (!el) return;
+  const f = () => {
+    if (!Q || !Q.hall || Q.done) return clearInterval(render.tick);
+    if (!Q.limit) { const up = Math.floor((Date.now() - Q.start) / 1000); el.textContent = Math.floor(up / 60) + ':' + String(up % 60).padStart(2, '0'); return; }
+    const left = Math.max(0, Q.limit * 1000 - (Date.now() - Q.start)), m = Math.floor(left / 60000), s = Math.floor(left / 1000) % 60;
+    el.textContent = (m >= 60 ? Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0') : m) + ':' + String(s).padStart(2, '0'); el.classList.toggle('low', left < 300000);
+    if (left < 300000 && !Q.warned) { Q.warned = 1; buzz(60); toast('5 minutes left — check your marked questions'); }
+    if (!left) { S.hall = null; finishQuiz(); }
+  };
+  f(); render.tick = setInterval(f, 1000);
+}
+function hqRefresh(i) { const el = $id('hq' + i); if (el) el.outerHTML = hq(Q.items[i], i); hallCount(); saveHall(); }
+function hallCount() { if (!Q) return; const a = Q.picks.filter(x => x != null).length, f = Q.flags.filter(Boolean).length, el = $id('hcount'); if (el) el.innerHTML = '<b>' + a + '</b>/' + Q.items.length + (f ? ' · ⚑' + f : ''); }
+const ij = a => String(a).split(':').map(Number);
+ACT.hp = (a, t) => {
+  if (t && t.closest && t.closest('.elim')) return;
+  const [i, j] = ij(a);
+  if (Q.picks[i] == null) { const now = Date.now(); Q.tq[i] = now - (Q.lastPick || Q.start); Q.lastPick = now; }
+  Q.picks[i] = Q.picks[i] === j ? null : j; Q.elim[i] = (Q.elim[i] || []).filter(x => x !== j); buzz(); hqRefresh(i);
+};
+ACT.hx = a => { const [i, j] = ij(a), e = Q.elim[i] || []; Q.elim[i] = e.includes(j) ? e.filter(x => x !== j) : e.concat(j); if (Q.picks[i] === j) Q.picks[i] = null; hqRefresh(i); };
+ACT.hf = i => { i = +i; Q.flags[i] = !Q.flags[i]; hqRefresh(i); };
+ACT.htime = () => { S.prefs.hideTimer = !S.prefs.hideTimer; save(); const el = $id('qtimer'); if (el) el.classList.toggle('hid', !!S.prefs.hideTimer); };
+ACT.hsec = s => { const el = $id('hs_' + s); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+ACT.hpal = () => {
+  const cls = i => (Q.picks[i] != null ? 'a' : 'n') + (Q.flags[i] ? ' f' : '');
+  modal('<h3>Answer sheet</h3><div class="legend"><span class="lg a"></span>Answered <span class="lg n"></span>Not answered <span class="lg f"></span>Marked for review</div><div class="pal">' +
+    Q.items.map((_, i) => '<button class="' + cls(i) + '" data-act="hjump" data-arg="' + i + '">' + (i + 1) + '</button>').join('') + '</div><button class="btn gold big" data-act="hsub">Submit</button><button class="btn ghost big" data-act="close">Back to the paper</button>');
+};
+ACT.hjump = i => { closeModal(); const el = $id('hq' + i); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.classList.add('pulse'); setTimeout(() => el.classList.remove('pulse'), 900); } };
+ACT.hsub = () => {
+  const n = Q.items.length, a = Q.picks.filter(x => x != null).length, f = Q.flags.filter(Boolean).length;
+  modal('<h3>Submit the paper?</h3><div class="kpis"><div><b>' + a + '</b><small>answered</small></div><div><b>' + (n - a) + '</b><small>blank</small></div><div><b>' + f + '</b><small>marked</small></div></div>' +
+    (n - a ? '<p class="callout tip">There is no negative marking in MDCAT — a blank is a mark thrown away. Fill every bubble before you submit.</p>' : '') +
+    '<button class="btn gold big" data-act="hsubGo">Submit and see my Score X-Ray</button><button class="btn ghost big" data-act="close">Keep going</button>');
+};
+ACT.hsubGo = () => { closeModal(); S.hall = null; buzz(30); finishQuiz(); };
+// the Mistake Vault remembers when each mistake happened, to re-test it after 48 hours
+const _record = record;
+record = function (q, ok) { _record(q, ok); if (q.gen) return; if (!ok) S.mistT[q.id] = Date.now(); else delete S.mistT[q.id]; };
+function afterFinish() {
+  if (!Q || !Q.hall) return;
+  S.hall = null;
+  if (Q.mode === 'past' && Q.pid) { const b = S.past[Q.pid]; if (b == null || Q.res.c > b) S.past[Q.pid] = Q.res.c; }
+  if (Q.mode === 'expected' && Q.paper) { const b = S.exp[Q.paper]; if (b == null || Q.res.c > b) S.exp[Q.paper] = Q.res.c; }
+  save();
+}
+const _result = V.result;
+V.result = () => Q && Q.hall && Q.res ? V.xray() : _result();
+
+/* ---------- the Score X-Ray ---------- */
+function xrayData() {
+  const sp = EXAM.secPerQ, k = { perfect: 0, fast: 0, slowR: 0, slowW: 0, wrong: 0, blank: 0 }, top = {};
+  Q.items.forEach((q, i) => {
+    const p = Q.picks[i], t = (Q.tq[i] || 0) / 1000, x = top[q.t] = top[q.t] || { n: 0, c: 0, w: 0 }; x.n++;
+    if (p == null) { k.blank++; x.w++; return; }
+    if (p === q.a) { x.c++; if (t && t > sp * 1.6) k.slowR++; else k.perfect++; }
+    else { x.w++; if (t && t < 15) k.fast++; else if (t > sp * 1.6) k.slowW++; else k.wrong++; }
+  });
+  const ans = Q.items.length - k.blank;
+  const label = k.blank > Q.items.length * .08 ? ['Racing the clock', 'You left ' + k.blank + ' bubbles empty. Do a first pass at one minute a question, mark the hard ones and come back.']
+    : k.fast > ans * .08 ? ['Careless', k.fast + ' answers took under 15 seconds and were wrong. Read the whole stem and every option before you tap.']
+      : k.slowR + k.slowW > ans * .25 ? ['Overthinking', 'A quarter of your answers took over ' + Math.round(sp * 1.6) + ' seconds. Mark slow ones and move on — come back at the end.']
+        : ['Steady', 'Good pacing. Your marks now depend on knowledge: fix the weak topics below.'];
+  const ts = Object.keys(top).filter(t => top[t].n >= 2);
+  const weak = ts.filter(t => top[t].c / top[t].n < .5).sort((a, b) => top[b].w - top[a].w);
+  const strong = ts.filter(t => top[t].c / top[t].n >= .75), avg = ts.filter(t => !weak.includes(t) && !strong.includes(t));
+  const reach = weak.slice(0, 3).reduce((a, t) => a + top[t].w, 0);
+  return { k, label, top, weak, strong, avg, reach };
+}
+V.xray = () => {
+  const { c, n, per, secs } = Q.res, d = xrayData(), full = n === EXAM.total, pv = pct(c, n), pass = Math.ceil(n * .55);
+  const ring = '<div class="ring big" style="--p:' + pv + '"><b>' + c + '</b><small>OF ' + n + '</small></div>';
+  const verdict = c >= pass ? '<span class="pill ok">✓ Above the 55% MBBS line</span>' : '<span class="pill warn">' + (pass - c) + ' marks below the 55% MBBS line</span>';
+  const aggPart = (50 * c / n), ag = S.ag && S.ag.f && S.ag.m ? aggPart + 40 * S.ag.f / (S.ag.ft || 1100) + 10 * S.ag.m / (S.ag.mt || 1100) : null;
+  const head = '<div class="xhero">' + ring + '<div><small class="k">SCORE X-RAY</small><h2>' + pv + '%</h2>' + verdict + '<small class="mute">' + Math.floor(secs / 60) + ' min · ' + Math.round(secs / n) + ' s a question</small></div></div>' +
+    (Q.rank ? '<div class="callout okc">🏅 <b>Ahead of ' + Q.rank.pct + '% of ' + esc(EXAM.name) + ' students</b> who sat a full paper (' + fmt(Q.rank.of) + ' so far).</div>' : '');
+  const subj = '<div class="card"><h3>By subject</h3>' + Object.keys(per).map(s => '<div class="trow"><div><b><span class="dot" style="background:' + SUBJ[s].c + '"></span>' + esc(SUBJ[s].n) + '</b><small>' + per[s].c + ' / ' + per[s].n + (per[s].ms ? ' · ' + Math.round(per[s].ms / per[s].n / 1000) + ' s each' : '') + '</small></div>' + bar(pct(per[s].c, per[s].n), pct(per[s].c, per[s].n) >= 55 ? '' : 'warn') + '</div>').join('') + '</div>';
+  const rv = '<div class="row g wrapb"><button class="btn wide" data-act="review" data-arg="wrong">Review wrong</button><button class="btn wide" data-act="review" data-arg="flag">Marked</button><button class="btn wide" data-act="review" data-arg="all">All answers</button></div>';
+  if (!has('xray')) return { title: 'Score X-Ray', noNav: true, html: head + subj + '<div class="card locked"><div class="blur"><h3>Your behaviour, your weak topics and your 7-day fix plan</h3><p>Perfect attempts · careless answers · overtime · marks within reach · aggregate projection · day-by-day plan</p></div><div class="lockover"><b>★ The full Score X-Ray is part of Pro</b><button class="btn gold" data-act="choosePlan" data-arg="' + planFor('xray').id + '">Unlock — Rs ' + planFor('xray').p + '</button></div></div>' + rv + '<button class="btn ghost big" data-act="home">Home</button>' };
+  const k = d.k, ans = n - k.blank;
+  const kp = [['perfect', 'Perfect', 'right, in good time'], ['slowR', 'Right but slow', 'over ' + Math.round(EXAM.secPerQ * 1.6) + ' s'], ['fast', 'Careless', 'wrong in under 15 s'], ['slowW', 'Overtime & wrong', 'time lost twice'], ['wrong', 'Wrong', 'a gap to fix'], ['blank', 'Blank', 'marks thrown away']];
+  const beh = '<div class="card"><h3>How you attempted</h3><div class="kgrid">' + kp.map(([x, a, b]) => '<div class="kc ' + x + '"><b>' + k[x] + '</b><span>' + a + '</span><small>' + b + '</small></div>').join('') + '</div><div class="callout tip"><b>Your pattern: ' + d.label[0] + '.</b> ' + d.label[1] + '</div></div>';
+  const chips = (arr, cl) => arr.slice(0, 12).map(t => '<span class="tc ' + cl + '" data-go="topicp" data-arg="' + t + '">' + esc(TOPIC[t].n) + ' <i>' + d.top[t].c + '/' + d.top[t].n + '</i></span>').join('');
+  const heat = '<div class="card"><h3>Topic heat map</h3>' + (d.weak.length ? '<small class="k">WEAK</small><div class="tcs">' + chips(d.weak, 'w') + '</div>' : '') + (d.avg.length ? '<small class="k">AVERAGE</small><div class="tcs">' + chips(d.avg, 'a') + '</div>' : '') + (d.strong.length ? '<small class="k">STRONG</small><div class="tcs">' + chips(d.strong, 's') + '</div>' : '') + '</div>';
+  const reach = d.reach ? '<div class="card gain"><b>+' + d.reach + ' marks within reach</b><small>That is what you lost in your three weakest topics: ' + d.weak.slice(0, 3).map(t => esc(TOPIC[t].n)).join(', ') + '. Fix them first.</small><button class="btn gold big" data-act="drill" data-arg="' + d.weak.slice(0, 3).join(',') + '">Practise them now</button></div>' : '';
+  const agg = '<div class="card"><h3>What this means for merit</h3><p>This score is worth <b>' + aggPart.toFixed(2) + '%</b> of the 50% that MDCAT carries in your aggregate.' + (ag != null ? ' With your FSc and Matric marks that makes an aggregate of about <b>' + ag.toFixed(2) + '%</b>.' : ' <a href="#" data-go="agg">Add your FSc and Matric marks</a> to see your full aggregate.') + '</p><small class="mute">Top public colleges have recently closed at roughly 93–95% aggregate (reported by admission sites; it changes every year).</small></div>';
+  const plan = d.weak.concat(d.avg).slice(0, 5), days = [];
+  plan.forEach((t, i) => { days.push('Day ' + (days.length + 1) + ': ' + TOPIC[t].n + ' — read the key points, then a 25-MCQ chapter test'); if (i === 2) days.push('Day ' + (days.length + 1) + ': Mistake Vault — re-test every wrong answer from this paper'); });
+  while (days.length < 6) days.push('Day ' + (days.length + 1) + ': mixed practice, 60 MCQs, and today’s flashcards');
+  days.push('Day 7: a full Exam Hall paper — compare with today');
+  const fix = '<div class="card"><h3>Your 7-day fix plan</h3><ol class="plan7">' + days.slice(0, 7).map(x => '<li>' + esc(x) + '</li>').join('') + '</ol></div>';
+  const hist = S.mocks.filter(m => m.n >= 40).slice(0, 8).reverse(), trend = hist.length > 1 ? '<div class="card"><h3>Your trend</h3><div class="spark tall">' + hist.map(m => '<i style="height:' + Math.max(4, pct(m.sc, m.n)) + '%" title="' + esc((m.t || m.kind) + ' ' + m.sc + '/' + m.n) + '"></i>').join('') + '</div><small class="mute">Your last ' + hist.length + ' papers, in %.</small></div>' : '';
+  return { title: 'Score X-Ray', noNav: true, html: head + beh + reach + subj + heat + agg + fix + trend + rv + '<button class="btn ghost big" data-act="home">Home</button>' };
+};
+ACT.review = f => { Q.rf = f || 'all'; go('review'); };
+const _review = V.review;
+V.review = () => {
+  if (!Q || !Q.hall) return _review();
+  const keep = (q, i) => Q.rf === 'wrong' ? Q.picks[i] !== q.a : Q.rf === 'flag' ? !!Q.flags[i] : true;
+  const list = Q.items.map((q, i) => [q, i]).filter(([q, i]) => keep(q, i));
+  return { title: { wrong: 'Wrong and blank', flag: 'Marked for review', all: 'All answers' }[Q.rf] || 'Answers', noNav: true, html: (list.length ? '' : '<p class="mute c">Nothing here.</p>') + list.map(([q, i]) => { const p = Q.picks[i]; return '<div class="card rv ' + (p === q.a ? 'ok' : 'bad') + '"><small>' + (i + 1) + ' · ' + esc(TOPIC[q.t].n) + (q.src ? ' · ' + esc(q.src) : '') + (Q.flags[i] ? ' · ⚑' : '') + '</small><p class="q">' + esc(q.q) + '</p><p><b>Answer: ' + esc(q.o[q.a]) + '</b>' + (p != null && p !== q.a ? '<br><span class="mute">You chose: ' + esc(q.o[p]) + '</span>' : p == null ? '<br><span class="mute">Left blank</span>' : '') + '</p>' + (q.e ? '<small class="mute">' + esc(q.e) + '</small>' : '') + '</div>'; }).join('') };
+};
+
+/* ---------- exams: the hall, real papers, grand tests, forecasts ---------- */
+V.tests = () => ({ title: 'Exams', tab: 'tests', html:
+  (S.hall ? '<div class="card resume"><small class="k">UNFINISHED PAPER</small><h3>' + esc(S.hall.title) + '</h3><p class="mute">' + S.hall.picks.filter(x => x != null).length + ' of ' + S.hall.items.length + ' answered — your answers are saved.</p><div class="row g"><button class="btn gold wide" data-act="resume">Resume</button><button class="btn ghost" data-act="discard">Discard</button></div></div>' : '') +
+  '<div class="card hallc"><small class="k">EXAM HALL</small><h3>A full MDCAT paper, the real way</h3><p class="mute">' + EXAM.total + ' MCQs on one page in ' + EXAM.minutes / 60 + ' hours — ' + EXAM.format.map(([s, n]) => n + ' ' + SUBJ[s].n).join(', ') + '. Answer in any order, mark for review, submit once, then your Score X-Ray.</p><button class="btn gold big" data-act="mock">Enter the Exam Hall' + lock('hall') + '</button></div>' +
+  row('Real past papers' + lock('past'), fmt(pastCount()) + ' real MCQs from 18 papers · UHS 2008–2025, SZABMU, NUMS', 'data-go="past"') +
+  row('20 Grand Tests' + lock('paper'), 'Full papers in the PMDC pattern, the same for every student · ' + Object.keys(S.papers).length + ' done', 'data-go="papers"') +
+  row('2027 Most-Expected Papers' + lock('expected'), '5 forecast papers built from what real MDCATs asked most', 'data-go="expected"') +
+  row('Custom test' + lock('custom'), 'Your subjects, your topics, your timer', 'data-go="custom"') +
+  row('Daily challenge', '10 real past-paper MCQs, the same for every student today', 'data-act="dailyGo"') +
+  row('Mini mock', EXAM.mini + ' MCQs in ' + Math.round(EXAM.mini * EXAM.secPerQ / 60) + ' minutes' + (!isPro() ? (S.freeMini ? ' · free one used' : ' · first one free') : ''), 'data-act="mini"') +
+  row('Subject tests' + lock('subject'), EXAM.format.map(([s, n]) => SUBJ[s].n + ' ' + n).join(' · '), 'data-tab="practice"') +
+  (S.diag ? '' : row(esc(EXAM.diagName), EXAM.diagN + ' questions, free', 'data-act="diag"')) +
+  (S.mocks.length ? '<div class="card"><h3>Your papers</h3>' + S.mocks.slice(0, 12).map(m => '<div class="trow"><div><b>' + esc(m.t || ({ mock: 'Full mock', mini: 'Mini mock', paper: 'Grand Test ' + m.p }[m.kind] || m.kind)) + ' · ' + m.sc + '/' + m.n + '</b><small>' + m.d + '</small></div>' + bar(pct(m.sc, m.n)) + '</div>').join('') + '</div>' : '') });
+ACT.mock = () => { if (need('hall')) return; startHall({ title: 'Exam Hall · full paper', items: paper(1), mode: 'mock', limit: EXAM.minutes * 60 }); };
+ACT.paper = k => { if (need('paper')) return; const items = withSeed(EXAM.key + ':paper:' + k + ':' + EXAM.paperSalt, () => paper(1)); startHall({ title: 'Grand Test ' + k, items, mode: 'paper', paper: +k, limit: EXAM.minutes * 60 }); };
+V.papers = () => ({ title: '20 Grand Tests', tab: 'tests', html: '<p class="intro">' + EXAM.papers + ' full papers built to the ' + esc(EXAM.patternName) + ' (' + EXAM.total + ' MCQs, ' + EXAM.minutes / 60 + ' hours), each the same for every student so you can compare. Practice papers, not past papers — the real ones are in Past papers.</p>' +
+  '<div class="papers">' + Array.from({ length: EXAM.papers }, (_, i) => i + 1).map(k => '<button class="paper' + (S.papers[k] != null ? ' done' : '') + '" data-act="paper" data-arg="' + k + '"><b>Test ' + k + '</b><small>' + (S.papers[k] != null ? 'Best ' + S.papers[k] + '/' + EXAM.total : has('paper') ? 'Start' : '★ ' + tierName(featTier('paper'))) + '</small></button>').join('') + '</div>' });
+V.past = () => {
+  if (!PP) { loadPast(); return { title: 'Past papers', tab: 'tests', html: '<div class="card skel"></div><div class="card skel"></div>' }; }
+  const byB = {}; PP.forEach(p => { (byB[p.board] = byB[p.board] || []).push(p); });
+  const mine = { UHS: 'UHS', SZABMU: 'SZABMU', NUMS: 'NUMS' }[S.prefs.board] || 'UHS';   // the student's own board first
+  const boards = [mine].concat(['UHS', 'SZABMU', 'NUMS'].filter(b => b !== mine)).filter(b => byB[b]);
+  const latest = PP.filter(p => p.key === 'official').sort((a, b) => b.year - a.year)[0];
+  const taste = !has('past') && latest ? '<div class="card taste tap" data-act="taste"><small class="k">FREE TASTE</small><b>15 real MCQs from ' + esc(srcName(latest)) + '</b><small>With the official answers. No sign-up.</small></div>' : '';
+  const nm = { UHS: 'UHS · Punjab', SZABMU: 'SZABMU · Federal', NUMS: 'NUMS · Armed Forces colleges' };
+  return { title: 'Past papers', tab: 'tests', html: '<p class="intro">' + fmt(pastCount()) + ' real MDCAT questions with their answers. Start with the newest three, then work back. UHS papers to 2016 are the old 220-MCQ pattern — use them for concepts.</p>' + taste +
+    boards.map(b => '<div class="card"><h3>' + esc(nm[b] || b) + '</h3>' + byB[b].map(p => '<div class="prow"><div><b>' + p.year + (p.code ? ' · ' + esc(p.code) : '') + '</b><small>' + p.qs.length + ' MCQs · ' + (p.key === 'official' ? '✓ official key' : 'key compiled by prep sites') + (p.era === 'UHS' ? ' · old pattern' : '') + (S.past[p.id] != null ? ' · best ' + S.past[p.id] + '/' + p.qs.length : '') + '</small></div><div class="pbtns"><button class="btn sm gold" data-act="pastHall" data-arg="' + p.id + '">Exam</button><button class="btn sm" data-act="pastPrac" data-arg="' + p.id + '">Practise</button></div></div>').join('') + '</div>').join('') +
+    '<p class="fine">Questions and answers are the boards’ own, from public past papers. UHS keys are official; SZABMU and NUMS publish no key, so theirs were compiled by preparation sites. Questions that needed a diagram were left out.</p>' };
+};
+const findP = id => (PP || []).find(p => p.id === id);
+ACT.pastHall = id => { if (need('past')) return; const p = findP(id); if (!p) return; startHall({ title: srcName(p), items: p.qs, keep: 1, mode: 'past', pid: id, limit: Math.max(600, Math.round(p.minutes * 60 * p.qs.length / p.total)) }); };
+ACT.pastPrac = id => { if (need('past')) return; const p = findP(id); if (!p) return; startQuiz({ title: srcName(p) + ' · practice', items: p.qs, keep: 1, mode: 'practice' }); };
+ACT.taste = () => pastWait(() => { const p = PP.filter(x => x.key === 'official').sort((a, b) => b.year - a.year)[0]; track('taste'); startQuiz({ title: 'Real paper · ' + srcName(p), items: p.qs.slice(0, 15), keep: 1, mode: 'practice' }); });
+// the daily challenge: 10 real past-paper MCQs, the same for everyone today
+ACT.dailyGo = () => {
+  if (S.daily[today()] != null) { ACT.dailyShare(); return; }
+  pastWait(() => {
+    const pool = PP.flatMap(p => p.qs), mix = [['bio', 4], ['chem', 3], ['phy', 2], ['eng', 1]];
+    const items = withSeed(EXAM.key + ':daily:' + today(), () => mix.flatMap(([s, k]) => shuffle(pool.filter(q => q.s === s)).slice(0, k)));
+    startQuiz({ title: 'Daily challenge · ' + today(), items, mode: 'daily', limit: 10 * EXAM.secPerQ });
+  });
+};
+
+/* ---------- the Repeat-o-Meter: what real papers asked most ---------- */
+function topicFreq() {
+  const f = {}; (PP || []).forEach(p => p.qs.forEach(q => { const x = f[q.t] = f[q.t] || { n: 0, w: 0, y: {} }; x.n++; x.w += p.year >= 2020 ? 2 : 1; x.y[p.year] = 1; }));
+  return f;
+}
+V.freq = () => {
+  if (!PP) { loadPast(); return { title: 'Repeat-o-Meter', tab: 'learn', html: '<div class="card skel"></div>' }; }
+  const f = topicFreq(), papers = PP.length, open = has('freq');
+  return { title: 'Repeat-o-Meter', tab: 'learn', html: '<p class="intro">What ' + papers + ' real MDCAT papers (' + fmt(pastCount()) + ' questions) asked most, topic by topic. Long bars are where marks come from year after year.</p>' +
+    EXAM.subjects.map((s, si) => { const ts = s.topics.map(([t]) => t).filter(t => f[t]).sort((a, b) => f[b].n - f[a].n), mx = Math.max(1, ...ts.map(t => f[t].n));
+      const shown = open ? ts : ts.slice(0, si === 0 ? 3 : 0);
+      return '<div class="card"><h3><span class="dot" style="background:' + s.c + '"></span>' + esc(s.n) + '</h3>' + shown.map(t => '<div class="frq tap" data-go="topicp" data-arg="' + t + '"><div class="row sp"><b>' + esc(TOPIC[t].n) + '</b><small>' + f[t].n + ' Qs · ' + Object.keys(f[t].y).length + ' years</small></div>' + bar(100 * f[t].n / mx, 'gold') + '</div>').join('') +
+        (!open ? '<div class="lockrow" data-act="choosePlan" data-arg="' + planFor('freq').id + '">★ ' + (ts.length - shown.length) + ' more topics — ' + tierName(featTier('freq')) + '</div>' : '') + '</div>'; }).join('') +
+    '<p class="fine">Counts come from the questions in our real-paper library (topics assigned automatically). A guide to where marks come from — not a promise of the next paper.</p>' };
+};
+
+/* ---------- 2027 Most-Expected Papers: forecasts from real-paper frequency ---------- */
+const EXP_N = 5;
+function expectedPaper(k) {
+  const f = topicFreq(), pool = (PP || []).flatMap(p => p.qs);
+  return withSeed(EXAM.key + ':exp:' + k + ':v1', () => EXAM.format.flatMap(([s, n]) => {
+    const ts = SUBJ[s].topics.map(x => x[0]).filter(hasQ), w = ts.map(t => (f[t] ? f[t].w : 0) + 1), W = w.reduce((a, b) => a + b, 0);
+    const per = ts.map((t, i) => ({ t, x: n * w[i] / W })); per.forEach(r => { r.k = Math.floor(r.x); });
+    let left = n - per.reduce((a, r) => a + r.k, 0); per.slice().sort((a, b) => (b.x - b.k) - (a.x - a.k)).forEach(r => { if (left > 0) { r.k++; left--; } });
+    return per.flatMap(r => { if (!r.k) return []; const real = shuffle(pool.filter(q => q.t === r.t)).slice(0, Math.ceil(r.k * .4)); return real.concat(pickTopic(r.t, r.k - real.length)).slice(0, r.k); });
+  }));
+}
+V.expected = () => ({ title: '2027 Most-Expected', tab: 'tests', html: '<div class="card hallc"><small class="k">FORECAST</small><h3>Five full papers shaped like MDCAT 2027 is most likely to be</h3><p class="mute">Each paper has the real 81/45/36/9/9 split, with every topic weighted by how often real MDCATs asked it (recent years count double) — and about 40% of each topic’s questions are real past-paper MCQs. A forecast from the record, not a leaked paper.</p></div>' +
+  '<div class="papers">' + Array.from({ length: EXP_N }, (_, i) => i + 1).map(k => '<button class="paper' + (S.exp[k] != null ? ' done' : '') + '" data-act="expGo" data-arg="' + k + '"><b>Paper ' + k + '</b><small>' + (S.exp[k] != null ? 'Best ' + S.exp[k] + '/' + EXAM.total : has('expected') ? 'Start' : '★ ' + tierName(featTier('expected'))) + '</small></button>').join('') + '</div>' });
+ACT.expGo = k => { if (need('expected')) return; pastWait(() => startHall({ title: '2027 Forecast Paper ' + k, items: expectedPaper(+k), mode: 'expected', paper: +k, limit: EXAM.minutes * 60 })); };
+
+/* ---------- custom test builder ---------- */
+V.custom = () => {
+  const c = S.prefs.custom || { s: EXAM.format.map(f => f[0]), n: 50, src: 'mix', timed: 1 };
+  const chipsS = EXAM.subjects.map(s => '<button class="tg' + (c.s.includes(s.id) ? ' on' : '') + '" data-act="cuS" data-arg="' + s.id + '">' + esc(s.n) + '</button>').join('');
+  const opt = (k, v, l) => '<button class="tg' + (c[k] === v ? ' on' : '') + '" data-act="cuSet" data-arg="' + k + ':' + v + '">' + l + '</button>';
+  return { title: 'Custom test', tab: 'tests', html: '<div class="card"><h3>Subjects</h3><div class="tgs">' + chipsS + '</div><h3>Questions</h3><div class="tgs">' + [20, 50, 100, 180].map(v => opt('n', v, v)).join('') + '</div>' +
+    '<h3>Source</h3><div class="tgs">' + opt('src', 'mix', 'Mixed') + opt('src', 'real', 'Real past papers') + opt('src', 'bank', 'Practice bank') + '</div><h3>Clock</h3><div class="tgs">' + opt('timed', 1, '1 min a question') + opt('timed', 0, 'No clock') + '</div>' +
+    '<button class="btn gold big" data-act="cuGo">Start in the Exam Hall' + lock('custom') + '</button></div>' };
+};
+const cust = () => (S.prefs.custom = S.prefs.custom || { s: EXAM.format.map(f => f[0]), n: 50, src: 'mix', timed: 1 });
+ACT.cuS = id => { const c = cust(); c.s = c.s.includes(id) ? c.s.filter(x => x !== id) : c.s.concat(id); if (!c.s.length) c.s = [id]; save(); render(); };
+ACT.cuSet = a => { const [k, v] = String(a).split(':'); cust()[k] = k === 'src' ? v : +v; save(); render(); };
+ACT.cuGo = () => {
+  if (need('custom')) return; const c = cust();
+  const build = () => {
+    const fm = EXAM.format.filter(([s]) => c.s.includes(s)), tot = fm.reduce((a, [, n]) => a + n, 0);
+    const items = fm.flatMap(([s, n]) => { const k = Math.max(1, Math.round(c.n * n / tot)); const real = PP ? shuffle(PP.flatMap(p => p.qs).filter(q => q.s === s)) : [];
+      if (c.src === 'real') return real.slice(0, k); if (c.src === 'bank') return pickSubject(s, k).filter(q => !q.src); const r = real.slice(0, Math.round(k / 2)); return r.concat(pickSubject(s, k - r.length)); }).slice(0, c.n);
+    startHall({ title: 'Custom test · ' + items.length + ' MCQs', items, mode: 'custom', limit: c.timed ? items.length * EXAM.secPerQ : 0 });
+  };
+  if (c.src === 'bank') build(); else pastWait(build);
+};
+
+/* ---------- the Mistake Vault ---------- */
+const mistDue = () => S.mist.map(x => typeof x === 'string' ? x : x.id).filter(id => S.mistT[id] && Date.now() - S.mistT[id] >= 48 * 3600e3);
+V.vault = () => ({ title: 'Mistake Vault', tab: 'learn', html: '<div class="card vaultc"><div class="kpis"><div><b>' + S.mist.length + '</b><small>saved mistakes</small></div><div><b>' + mistDue().length + '</b><small>due for re-test</small></div></div><p class="mute">Every wrong answer lands here. After 48 hours it is due again — getting it right takes it out of the vault.</p>' +
+  '<button class="btn gold big" data-act="vaultDue">Re-test what is due' + lock('vault') + '</button><button class="btn big" data-act="mistakes">Practise all my mistakes</button></div>' });
+ACT.vaultDue = () => { if (need('vault')) return; const ids = mistDue(); if (!ids.length) { toast('Nothing due yet — come back in a day or two'); return; } const items = ids.map(id => findQ(id)).filter(Boolean); startQuiz({ title: 'Mistake Vault · due', items: shuffle(items).slice(0, 25), mode: 'practice' }); };
+
+/* ---------- the final-30-days battle plan ---------- */
+V.final = () => {
+  const d = daysTo(), open = has('final');
+  const P = [[30, 21, 'Weak-topic rotation: one weak topic a day (notes + chapter test), 60 mixed MCQs, flashcards. A full Exam Hall paper every third day.'],
+    [20, 11, 'Real past papers, newest first: one every other day in the Exam Hall, then fix what its Score X-Ray shows.'],
+    [10, 4, 'Grand Tests and 2027 Forecast Papers on alternate days. Mistake Vault every evening. No new books.'],
+    [3, 2, 'Light revision only: notes, formula sheets, flashcards. Sleep early.'], [1, 1, 'Rest. Pack the admit card, original ID, clipboard, two blue pens and a water bottle. Sleep 8 hours.']];
+  return { title: 'Final 30 days', tab: 'learn', html: '<div class="card hallc"><small class="k">BATTLE PLAN</small><h3>' + (d != null && d >= 0 ? d + ' days to go' : 'The last month, day by day') + '</h3><p class="mute">The order toppers follow in the final month: fix, then simulate, then rest.</p></div>' +
+    (open ? P.map(([a, b, t]) => '<div class="card' + (d != null && d <= a && d >= b ? ' now' : '') + '"><small class="k">' + (a === b ? 'DAY ' + a : 'DAYS ' + a + '–' + b) + '</small><p>' + esc(t) + '</p></div>').join('') : '<div class="card locked"><div class="blur"><p>Days 30–21 · Days 20–11 · Days 10–4 · Days 3–2 · The last day</p></div><div class="lockover"><b>★ Part of ' + tierName(featTier('final')) + '</b><button class="btn gold" data-act="choosePlan" data-arg="' + planFor('final').id + '">Unlock</button></div></div>') };
+};
+
+/* ---------- learn and the guide ---------- */
+V.learn = () => ({ title: 'Learn', tab: 'learn', html:
+  row('📘 The complete MDCAT guide', 'Registration, exam day, merit, strategy, parents, repeaters, myths', 'data-go="guide"') +
+  row('📈 Repeat-o-Meter' + lock('freq'), 'What real MDCATs asked most, 2008–2026', 'data-go="freq"') +
+  row('🗂 Mistake Vault', S.mist.length + ' saved · ' + mistDue().length + ' due for re-test', 'data-go="vault"') +
+  row('🃏 Flashcards', dueCards().length + ' due · ' + newCardsLeft() + ' new left today', 'data-act="cards"') +
+  row('📝 Quick-revision notes', 'Key points for all ' + Object.keys(TOPIC).length + ' topics', 'data-go="notes"') +
+  (typeof FORMULAS !== 'undefined' ? row('∑ Formula sheets', Object.keys(FORMULAS).map(s => SUBJ[s] ? SUBJ[s].n : s).join(' · '), 'data-go="formulas"') : '') +
+  row('⚔ Final-30-days plan' + lock('final'), 'The last month, day by day', 'data-go="final"') +
+  row('🧮 Aggregate calculator', 'Your merit from Matric, FSc and MDCAT', 'data-go="agg"') });
+V.guide = () => ({ title: EXAM.short + ' guide', tab: 'learn', html: '<p class="intro">Everything about MDCAT in one place — from registration to the merit list.</p>' +
+  (typeof GUIDE !== 'undefined' ? GUIDE : []).map(([h, ic, intro, items], i) => '<details class="card gd"' + (i === 0 ? ' open' : '') + '><summary><span class="gi">' + ic + '</span><span><b>' + esc(h) + '</b><small>' + esc(intro) + '</small></span></summary><ul>' + items.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></details>').join('') +
+  '<p class="fine">' + esc(typeof GUIDE_NOTE !== 'undefined' ? GUIDE_NOTE : '') + '</p>' });
+
+/* ---------- welcome: a premium first screen, personal in one tap ---------- */
+V.welcome = () => {
+  track('ob_view'); const pr = S.prefs || {};
+  const chips = (k, list) => '<div class="tgs">' + list.map(([v, l]) => '<button class="tg' + (pr[k] === v ? ' on' : '') + '" data-act="wset" data-arg="' + k + ':' + v + '">' + l + '</button>').join('') + '</div>';
+  return { noHead: true, noNav: true, html: '<div class="welcome v3"><div class="wl">' + EXAM.logo + '</div><h1>' + esc(EXAM.name) + '</h1><p class="tag">' + esc(EXAM.tagline) + '</p>' +
+    '<div class="stats4"><div><b>24,000+</b><small>MCQs</small></div><div><b>' + fmt(pastCount()) + '</b><small>real past MCQs</small></div><div><b>180</b><small>MCQ exam hall</small></div><div><b>64</b><small>topics</small></div></div>' +
+    '<ul class="promise">' + (EXAM.promise || []).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' +
+    '<div class="card wq"><small class="k">MAKE IT YOURS (OPTIONAL)</small><b>Where do you sit MDCAT?</b>' + chips('board', [['UHS', 'Punjab'], ['KMU', 'KPK'], ['SINDH', 'Sindh'], ['SZABMU', 'Federal'], ['NUMS', 'NUMS'], ['BAL', 'Balochistan']]) +
+    '<b>Your goal</b>' + chips('goal', [['top', 'Top government college'], ['mbbs', 'Any MBBS seat'], ['bds', 'BDS']]) + '</div>' +
+    (TRIAL_H() ? '<button class="btn gold big glow" data-act="start">Start my free Ultra day →</button><p class="trialnote">Every feature open for 24 hours. No card, no sign-up.</p>' : '<button class="btn gold big" data-act="start">Start practising free →</button>') +
+    '<p class="fine">' + esc(EXAM.disclaimer) + '</p></div>' };
+};
+ACT.wset = a => { const [k, v] = String(a).split(':'); S.prefs[k] = S.prefs[k] === v ? null : v; save(); render(); };
+const _start = ACT.start;
+ACT.start = () => { const first = !S.onboard; _start(); if (first) { track('ob_course', S.prefs.board || 'none'); setTimeout(() => modal('<div class="center"><div class="bigtick">✓</div><h3>Your plan is ready</h3><p>For the next 24 hours <b>everything is open</b>: the Exam Hall, ' + fmt(pastCount()) + ' real past-paper MCQs, Grand Tests and the forecast papers.</p><p class="mute">Start with the 30-question MDCAT check — it shows your estimated score and where to begin.</p><button class="btn gold big" data-act="diagNow">Take the MDCAT check</button><button class="btn ghost big" data-act="close">Explore first</button></div>'), 250); } };
+ACT.diagNow = () => { closeModal(); ACT.diag(); };
+
+/* ---------- home ---------- */
+V.home = () => {
+  const d = daysTo(), rd = readiness(), done = (S.days[today()] || {}).q || 0, goal = EXAM.dailyGoal, t = tierNow();
+  const hi = '<div class="greet"><div><small>' + (new Date().getHours() < 12 ? 'Good morning' : new Date().getHours() < 17 ? 'Good afternoon' : 'Good evening') + '</small><h2>' + esc(S.name || 'Doctor-to-be') + '</h2></div><span class="tier t' + t + '">' + tierName(t) + '</span></div>';
+  const trial = trialLeft() && !payActive() ? '<div class="card trialc">★ <b>Your free Ultra day</b> · ' + hoursLeft(trialLeft()) + ' h left — every feature is open. <button class="btn sm gold" data-act="keepPro">Keep it — from Rs ' + EXAM.plans[0].p + '</button></div>' : '';
+  const hero = '<div class="hero"><div><small>' + (d != null ? (d >= 0 ? 'DAYS TO ' + esc(EXAM.short) : 'UPDATE YOUR TEST DATE') : 'YOUR ESTIMATED SCORE') + '</small><div class="big">' + (d != null ? Math.max(0, d) : estScore() + '<span>/' + EXAM.total + '</span>') + '</div>' +
+    (d == null ? '<button class="btn sm ghost" data-go="settings">Set test date</button>' : '<small>Estimated score: <b>' + estScore() + '/' + EXAM.total + '</b></small>') + '</div><div class="ring" style="--p:' + rd + '"><b>' + rd + '</b><small>READY</small></div></div>';
+  const resume = S.hall ? '<div class="card resume tap" data-act="resume"><small class="k">CONTINUE</small><b>' + esc(S.hall.title) + '</b><small>' + S.hall.picks.filter(x => x != null).length + ' of ' + S.hall.items.length + ' answered · tap to resume</small></div>' : '';
+  const start = !S.diag ? '<div class="card startc"><small class="k">START HERE</small><h3>' + esc(EXAM.diagName) + '</h3><p class="mute">' + EXAM.diagN + ' questions in the real mix, about ' + Math.round(EXAM.diagN * EXAM.secPerQ / 60) + ' minutes: your estimated score out of ' + EXAM.total + ' and your weakest topics.</p><button class="btn gold big" data-act="diag">Take it free →</button></div>' : '';
+  const tiles = '<div class="qtiles"><div class="qt hall" data-act="mock"><span>🏛</span><b>Exam Hall</b><small>180 MCQs, real layout</small></div><div class="qt" data-go="past"><span>📜</span><b>Past papers</b><small>' + fmt(pastCount()) + ' real MCQs</small></div>' +
+    '<div class="qt" data-act="dailyGo"><span>⚡</span><b>Daily challenge</b><small>' + (S.daily[today()] != null ? 'Done: ' + S.daily[today()] + '/10' : '10 real MCQs') + '</small></div><div class="qt" data-go="expected"><span>🎯</span><b>2027 Forecast</b><small>5 papers</small></div></div>';
+  const taste = !has('past') ? '<div class="card taste tap" data-act="taste"><small class="k">FREE · REAL PAPER</small><b>Try 15 real MDCAT questions</b><small>From the newest UHS paper, with the official answers.</small></div>' : '';
+  const plan = planToday();
+  const planCard = '<div class="card"><div class="row sp"><h3>Today’s plan</h3><span class="pill">' + Math.min(done, goal) + '/' + goal + '</span></div>' + bar(pct(done, goal), 'gold') +
+    plan.map(x => '<div class="trow tap" ' + (x.go ? 'data-go="' + x.go + '"' : 'data-act="' + x.act + '" data-arg="' + esc(x.arg) + '"') + '><div><b>' + esc(x.t) + '</b>' + (x.cards ? '<small>' + dueCards().length + ' due · ' + newCardsLeft() + ' new left today</small>' : '') + '</div><span class="chev">›</span></div>').join('') +
+    (!isPro() ? '<small class="mute">Free: ' + freeLeftToday() + ' of ' + EXAM.freeDaily + ' practice questions left today.</small>' : '') + '</div>';
+  const subs = '<div class="tiles">' + EXAM.subjects.map(s => { const st = subjStat(s.id); return '<div class="tile" data-go="subject" data-arg="' + s.id + '"><span class="dot" style="background:' + s.c + '"></span><b>' + esc(s.n) + '</b><small>' + (st.n ? pct(st.c, st.n) + '% · ' + st.n + ' done' : fmt(subjCount(s.id)) + '+ questions') + '</small></div>'; }).join('') + '</div>';
+  const nt = nextTier(), up = t < 4 && (payActive() || !trialLeft()) ? '<div class="card upsell tap" data-act="choosePlan" data-arg="' + (EXAM.plans.find(p => p.tier === Math.max(1, nt)) || EXAM.plans[0]).id + '"><small class="k">' + (t ? 'YOU ARE ON ' + tierName(t).toUpperCase() : 'UPGRADE') + '</small><b>' + tierName(Math.max(1, nt)) + ' adds:</b><ul class="ticks sm">' + EXAM.features.filter(f => f[3] === Math.max(1, nt)).slice(0, 3).map(f => '<li>' + esc(f[1]) + '</li>').join('') + '</ul></div>' : '';
+  const mist = S.mist.length ? row('🗂 Mistake Vault', S.mist.length + ' saved · ' + mistDue().length + ' due for re-test', 'data-go="vault"') : '';
+  return { title: EXAM.name, tab: 'home', html: hi + trial + resume + hero + start + tiles + taste + planCard + subs + up + mist + installCard() + '<p class="fine c">' + esc(EXAM.disclaimer) + '</p>' };
+};
+
+/* ---------- plans: ✓ and ✗, like Claude's plans ---------- */
+V.passes = () => {
+  track('paywall');
+  const P = PAY(), plans = EXAM.plans, sel = plans.find(p => p.id === S.payPlan) || plans.find(p => p.id === 'q3') || plans[0], st = sel.tier || 4;
+  const status = payActive() ? '<div class="callout okc">✓ <b>' + esc((plans.find(p => p.id === S.pay.plan) || {}).n || 'Pass') + '</b> — ' + (S.pay.until ? 'until ' + pkDay(S.pay.until) : 'yours for good') + '. A bigger plan starts today and keeps your days.</div>'
+    : trialLeft() ? '<div class="callout tip">★ <b>Your free Ultra day ends in ' + hoursLeft(trialLeft()) + ' h.</b> Pick a plan to keep going.</div>' : '';
+  const card = p => '<div class="pcard' + (p.id === sel.id ? ' sel' : '') + ' t' + p.tier + '" data-act="plan" data-arg="' + p.id + '">' + (p.tag ? '<em>' + esc(p.tag) + '</em>' : '') + '<div class="row sp"><b class="pn">' + tierName(p.tier) + '</b><span class="pp">Rs ' + fmt(p.p) + '</span></div><small>' + (p.d ? p.d + ' days · about Rs ' + Math.max(1, Math.round(p.p / p.d)) + ' a day' : 'Lifetime · pay once') + '</small><small class="tl2">' + esc((EXAM.tierLine || [])[p.tier] || '') + '</small></div>';
+  const list = '<ul class="fx">' + EXAM.features.map(f => '<li class="' + (st >= f[3] ? 'y' : 'n') + '"><i>' + (st >= f[3] ? '✓' : '✗') + '</i><span><b>' + esc(f[1]) + '</b><small>' + esc(f[2]) + '</small></span></li>').join('') + '</ul>';
+  const table = '<details class="card cmp"><summary><b>Compare all plans</b><small>Tap to open</small></summary><table><tr><th></th>' + ['Free'].concat(plans.map(p => tierName(p.tier))).map(x => '<th>' + x + '</th>').join('') + '</tr>' +
+    EXAM.features.map(f => '<tr><td>' + esc(f[1]) + '</td>' + [0].concat(plans.map(p => p.tier)).map(t => '<td class="' + (t >= f[3] ? 'y' : 'n') + '">' + (t >= f[3] ? '✓' : '✗') + '</td>').join('') + '</tr>').join('') + '<tr><td><b>Price</b></td><td>Rs 0</td>' + plans.map(p => '<td><b>' + fmt(p.p) + '</b></td>').join('') + '</tr></table></details>';
+  const qr = P.qr || EXAM.qr;
+  return { title: 'Plans', tab: 'me', html: status + '<div class="phero"><small class="k">CHOOSE YOUR PLAN</small><h2>Practise like the one in six who gets a seat</h2><p class="mute">140,125 candidates sat MDCAT 2025 for about 22,000 seats (PMDC).</p></div>' +
+    '<div class="pcards">' + plans.map(card).join('') + '</div><div class="card"><h3>' + tierName(st) + ' includes</h3>' + list + '</div>' + table +
+    '<div class="card center"><h3>Pay Rs ' + fmt(sel.p) + ' with Easypaisa</h3>' + (qr ? '<img src="' + qr + '" alt="Easypaisa QR code" class="payqr">' : '') +
+    '<ol class="steps"><li>Take a screenshot of this QR code.</li><li>In Easypaisa: Scan QR → gallery icon → pick the screenshot → pay Rs ' + fmt(sel.p) + '.</li><li>Type the Transaction ID from the receipt below.</li></ol><small class="mute">JazzCash, SadaPay, NayaPay and bank apps can scan it too. Paying for someone else? <a href="#" data-act="family">Ask family to pay</a></small></div>' +
+    '<div class="card"><h3>Your Transaction ID</h3><input id="pay_tid" class="inp big mono" inputmode="numeric" autocomplete="off" placeholder="e.g. 41234567890" maxlength="20"><label class="oath"><input type="checkbox" id="pay_oath"> <span>I confirm I have actually paid Rs ' + fmt(sel.p) + '.</span></label><button class="btn gold big" data-act="unlock">Unlock ' + tierName(st) + '</button><small class="mute">It opens at once. Our team checks every payment; an ID that was not paid is switched off.</small></div>' };
+};
+
+
+/* Start the app (after engine.js and v3.js are loaded), then load the real past papers in the background. */
 boot();
+setTimeout(loadPast, 400);
 </script></body></html>
