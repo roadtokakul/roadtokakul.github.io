@@ -2936,7 +2936,7 @@ const GEN = (() => {
   return G;
 })();
 
-EXAM.genCount = {"p_vec":5,"p_force":588,"p_work":534,"p_rot":60,"p_fluid":48,"p_wave":843,"p_thermo":8,"p_estat":302,"p_curr":847,"p_emi":48,"p_ac":5,"p_modern":5,"p_nuc":100,"p_atom":4,"c_fund":243,"c_gas":236,"c_eq":132,"c_kin":42,"c_atom":52,"l_series":871,"l_prob":1921,"c_thermo":1578,"c_elec":21,"e_punct":1090,"e_vocab":105,"e_tense":1266,"e_prep":78,"e_agree":1308,"e_correct":776,"l_deduct":1499,"l_crit":42,"b_inher":1589,"b_evo":32,"b_mol":1443,"b_repro":108,"b_cell":84,"b_circ":105,"b_resp":57,"b_energy":8,"p_emag":257,"p_elec":82};
+EXAM.genCount = {"p_vec":5,"p_force":603,"p_work":514,"p_rot":60,"p_fluid":48,"p_wave":841,"p_thermo":8,"p_estat":297,"p_curr":838,"p_emi":48,"p_ac":5,"p_modern":5,"p_nuc":100,"p_atom":4,"c_fund":242,"c_gas":234,"c_eq":132,"c_kin":42,"c_atom":52,"l_series":854,"l_prob":1901,"c_thermo":1593,"c_elec":21,"e_punct":1095,"e_vocab":105,"e_tense":1257,"e_prep":78,"e_agree":1331,"e_correct":762,"l_deduct":1408,"l_crit":42,"b_inher":1550,"b_evo":32,"b_mol":1422,"b_repro":108,"b_cell":84,"b_circ":105,"b_resp":57,"b_energy":8,"p_emag":262,"p_elec":82};
 'use strict';
 /* =====================================================================
    The exam engine — Road to MBBS first, Road to CSS next, from the same file.
@@ -2979,7 +2979,10 @@ window.addEventListener('pagehide', saveNow);
 let CFG = (() => { try { return JSON.parse(localStorage.getItem(CFG_KEY)) || {}; } catch (e) { return {}; } })();
 function loadCfg() {
   return fetch(EXAM.packUrl + '?t=' + Date.now(), { cache: 'no-store' }).then(r => r.json()).then(p => {
-    CFG = Object.assign({}, (p && p.config) || {}, { qa: (p && p.qa) || [] });
+    // this app's answers from the team (pack.qa_apps[key]) and the questions several students reported as wrong (pack.qhide[key])
+    const mine = o => ((p && p[o]) || {})[EXAM.key] || [];
+    CFG = Object.assign({}, (p && p.config) || {}, { qa: ((p && p.qa) || []).concat(mine('qa_apps')), qhide: mine('qhide') });
+    if (CFG.qhide.some(id => !HIDE[id])) { CFG.qhide.forEach(id => { HIDE[id] = 1; }); indexBank(); }
     try { localStorage.setItem(CFG_KEY, JSON.stringify(CFG)); } catch (e) { }
     if (S.pay && (CFG.blockTids || []).includes(S.pay.tid)) render();
   }).catch(() => { });
@@ -3054,7 +3057,7 @@ Object.keys(FACTS_).forEach(s => FACTS_[s].forEach((G, gi) => {
 }));
 let byTopic = {};
 function indexBank() { byTopic = {}; ALL.forEach(q => { if (!S.hidden[q.id] && !HIDE[q.id]) (byTopic[q.t] = byTopic[q.t] || []).push(q); }); }
-let HIDE = {};
+let HIDE = {}; (CFG.qhide || []).forEach(id => { HIDE[id] = 1; });
 indexBank();
 // questions the studio wrote and double-checked, published next to the app (they grow every night)
 function loadExtra() {
